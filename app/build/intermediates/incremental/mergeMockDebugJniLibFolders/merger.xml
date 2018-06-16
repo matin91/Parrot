@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\jniLibs"/></dataSet><dataSet config="mock"><source path="C:\Users\hossein\Desktop\PosTrainer-master\app\src\mock\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\hossein\Desktop\PosTrainer-master\app\src\debug\jniLibs"/></dataSet><dataSet config="mockDebug"><source path="C:\Users\hossein\Desktop\PosTrainer-master\app\src\mockDebug\jniLibs"/></dataSet></merger>

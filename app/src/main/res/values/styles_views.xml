@@ -110,7 +110,7 @@
     </style>
 
     <style name="Alarm_Switch_Theme" parent="ThemeOverlay.AppCompat">
-        <item name="colorControlActivated">@color/MINT_GREEN</item>
+        <item name="colorControlActivated">@color/SCREAMY_YELLOW</item>
     </style>
 
     <style name="CheckBox_White_Border" parent="@android:style/Widget.CompoundButton.CheckBox">

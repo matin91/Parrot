@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\incremental\\mergeMockDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "C:\\Users\\hossein\\.android\\build-cache\\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\\output\\res\\values-v18\\values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+    }
+]

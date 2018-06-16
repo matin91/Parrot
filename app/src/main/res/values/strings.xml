@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PosTrainer</string>
+    <string name="app_name">Parrot:The Talking Alarm</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_movement_detail">ActivityMovementDetail</string>
     <string name="title_activity_movement_menu">ActivityMovementMenu</string>

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\button_flat_inverse.xml",
+        "source": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\src\\main\\res\\drawable-v21\\button_flat_inverse.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\457bf3c69aa97427d8df63b7b95006e182ae65b5\\output\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\457bf3c69aa97427d8df63b7b95006e182ae65b5\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\457bf3c69aa97427d8df63b7b95006e182ae65b5\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\button_flat.xml",
+        "source": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\src\\main\\res\\drawable-v21\\button_flat.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\457bf3c69aa97427d8df63b7b95006e182ae65b5\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\res\\merged\\mock\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\hossein\\.android\\build-cache\\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    }
+]
