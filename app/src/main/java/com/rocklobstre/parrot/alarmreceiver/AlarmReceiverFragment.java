@@ -104,9 +104,10 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
        return new Alarm(
                 this.alarmId,
                 getString(R.string.def_alarm_name),
+               getString(R.string.def_alarm_message),
+                false,
                 false,
                 true,
-                false,
                 12,
                 30
         );

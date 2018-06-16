@@ -16,6 +16,7 @@
 
     <!-- ActivityManageAlarm -->
     <string name="manage_alarm_title_hint">Alarm Title</string>
+    <string name="manage_alarm_message_hint">Reminder Message</string>
     <string name="manage_alarm_vibrate">Vibrate Only</string>
     <string name="manage_alarm_renew">Renew Automatically</string>
     <string name="manage_alarm_action_done">Done</string>
@@ -98,6 +99,7 @@
     <string name="msg_alarm_deactivated">Alarm Deactivated</string>
     <string name="msg_alarm_deleted">Alarm Deleted</string>
     <string name="def_alarm_name">New Alarm</string>
+    <string name="def_alarm_message">You have set an alarm, do you remember why?</string>
     <string name="msg_alarm_limit_reached">Maximun Alarms per Day is 5.</string>
     <string name="error_invalid_alarm_id">That\'s not supposed to happen. Contact the Dev. if this message keeps appearing.</string>
     <string name="error_managing_alarm">Error Managing Alarm</string>

@@ -15,6 +15,7 @@ public class RealmAlarm implements RealmModel {
     private String alarmId;
 
     private String alarmTitle;
+    private String alarmMessage;
     private boolean active;
     private boolean vibrateOnly;
     private boolean renewAutomatically;
@@ -27,6 +28,7 @@ public class RealmAlarm implements RealmModel {
 
     public RealmAlarm(String alarmId,
                       String alarmTitle,
+                      String alarmMessage,
                       boolean active,
                       boolean vibrateOnly,
                       boolean renewAutomatically,
@@ -36,6 +38,7 @@ public class RealmAlarm implements RealmModel {
 
         this.alarmId = alarmId;
         this.alarmTitle = alarmTitle;
+        this.alarmMessage = alarmMessage;
         this.active = active;
         this.vibrateOnly = vibrateOnly;
         this.renewAutomatically = renewAutomatically;
@@ -53,6 +56,7 @@ public class RealmAlarm implements RealmModel {
         this.hourOfDay = 12;
         this.minute = 0;
         this.alarmTitle = "New Alarm";
+        this.alarmMessage = "You have set an alarm, do you remember why?";
         this.active = false;
         this.vibrateOnly = false;
         this.renewAutomatically = false;
@@ -71,8 +75,16 @@ public class RealmAlarm implements RealmModel {
         return alarmTitle;
     }
 
+    public String getAlarmMessage() {
+        return alarmMessage;
+    }
+
     public void setAlarmTitle(String alarmTitle) {
         this.alarmTitle = alarmTitle;
+    }
+
+    public void setAlarmMessage(String alarmMessage) {
+        this.alarmMessage = alarmMessage;
     }
 
     public boolean isActive() {

@@ -107,9 +107,10 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
                         new Alarm(
                                 getDate(),
                                 getString(R.string.def_alarm_name),
+                                getString(R.string.def_alarm_message),
+                                false,
                                 false,
                                 true,
-                                false,
                                 12,
                                 30
                         )
@@ -297,6 +298,7 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
         public void onBindViewHolder(AlarmListAdapter.ViewHolder holder, final int position) {
             Alarm item = alarms.get(position);
             holder.alarmTitle.setText(item.getAlarmTitle());
+            holder.alarmMessage.setText(item.getAlarmMessage());
 
             try {
                 holder.alarmTime.setText(
@@ -324,6 +326,7 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
         class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
             TextView alarmTitle;
+            TextView alarmMessage;
             TextView alarmTime;
             TextView alarmStateLabel;
             ImageView alarmIcon;
@@ -332,6 +335,7 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
             public ViewHolder(View itemView) {
                 super(itemView);
                 alarmTitle = (TextView) itemView.findViewById(R.id.lbl_alarm_title);
+                alarmMessage = (TextView) itemView.findViewById(R.id.lbl_alarm_message);
                 alarmTime = (TextView) itemView.findViewById(R.id.lbl_alarm_time);
                 alarmStateLabel = (TextView) itemView.findViewById(R.id.lbl_alarm_activation);
                 alarmStateSwitch = (SwitchCompat) itemView.findViewById(R.id.swi_alarm_activation);

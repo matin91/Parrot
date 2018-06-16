@@ -14,6 +14,8 @@ public interface AlarmDetailContract {
 
         void setAlarmTitle(String title);
 
+        void setAlarmMessage(String message);
+
         void setVibrateOnly(boolean active);
 
         void setRenewAutomatically(boolean active);

@@ -71,6 +71,7 @@ public class AlarmDatabase implements AlarmSource {
                         realmAlarm.setHourOfDay(alarm.getHourOfDay());
                         realmAlarm.setMinute(alarm.getMinute());
                         realmAlarm.setAlarmTitle(alarm.getAlarmTitle());
+                        realmAlarm.setAlarmMessage(alarm.getAlarmMessage());
                         realmAlarm.setActive(alarm.isActive());
                         realmAlarm.setVibrateOnly(alarm.isVibrateOnly());
                         realmAlarm.setRenewAutomatically(alarm.isRenewAutomatically());
@@ -111,6 +112,7 @@ public class AlarmDatabase implements AlarmSource {
                                 alarm.setHourOfDay(realmAlarm.getHourOfDay());
                                 alarm.setMinute(realmAlarm.getMinute());
                                 alarm.setAlarmTitle(realmAlarm.getAlarmTitle());
+                                alarm.setAlarmMessage(realmAlarm.getAlarmMessage());
                                 alarm.setAlarmId(realmAlarm.getAlarmId());
 
                                 alarmList.add(
@@ -152,6 +154,7 @@ public class AlarmDatabase implements AlarmSource {
                             alarm.setHourOfDay(realmAlarm.getHourOfDay());
                             alarm.setMinute(realmAlarm.getMinute());
                             alarm.setAlarmTitle(realmAlarm.getAlarmTitle());
+                            alarm.setAlarmMessage(realmAlarm.getAlarmMessage());
 
                             e.onNext(alarm);
                         }

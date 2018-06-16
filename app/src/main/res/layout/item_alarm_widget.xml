@@ -22,6 +22,19 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Coffee Break" />
 
+    <TextView
+        android:id="@+id/lbl_alarm_message"
+        style="@style/Lable.AlarmWidgetMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_alarm_title"
+        tools:text="&quot;Who knows where technology would be without coffee!&quot;" />
     <View
         android:id="@+id/div_alarm_widget_one"
         android:layout_width="0dp"
@@ -32,7 +45,7 @@
         android:background="@drawable/divider_white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_alarm_title"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_alarm_message"
         app:layout_constraintHorizontal_bias="0.497" />
 
     <ImageView

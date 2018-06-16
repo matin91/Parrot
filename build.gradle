@@ -44,6 +44,7 @@ ext {
     runnerVersion = '0.5'
     rulesVersion = '0.5'
     espressoVersion = '2.2.2'
+    speakerBoxVersion = '1.4.1'
 
     //android
     supportLibraryVersion = '25.3.1'

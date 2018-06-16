@@ -35,9 +35,10 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     AlarmDetailPresenter presenter;
 
     private EditText alarmTitle;
+    private EditText alarmMessage;
     private CheckBox vibrateOnly, autoRenew;
     private TimePicker nosePicker;
-    private ImageView back, proceed;
+    private ImageView back, proceed, clearMessage;
 
     private String alarmId;
     private boolean currentAlarmState;
@@ -83,18 +84,27 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         View v = inflater.inflate(R.layout.fragment_alarm_detail, container, false);
 
         alarmTitle = (EditText) v.findViewById(R.id.edt_alarm_title);
+        alarmMessage = (EditText) v.findViewById(R.id.edt_alarm_message);
         nosePicker = (TimePicker) v.findViewById(R.id.pck_alarm_time);
 
         vibrateOnly = (CheckBox) v.findViewById(R.id.chb_vibrate_only);
         autoRenew = (CheckBox) v.findViewById(R.id.chb_renew_automatically);
 
         back = (ImageButton) v.findViewById(R.id.imb_alarm_detail_back);
+        clearMessage = (ImageButton) v.findViewById(R.id.imb_clear_alarm_message);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBackIconPress();
             }
         });
+        clearMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmMessage.setText("");
+            }
+        });
+
 
         proceed = (ImageButton) v.findViewById(R.id.imb_alarm_detail_proceed);
         proceed.setOnClickListener(new View.OnClickListener() {
@@ -131,6 +141,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
         alarm.setAlarmId(alarmId);
         alarm.setAlarmTitle(alarmTitle.getText().toString());
+        alarm.setAlarmMessage(alarmMessage.getText().toString());
         alarm.setMinute(getPickerMinute());
         alarm.setHourOfDay(getPickerHour());
         alarm.setActive(false);
@@ -143,6 +154,11 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     @Override
     public void setAlarmTitle(String title) {
         alarmTitle.setText(title);
+    }
+
+    @Override
+    public void setAlarmMessage(String message) {
+        alarmMessage.setText(message);
     }
 
     @Override
@@ -178,6 +194,9 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
     public String getReminderTitle() {
         return alarmTitle.getText().toString();
+    }
+    public String getReminderMessage() {
+        return alarmMessage.getText().toString();
     }
 
     @Override

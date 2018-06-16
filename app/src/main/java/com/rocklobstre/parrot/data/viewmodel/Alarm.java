@@ -9,6 +9,7 @@ public class Alarm {
 
     private String alarmId;
     private String alarmTitle;
+    private String alarmMessage;
     private boolean active;
     private boolean vibrateOnly;
     private boolean renewAutomatically;
@@ -21,6 +22,7 @@ public class Alarm {
 
     public Alarm(String alarmId,
                  String alarmTitle,
+                 String alarmMessage,
                  boolean active,
                  boolean vibrateOnly,
                  boolean renewAutomatically,
@@ -28,6 +30,7 @@ public class Alarm {
                  int minute) {
         this.alarmId = alarmId;
         this.alarmTitle = alarmTitle;
+        this.alarmMessage = alarmMessage;
         this.active = active;
         this.vibrateOnly = vibrateOnly;
         this.renewAutomatically = renewAutomatically;
@@ -45,6 +48,10 @@ public class Alarm {
 
     public String getAlarmTitle() {
         return alarmTitle;
+    }
+
+    public void setAlarmMessage(String alarmMessage) {
+        this.alarmMessage = alarmMessage;
     }
 
     public void setAlarmTitle(String alarmTitle) {
@@ -73,6 +80,10 @@ public class Alarm {
 
     public void setRenewAutomatically(boolean renewAutomatically) {
         this.renewAutomatically = renewAutomatically;
+    }
+
+    public String getAlarmMessage() {
+        return alarmMessage;
     }
 
     public int getMinute() {

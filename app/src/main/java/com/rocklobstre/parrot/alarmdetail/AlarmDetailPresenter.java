@@ -62,6 +62,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
                                     @Override
                                     public void onNext(Alarm alarm) {
                                         view.setAlarmTitle(alarm.getAlarmTitle());
+                                        view.setAlarmMessage(alarm.getAlarmMessage());
                                         view.setVibrateOnly(alarm.isVibrateOnly());
                                         view.setRenewAutomatically(alarm.isRenewAutomatically());
                                         view.setPickerTime(alarm.getHourOfDay(), alarm.getMinute());

@@ -13,7 +13,7 @@ public interface BasePresenter {
     void start();
 
     /**
-     * Remove Listeners and prepare stuff for Gabage Collection
+     * Remove Listeners and prepare stuff for Garbage Collection
      */
     void stop();
 
