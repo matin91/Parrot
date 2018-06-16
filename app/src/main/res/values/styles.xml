@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- I put high level theme data which effects App/Activities/Fragments here. -->
+
+    <style name="Postrainer" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/LIGHT_GREY</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="android:timePickerStyle">@style/CustomTimePicker</item>
+    </style>
+
+    <style name="Postrainer.Inverse" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/WHITE</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorControlActivated">@color/WHITE</item>
+        <item name="colorControlNormal">@color/WHITE</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+</resources>
