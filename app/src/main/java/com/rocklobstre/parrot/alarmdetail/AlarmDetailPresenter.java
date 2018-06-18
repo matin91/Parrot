@@ -1,6 +1,7 @@
 package com.rocklobstre.parrot.alarmdetail;
 
 
+import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
@@ -44,7 +45,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
 
     @Override
     public void start() {
-       getReminder();
+        getReminder();
     }
 
     @Override
@@ -114,5 +115,15 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
                                     }
                                 })
         );
+    }
+
+    @Override
+    public void onTestMessageButtonClick() {
+        view.startSpeakingMessage();
+    }
+
+    @Override
+    public void onClearMessageIconPress() {
+        view.setAlarmMessage("");
     }
 }

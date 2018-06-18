@@ -6,6 +6,7 @@
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="title_activity_alarms">ActivityAlarms</string>
     <string name="title_activity_manage_alarm">ActivityManageAlarm</string>
+    <string name="title_activity_speaker_detail">ActivitySpeakerDetail</string>
 
     <!-- AlarmListActivity -->
     <string name="alarms_alarm_on">ON</string>

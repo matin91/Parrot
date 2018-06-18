@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.alarmdetail.DaggerAlarmDetailComponent;
 import com.rocklobstre.parrot.PostrainerApplication;
 import com.rocklobstre.parrot.R;
@@ -36,12 +38,15 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
     private EditText alarmTitle;
     private EditText alarmMessage;
+    private Button testMessage;
     private CheckBox vibrateOnly, autoRenew;
     private TimePicker nosePicker;
     private ImageView back, proceed, clearMessage;
 
     private String alarmId;
     private boolean currentAlarmState;
+
+    private Speakerbox speakerbox;
 
     public AlarmDetailFragment() {
     }
@@ -87,23 +92,37 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         alarmMessage = (EditText) v.findViewById(R.id.edt_alarm_message);
         nosePicker = (TimePicker) v.findViewById(R.id.pck_alarm_time);
 
+        testMessage = (Button) v.findViewById(R.id.btn_start_speak);
+
         vibrateOnly = (CheckBox) v.findViewById(R.id.chb_vibrate_only);
         autoRenew = (CheckBox) v.findViewById(R.id.chb_renew_automatically);
 
         back = (ImageButton) v.findViewById(R.id.imb_alarm_detail_back);
         clearMessage = (ImageButton) v.findViewById(R.id.imb_clear_alarm_message);
+
+        speakerbox = new Speakerbox(getActivity().getApplication());
+        speakerbox.setActivity(getActivity());
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBackIconPress();
             }
         });
+        testMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onTestMessageButtonClick();
+            }
+        });
+
         clearMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alarmMessage.setText("");
+                presenter.onClearMessageIconPress();
             }
         });
+
 
 
         proceed = (ImageButton) v.findViewById(R.id.imb_alarm_detail_proceed);
@@ -207,6 +226,26 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         //method is called?
         Intent i = new Intent(getActivity(), AlarmListActivity.class);
         startActivity(i);
+    }
+
+    @Override
+    public void startSpeakingMessage() {
+        Runnable onStart = new Runnable() {
+            public void run() {
+                speakerbox.requestAudioFocus();
+                testMessage.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_speaker_pause), null, null);
+            }
+        };
+        Runnable onDone = new Runnable() {
+            public void run() {
+                speakerbox.abandonAudioFocus();
+                testMessage.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_speaker_play), null, null);
+            }
+        };
+        if (speakerbox.getTextToSpeech().isSpeaking())
+            speakerbox.stop();
+        else
+            speakerbox.play(getReminderMessage(), onStart, onDone, null);
     }
 
     @Override

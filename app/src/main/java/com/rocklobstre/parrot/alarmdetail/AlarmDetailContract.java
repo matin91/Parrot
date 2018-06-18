@@ -28,11 +28,18 @@ public interface AlarmDetailContract {
 
         void startAlarmListActivity();
 
+        void startSpeakingMessage();
+
     }
 
     interface Presenter extends BasePresenter {
         void onBackIconPress();
 
         void onDoneIconPress();
+
+        void onTestMessageButtonClick();
+
+        void onClearMessageIconPress();
+
     }
 }
