@@ -10,10 +10,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.alarmreceiver.DaggerAlarmReceiverComponent;
 import com.rocklobstre.parrot.PostrainerApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
+
+import java.util.Locale;
 
 import javax.inject.Inject;
 
@@ -25,6 +28,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
 
     private static final String ALARM_ID = "ALARM_ID";
     private String alarmId;
+    private Speakerbox speakerbox;
 
     @Inject
     AlarmReceiverPresenter presenter;
@@ -63,6 +67,10 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         View v = inflater.inflate(R.layout.fragment_alarm, container, false);
 
         Button stopAlarm = (Button) v.findViewById(R.id.btn_alarm_dismiss);
+
+        speakerbox = new Speakerbox(getActivity().getApplication());
+        speakerbox.setActivity(getActivity());
+
         stopAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,5 +129,25 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         if (activity != null) {
             activity.finish();
         }
+    }
+
+    @Override
+    public void startSpeakingMessage(String message) {
+        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
+        Runnable onStart = new Runnable() {
+            public void run() {
+                speakerbox.requestAudioFocus();
+            }
+        };
+        Runnable onDone = new Runnable() {
+            public void run() {
+                speakerbox.abandonAudioFocus();
+            }
+        };
+        if (speakerbox.getTextToSpeech().isSpeaking()) {
+            speakerbox.stop();
+            speakerbox.abandonAudioFocus();
+        } else
+            speakerbox.play(message, onStart, onDone, null);
     }
 }
