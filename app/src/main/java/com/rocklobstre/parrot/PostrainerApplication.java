@@ -13,6 +13,7 @@ import io.realm.RealmConfiguration;
 
 public class PostrainerApplication extends Application {
     private ApplicationComponent applicationComponent;
+    private static PostrainerApplication instance;
 
     @Override
     public void onCreate() {
@@ -29,6 +30,8 @@ public class PostrainerApplication extends Application {
                 .builder()
                 .applicationModule(applicationModule)
                 .build();
+
+        instance = this;
 
     }
 
@@ -48,4 +51,9 @@ public class PostrainerApplication extends Application {
     public ApplicationComponent getApplicationComponent() {
         return this.applicationComponent;
     }
+
+    public static synchronized PostrainerApplication getInstance(){
+        return instance;
+    }
+
 }

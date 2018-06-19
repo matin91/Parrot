@@ -37,7 +37,7 @@ public interface AlarmDetailContract {
 
         void onDoneIconPress();
 
-        void onTestMessageButtonClick();
+        void onTestMessageIconPress();
 
         void onClearMessageIconPress();
 

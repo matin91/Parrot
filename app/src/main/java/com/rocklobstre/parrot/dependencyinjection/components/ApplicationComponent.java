@@ -20,9 +20,11 @@ import android.media.AudioManager;
 import android.os.PowerManager;
 import android.os.Vibrator;
 
+import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule;
+import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 
 import javax.inject.Singleton;
@@ -32,7 +34,7 @@ import dagger.Component;
 /**
  *The Application Component Provides
  */
-@Singleton
+@MainApplicationScope
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
 
@@ -43,5 +45,6 @@ public interface ApplicationComponent {
   AlarmManager alarmManager();
   AlarmSource alarmSource();
   BaseSchedulerProvider baseSchedulerProvider();
+  Speakerbox getSpeakerbox();
 
 }

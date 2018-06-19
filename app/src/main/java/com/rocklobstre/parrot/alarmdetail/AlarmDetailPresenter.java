@@ -118,7 +118,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     }
 
     @Override
-    public void onTestMessageButtonClick() {
+    public void onTestMessageIconPress() {
         view.startSpeakingMessage();
     }
 

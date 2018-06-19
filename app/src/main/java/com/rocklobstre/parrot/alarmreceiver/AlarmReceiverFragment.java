@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.mapzen.speakerbox.Speakerbox;
@@ -28,10 +30,12 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
 
     private static final String ALARM_ID = "ALARM_ID";
     private String alarmId;
-    private Speakerbox speakerbox;
+    private ImageView parrot;
 
     @Inject
     AlarmReceiverPresenter presenter;
+    @Inject
+    Speakerbox speakerbox;
 
     public AlarmReceiverFragment() {
 
@@ -68,8 +72,9 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
 
         Button stopAlarm = (Button) v.findViewById(R.id.btn_alarm_dismiss);
 
-        speakerbox = new Speakerbox(getActivity().getApplication());
         speakerbox.setActivity(getActivity());
+
+        parrot = (ImageView) v.findViewById(R.id.parrot);
 
         stopAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,7 +138,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
 
     @Override
     public void startSpeakingMessage(String message) {
-        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
+//        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
         Runnable onStart = new Runnable() {
             public void run() {
                 speakerbox.requestAudioFocus();
@@ -142,12 +147,9 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         Runnable onDone = new Runnable() {
             public void run() {
                 speakerbox.abandonAudioFocus();
+                parrot.setVisibility(View.GONE);
             }
         };
-        if (speakerbox.getTextToSpeech().isSpeaking()) {
-            speakerbox.stop();
-            speakerbox.abandonAudioFocus();
-        } else
-            speakerbox.play(message, onStart, onDone, null);
+        speakerbox.play(message, onStart, onDone, null);
     }
 }

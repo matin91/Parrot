@@ -20,7 +20,7 @@ public class CustomItemDecorator extends RecyclerView.ItemDecoration {
     private static int horizontalSpaceHeight = 16;
 
     public CustomItemDecorator(Context context) {
-        divider = context.getResources().getDrawable(R.drawable.divider_white);
+        divider = context.getResources().getDrawable(R.drawable.divider_transparent);
     }
 
     @Override

@@ -15,6 +15,8 @@ public interface AlarmReceiverContract {
             Alarm getViewModel();
 
             void finishActivity();
+
+            void startSpeakingMessage(String message);
     }
 
     interface Presenter extends BasePresenter {

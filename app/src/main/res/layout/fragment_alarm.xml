@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     android:id="@+id/root_alarm_fragment"
     >
+    <ImageView
+        android:id="@+id/parrot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_alarm_dismiss"
+        android:src="@mipmap/ic_launcher"
+        />
 
     <Button
         android:id="@+id/btn_alarm_dismiss"

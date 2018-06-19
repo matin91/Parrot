@@ -8,9 +8,12 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 import android.provider.Settings;
 
+import com.mapzen.speakerbox.Speakerbox;
+import com.rocklobstre.parrot.PostrainerApplication;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmDatabase;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmService;
+import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 import com.rocklobstre.parrot.util.SchedulerProvider;
 
@@ -38,6 +41,7 @@ public final class ApplicationModule {
     private final AlarmManager alarmManager;
     private final MediaPlayer mediaPlayer;
 
+
     //This objects are necessary for creation of other objects within this Module, hence making them
     //variables
     public ApplicationModule(Context application) {
@@ -52,48 +56,48 @@ public final class ApplicationModule {
     }
 
     @Provides
-    @Singleton
+    @MainApplicationScope
     Context provideContext() {
         return applicationContext;
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     PowerManager.WakeLock provideWakeLock() {
         return wakeLock;
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     AudioManager provideAudioManager() {
         return audioManager;
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     MediaPlayer provideMediaPlayer() {
         return mediaPlayer;
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     Vibrator provideVibrator() {
         return vibrator;
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     AlarmManager provideAndroidAlarmManager() {
         return alarmManager;
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     BaseSchedulerProvider provideScheduler() {
         return new SchedulerProvider();
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     com.rocklobstre.parrot.data.alarmservice.AlarmManager provideAlarmManager() {
         return new AlarmService(
@@ -106,10 +110,16 @@ public final class ApplicationModule {
         );
     }
 
-    @Singleton
+    @MainApplicationScope
     @Provides
     AlarmSource provideAlarmSource() {
         return new AlarmDatabase();
+    }
+
+    @MainApplicationScope
+    @Provides
+    Speakerbox provideSpeakerbox(){
+        return new Speakerbox(PostrainerApplication.getInstance());
     }
 
 }

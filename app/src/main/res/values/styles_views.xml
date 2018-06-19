@@ -12,15 +12,6 @@
         <item name="android:textColorHint">@color/windowBackground</item>
         <item name="android:inputType">textCapWords|textNoSuggestions</item>
     </style>
-    <style name="InputField.ReminderMessage" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/WHITE</item>
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:gravity">top|left</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColorHint">@color/windowBackground</item>
-        <item name="android:minLines">2</item>
-        <item name="android:inputType">textLongMessage|textNoSuggestions</item>
-    </style>
 
     <!-- *********************** Labels  *********************** -->
     <style name="Label">

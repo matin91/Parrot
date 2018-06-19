@@ -1,5 +1,7 @@
 package com.rocklobstre.parrot.alarmreceiver;
 
+import android.os.Handler;
+
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
@@ -9,6 +11,7 @@ import com.rocklobstre.parrot.usecase.GetAlarm;
 import com.rocklobstre.parrot.usecase.StartAlarm;
 import com.rocklobstre.parrot.usecase.UpdateOrCreateAlarm;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
+
 
 import javax.inject.Inject;
 
@@ -57,7 +60,7 @@ public class AlarmReceiverPresenter implements AlarmReceiverContract.Presenter {
     }
 
     /**
-     * Query the Alarm Database for a Alarm which matches the given reminderId passed
+     * Query the Alarm Database for an Alarm which matches the given reminderId passed
      * in from the Activity's extras.
      */
     private void getAlarmFromDatabase() {
@@ -70,7 +73,7 @@ public class AlarmReceiverPresenter implements AlarmReceiverContract.Presenter {
                         .observeOn(schedulerProvider.ui())
                         .subscribeWith(new DisposableSubscriber<Alarm>() {
                             @Override
-                            public void onNext(Alarm alarm) {
+                            public void onNext(final Alarm alarm) {
                                 checkAlarmState(alarm);
                             }
 
