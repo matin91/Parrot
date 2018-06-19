@@ -230,7 +230,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
     @Override
     public void startSpeakingMessage() {
-//        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
+        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
         Runnable onStart = new Runnable() {
             public void run() {
                 speakerbox.requestAudioFocus();

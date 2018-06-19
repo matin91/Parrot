@@ -74,6 +74,7 @@ public class AlarmReceiverPresenter implements AlarmReceiverContract.Presenter {
                         .subscribeWith(new DisposableSubscriber<Alarm>() {
                             @Override
                             public void onNext(final Alarm alarm) {
+                                view.startSpeakingMessage(alarm.getAlarmMessage());
                                 checkAlarmState(alarm);
                             }
 

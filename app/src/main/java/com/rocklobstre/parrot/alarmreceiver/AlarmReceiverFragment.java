@@ -2,6 +2,7 @@ package com.rocklobstre.parrot.alarmreceiver;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -12,6 +13,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
+import com.airbnb.lottie.OnCompositionLoadedListener;
 import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.alarmreceiver.DaggerAlarmReceiverComponent;
 import com.rocklobstre.parrot.PostrainerApplication;
@@ -19,6 +23,7 @@ import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 
 import java.util.Locale;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -30,7 +35,6 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
 
     private static final String ALARM_ID = "ALARM_ID";
     private String alarmId;
-    private ImageView parrot;
 
     @Inject
     AlarmReceiverPresenter presenter;
@@ -71,10 +75,11 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         View v = inflater.inflate(R.layout.fragment_alarm, container, false);
 
         Button stopAlarm = (Button) v.findViewById(R.id.btn_alarm_dismiss);
+        LottieAnimationView animationView = (LottieAnimationView) v.findViewById(R.id.animation_view);
 
         speakerbox.setActivity(getActivity());
 
-        parrot = (ImageView) v.findViewById(R.id.parrot);
+        lottieProgressConfig(animationView);
 
         stopAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,19 +142,40 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
     }
 
     @Override
-    public void startSpeakingMessage(String message) {
-//        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
-        Runnable onStart = new Runnable() {
+    public void startSpeakingMessage(final String message) {
+        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
+        final Runnable onStart = new Runnable() {
             public void run() {
                 speakerbox.requestAudioFocus();
             }
         };
-        Runnable onDone = new Runnable() {
+        final Runnable onDone = new Runnable() {
             public void run() {
                 speakerbox.abandonAudioFocus();
-                parrot.setVisibility(View.GONE);
+                startSpeakingMessage(message);
             }
         };
-        speakerbox.play(message, onStart, onDone, null);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                speakerbox.play(message, onStart, onDone, null);
+            }
+        }, 3000);
+    }
+
+    private void lottieProgressConfig(final LottieAnimationView animationView) {
+        animationView.loop(true);
+        LottieComposition.Factory.fromAssetFileName(Objects.requireNonNull(getActivity()), "_alarm.json",
+                new OnCompositionLoadedListener() {
+                    @Override public void onCompositionLoaded(LottieComposition composition) {
+                        animationView.setComposition(composition);
+                    }
+                });
+
+        if (animationView.getProgress() == 1f) {
+            animationView.setProgress(0f);
+        }
+        animationView.resumeAnimation();
+
     }
 }

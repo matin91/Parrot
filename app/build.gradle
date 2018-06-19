@@ -10,9 +10,10 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 9
         versionName "2.1"
-
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
@@ -83,4 +84,8 @@ dependencies {
     androidTestCompile "com.android.support.test:rules:$rootProject.rulesVersion"
     androidTestCompile "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
 
+    compile "com.airbnb.android:lottie:$rootProject.lottieVersion"
+}
+repositories {
+    mavenCentral()
 }

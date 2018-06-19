@@ -30,9 +30,9 @@ ext {
     //Versions are managed here. Consider doing something like this if you don't already.
 
     minSdkVersion = 21
-    targetSdkVersion = 25
-    compileSdkVersion = 25
-    buildToolsVersion = '25.0.2'
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
 
     //3rd party
     mockitoVersion = '1.10.19'
@@ -45,9 +45,10 @@ ext {
     rulesVersion = '0.5'
     espressoVersion = '2.2.2'
     speakerBoxVersion = '1.4.1'
+    lottieVersion = '2.5.5'
 
     //android
-    supportLibraryVersion = '25.3.1'
+    supportLibraryVersion = '27.1.1'
     constraintLayoutVersion = '1.0.2'
     archLifecycleVersion = "1.0.0-alpha3"
 
