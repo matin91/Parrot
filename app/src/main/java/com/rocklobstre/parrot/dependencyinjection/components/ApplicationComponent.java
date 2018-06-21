@@ -23,11 +23,12 @@ import android.os.Vibrator;
 import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
+import com.rocklobstre.parrot.data.retrofit.RestApi;
+import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule;
+import com.rocklobstre.parrot.dependencyinjection.modules.DataModule;
 import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
-
-import javax.inject.Singleton;
 
 import dagger.Component;
 
@@ -35,7 +36,7 @@ import dagger.Component;
  *The Application Component Provides
  */
 @MainApplicationScope
-@Component(modules = ApplicationModule.class)
+@Component(modules = {ApplicationModule.class, DataModule.class})
 public interface ApplicationComponent {
 
   Context context();
@@ -47,4 +48,6 @@ public interface ApplicationComponent {
   BaseSchedulerProvider baseSchedulerProvider();
   Speakerbox getSpeakerbox();
 
+  RestApi restApi();
+  AlarmRepository alarmRepository();
 }

@@ -1,6 +1,8 @@
 package com.rocklobstre.parrot.alarmdetail;
 
+import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
 import com.rocklobstre.parrot.dependencyinjection.components.ApplicationComponent;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 import dagger.MembersInjector;
@@ -17,9 +19,13 @@ public final class DaggerAlarmDetailComponent implements AlarmDetailComponent {
 
   private Provider<AlarmSource> alarmSourceProvider;
 
+  private Provider<AlarmRepository> alarmRepositoryProvider;
+
   private Provider<BaseSchedulerProvider> baseSchedulerProvider;
 
   private Provider<AlarmDetailPresenter> alarmDetailPresenterProvider;
+
+  private Provider<Speakerbox> getSpeakerboxProvider;
 
   private MembersInjector<AlarmDetailFragment> alarmDetailFragmentMembersInjector;
 
@@ -51,6 +57,18 @@ public final class DaggerAlarmDetailComponent implements AlarmDetailComponent {
           }
         };
 
+    this.alarmRepositoryProvider =
+        new dagger.internal.Factory<AlarmRepository>() {
+          private final ApplicationComponent applicationComponent = builder.applicationComponent;
+
+          @Override
+          public AlarmRepository get() {
+            return Preconditions.checkNotNull(
+                applicationComponent.alarmRepository(),
+                "Cannot return null from a non-@Nullable component method");
+          }
+        };
+
     this.baseSchedulerProvider =
         new dagger.internal.Factory<BaseSchedulerProvider>() {
           private final ApplicationComponent applicationComponent = builder.applicationComponent;
@@ -65,10 +83,26 @@ public final class DaggerAlarmDetailComponent implements AlarmDetailComponent {
 
     this.alarmDetailPresenterProvider =
         AlarmDetailPresenter_Factory.create(
-            provideAlarmDetailViewProvider, alarmSourceProvider, baseSchedulerProvider);
+            provideAlarmDetailViewProvider,
+            alarmSourceProvider,
+            alarmRepositoryProvider,
+            baseSchedulerProvider);
+
+    this.getSpeakerboxProvider =
+        new dagger.internal.Factory<Speakerbox>() {
+          private final ApplicationComponent applicationComponent = builder.applicationComponent;
+
+          @Override
+          public Speakerbox get() {
+            return Preconditions.checkNotNull(
+                applicationComponent.getSpeakerbox(),
+                "Cannot return null from a non-@Nullable component method");
+          }
+        };
 
     this.alarmDetailFragmentMembersInjector =
-        AlarmDetailFragment_MembersInjector.create(alarmDetailPresenterProvider);
+        AlarmDetailFragment_MembersInjector.create(
+            alarmDetailPresenterProvider, getSpeakerboxProvider);
   }
 
   @Override

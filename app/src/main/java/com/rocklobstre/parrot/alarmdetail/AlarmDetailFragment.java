@@ -41,6 +41,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     private EditText alarmTitle;
     private EditText alarmMessage;
     private ImageButton testMessage;
+    private ImageButton loadReasons;
     private CheckBox vibrateOnly, autoRenew;
     private TimePicker nosePicker;
     private ImageView back, proceed, clearMessage;
@@ -94,6 +95,8 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
         testMessage = (ImageButton) v.findViewById(R.id.imb_start_speak);
 
+        loadReasons = (ImageButton) v.findViewById(R.id.imb_load_reasons);
+
         vibrateOnly = (CheckBox) v.findViewById(R.id.chb_vibrate_only);
         autoRenew = (CheckBox) v.findViewById(R.id.chb_renew_automatically);
 
@@ -113,6 +116,13 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
             @Override
             public void onClick(View v) {
                 presenter.onTestMessageIconPress();
+            }
+        });
+
+        loadReasons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onLoadReasonsIconPress();
             }
         });
 

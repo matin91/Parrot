@@ -3,9 +3,10 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.1.2'
         classpath "io.realm:realm-gradle-plugin:3.1.1"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -15,10 +16,12 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        google()
 
         maven {
             url "https://maven.google.com"
         }
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -36,8 +39,6 @@ ext {
 
     //3rd party
     mockitoVersion = '1.10.19'
-    rxJavaVersion = '2.0.7'
-    rxAndroidVersion = '2.0.1'
     daggerVersion = '2.10-rc2'
     jsr250Version = '1.0'
     junitVersion = '4.12'
@@ -46,10 +47,16 @@ ext {
     espressoVersion = '2.2.2'
     speakerBoxVersion = '1.4.1'
     lottieVersion = '2.5.5'
+    dropdownViewVersion = '1.0.1'
 
     //android
     supportLibraryVersion = '27.1.1'
     constraintLayoutVersion = '1.0.2'
-    archLifecycleVersion = "1.0.0-alpha3"
+    archLifecycleVersion = "1.1.0"
 
+    //data
+    retrofitVersion = '2.3.0'
+    gsonVersion = '2.8.0'
+    rxJavaVersion = '2.0.7'
+    rxAndroidVersion = '2.0.1'
 }

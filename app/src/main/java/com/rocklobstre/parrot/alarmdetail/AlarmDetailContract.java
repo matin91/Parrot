@@ -41,5 +41,7 @@ public interface AlarmDetailContract {
 
         void onClearMessageIconPress();
 
+        void onLoadReasonsIconPress();
+
     }
 }

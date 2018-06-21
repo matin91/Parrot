@@ -1,4 +1,0 @@
-#Sat Jun 16 21:05:16 IRDT 2018
-base.0=C\:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\transforms\\dex\\mock\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=C\:\\Users\\hossein\\Desktop\\PosTrainer-master\\app\\build\\intermediates\\transforms\\dex\\mock\\debug\\folders\\1000\\1f\\main\\classes.dex

@@ -115,7 +115,16 @@
                     android:src="@drawable/ic_speaker_play"
                     android:background="?attr/selectableItemBackground"
                     />
-
+                <ImageButton
+                    android:id="@+id/imb_load_reasons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".50"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add_white_24dp"
+                    android:background="?attr/selectableItemBackground"
+                    />
                 <ImageButton
                     android:id="@+id/imb_clear_alarm_message"
                     android:layout_width="wrap_content"

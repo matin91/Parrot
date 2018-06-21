@@ -1,5 +1,6 @@
 package com.rocklobstre.parrot.alarmreceiver;
 
+import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
 import com.rocklobstre.parrot.dependencyinjection.components.ApplicationComponent;
@@ -23,6 +24,8 @@ public final class DaggerAlarmReceiverComponent implements AlarmReceiverComponen
   private Provider<BaseSchedulerProvider> baseSchedulerProvider;
 
   private Provider<AlarmReceiverPresenter> alarmReceiverPresenterProvider;
+
+  private Provider<Speakerbox> getSpeakerboxProvider;
 
   private MembersInjector<AlarmReceiverFragment> alarmReceiverFragmentMembersInjector;
 
@@ -85,8 +88,21 @@ public final class DaggerAlarmReceiverComponent implements AlarmReceiverComponen
             alarmManagerProvider,
             baseSchedulerProvider);
 
+    this.getSpeakerboxProvider =
+        new dagger.internal.Factory<Speakerbox>() {
+          private final ApplicationComponent applicationComponent = builder.applicationComponent;
+
+          @Override
+          public Speakerbox get() {
+            return Preconditions.checkNotNull(
+                applicationComponent.getSpeakerbox(),
+                "Cannot return null from a non-@Nullable component method");
+          }
+        };
+
     this.alarmReceiverFragmentMembersInjector =
-        AlarmReceiverFragment_MembersInjector.create(alarmReceiverPresenterProvider);
+        AlarmReceiverFragment_MembersInjector.create(
+            alarmReceiverPresenterProvider, getSpeakerboxProvider);
   }
 
   @Override

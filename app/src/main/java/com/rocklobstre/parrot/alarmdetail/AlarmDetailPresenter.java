@@ -1,13 +1,18 @@
 package com.rocklobstre.parrot.alarmdetail;
 
 
-import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
+import com.rocklobstre.parrot.data.viewmodel.Reason;
+import com.rocklobstre.parrot.usecase.subscriber.BaseSubscriber;
 import com.rocklobstre.parrot.usecase.GetAlarm;
+import com.rocklobstre.parrot.usecase.GetReasons;
 import com.rocklobstre.parrot.usecase.UpdateOrCreateAlarm;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -24,6 +29,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     //Use Cases
     private final GetAlarm getAlarm;
     private final UpdateOrCreateAlarm updateOrCreateAlarm;
+    private final GetReasons getReasons;
 
 
     private final AlarmDetailContract.View view;
@@ -34,13 +40,16 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     @Inject
     public AlarmDetailPresenter(AlarmDetailContract.View view,
                                 AlarmSource alarmSource,
-                                BaseSchedulerProvider schedulerProvider) {
+                                AlarmRepository alarmRepository,
+                                BaseSchedulerProvider schedulerProvider
+                                ) {
         this.getAlarm = new GetAlarm(alarmSource);
+        this.getReasons = new GetReasons(alarmRepository);
         this.updateOrCreateAlarm = new UpdateOrCreateAlarm(alarmSource);
-
         this.view = view;
         this.schedulerProvider = schedulerProvider;
         this.compositeDisposable = new CompositeDisposable();
+
     }
 
     @Override
@@ -82,6 +91,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
                                     }
                                 })
         );
+
     }
 
     @Override
@@ -126,4 +136,28 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     public void onClearMessageIconPress() {
         view.setAlarmMessage("");
     }
+
+    @Override
+    public void onLoadReasonsIconPress() {
+        compositeDisposable.add(
+                getReasons.runUseCase()
+                        .subscribeOn(schedulerProvider.io())
+                        .observeOn(schedulerProvider.ui())
+                        .subscribeWith(new ReasonsSubscriber())
+        );
+    }
+
+    protected class ReasonsSubscriber extends BaseSubscriber<List<Reason>> {
+
+        @Override
+        public void onError(Throwable e) {
+            super.onError(e);
+        }
+
+        @Override public void onNext(List<Reason> reasons) {
+            view.setAlarmMessage(reasons.get(1).getReasonMessage());
+            view.startSpeakingMessage();
+        }
+    }
+
 }

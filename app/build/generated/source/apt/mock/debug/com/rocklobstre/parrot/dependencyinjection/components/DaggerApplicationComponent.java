@@ -4,16 +4,23 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.os.PowerManager;
 import android.os.Vibrator;
+import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
+import com.rocklobstre.parrot.data.retrofit.RestApi;
+import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideAlarmManagerFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideAlarmSourceFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideAudioManagerFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideContextFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideSchedulerFactory;
+import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideSpeakerboxFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideVibratorFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideWakeLockFactory;
+import com.rocklobstre.parrot.dependencyinjection.modules.DataModule;
+import com.rocklobstre.parrot.dependencyinjection.modules.DataModule_ProvideAlarmRepositoryFactory;
+import com.rocklobstre.parrot.dependencyinjection.modules.DataModule_ProvideRestApiFactory;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
@@ -38,6 +45,12 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
   private Provider<AlarmSource> provideAlarmSourceProvider;
 
   private Provider<BaseSchedulerProvider> provideSchedulerProvider;
+
+  private Provider<Speakerbox> provideSpeakerboxProvider;
+
+  private Provider<RestApi> provideRestApiProvider;
+
+  private Provider<AlarmRepository> provideAlarmRepositoryProvider;
 
   private DaggerApplicationComponent(Builder builder) {
     assert builder != null;
@@ -78,6 +91,18 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
     this.provideSchedulerProvider =
         DoubleCheck.provider(
             ApplicationModule_ProvideSchedulerFactory.create(builder.applicationModule));
+
+    this.provideSpeakerboxProvider =
+        DoubleCheck.provider(
+            ApplicationModule_ProvideSpeakerboxFactory.create(builder.applicationModule));
+
+    this.provideRestApiProvider =
+        DoubleCheck.provider(DataModule_ProvideRestApiFactory.create(builder.dataModule));
+
+    this.provideAlarmRepositoryProvider =
+        DoubleCheck.provider(
+            DataModule_ProvideAlarmRepositoryFactory.create(
+                builder.dataModule, provideRestApiProvider));
   }
 
   @Override
@@ -115,8 +140,25 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
     return provideSchedulerProvider.get();
   }
 
+  @Override
+  public Speakerbox getSpeakerbox() {
+    return provideSpeakerboxProvider.get();
+  }
+
+  @Override
+  public RestApi restApi() {
+    return provideRestApiProvider.get();
+  }
+
+  @Override
+  public AlarmRepository alarmRepository() {
+    return provideAlarmRepositoryProvider.get();
+  }
+
   public static final class Builder {
     private ApplicationModule applicationModule;
+
+    private DataModule dataModule;
 
     private Builder() {}
 
@@ -125,11 +167,19 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
         throw new IllegalStateException(
             ApplicationModule.class.getCanonicalName() + " must be set");
       }
+      if (dataModule == null) {
+        this.dataModule = new DataModule();
+      }
       return new DaggerApplicationComponent(this);
     }
 
     public Builder applicationModule(ApplicationModule applicationModule) {
       this.applicationModule = Preconditions.checkNotNull(applicationModule);
+      return this;
+    }
+
+    public Builder dataModule(DataModule dataModule) {
+      this.dataModule = Preconditions.checkNotNull(dataModule);
       return this;
     }
   }

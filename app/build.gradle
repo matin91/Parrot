@@ -13,7 +13,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
         multiDexEnabled true
-
+        flavorDimensions "default"
     }
     buildTypes {
         release {
@@ -55,6 +55,10 @@ android {
             java.srcDirs = ['src/prod/java', 'src/prod/java/com/bracketcove/postrainer/scheduler']
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -66,8 +70,7 @@ dependencies {
     compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
     compile "com.mapzen.android:speakerbox:$rootProject.speakerBoxVersion"
     compile "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
-    compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
-    compile "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
+
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
@@ -85,6 +88,16 @@ dependencies {
     androidTestCompile "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
 
     compile "com.airbnb.android:lottie:$rootProject.lottieVersion"
+    compile "com.github.AnthonyFermin:DropDownView:$rootProject.dropdownViewVersion"
+
+    // data dependencies
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    compile "com.google.code.gson:gson:$rootProject.gsonVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
+
 }
 repositories {
     mavenCentral()

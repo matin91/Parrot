@@ -6,6 +6,8 @@ public interface RealmAlarmRealmProxyInterface {
     public void realmSet$alarmId(String value);
     public String realmGet$alarmTitle();
     public void realmSet$alarmTitle(String value);
+    public String realmGet$alarmMessage();
+    public void realmSet$alarmMessage(String value);
     public boolean realmGet$active();
     public void realmSet$active(boolean value);
     public boolean realmGet$vibrateOnly();

@@ -28,7 +28,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel.RealmAlarm
+public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm
     implements RealmObjectProxy, RealmAlarmRealmProxyInterface {
 
     static final class RealmAlarmColumnInfo extends ColumnInfo
@@ -36,6 +36,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
 
         public long alarmIdIndex;
         public long alarmTitleIndex;
+        public long alarmMessageIndex;
         public long activeIndex;
         public long vibrateOnlyIndex;
         public long renewAutomaticallyIndex;
@@ -43,11 +44,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         public long minuteIndex;
 
         RealmAlarmColumnInfo(String path, Table table) {
-            final Map<String, Long> indicesMap = new HashMap<String, Long>(7);
+            final Map<String, Long> indicesMap = new HashMap<String, Long>(8);
             this.alarmIdIndex = getValidColumnIndex(path, table, "RealmAlarm", "alarmId");
             indicesMap.put("alarmId", this.alarmIdIndex);
             this.alarmTitleIndex = getValidColumnIndex(path, table, "RealmAlarm", "alarmTitle");
             indicesMap.put("alarmTitle", this.alarmTitleIndex);
+            this.alarmMessageIndex = getValidColumnIndex(path, table, "RealmAlarm", "alarmMessage");
+            indicesMap.put("alarmMessage", this.alarmMessageIndex);
             this.activeIndex = getValidColumnIndex(path, table, "RealmAlarm", "active");
             indicesMap.put("active", this.activeIndex);
             this.vibrateOnlyIndex = getValidColumnIndex(path, table, "RealmAlarm", "vibrateOnly");
@@ -67,6 +70,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
             final RealmAlarmColumnInfo otherInfo = (RealmAlarmColumnInfo) other;
             this.alarmIdIndex = otherInfo.alarmIdIndex;
             this.alarmTitleIndex = otherInfo.alarmTitleIndex;
+            this.alarmMessageIndex = otherInfo.alarmMessageIndex;
             this.activeIndex = otherInfo.activeIndex;
             this.vibrateOnlyIndex = otherInfo.vibrateOnlyIndex;
             this.renewAutomaticallyIndex = otherInfo.renewAutomaticallyIndex;
@@ -83,12 +87,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
 
     }
     private RealmAlarmColumnInfo columnInfo;
-    private ProxyState<com.rocklobstre.parrot.data.realmmodel.RealmAlarm> proxyState;
+    private ProxyState<com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm> proxyState;
     private static final List<String> FIELD_NAMES;
     static {
         List<String> fieldNames = new ArrayList<String>();
         fieldNames.add("alarmId");
         fieldNames.add("alarmTitle");
+        fieldNames.add("alarmMessage");
         fieldNames.add("active");
         fieldNames.add("vibrateOnly");
         fieldNames.add("renewAutomatically");
@@ -108,7 +113,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         }
         final BaseRealm.RealmObjectContext context = BaseRealm.objectContext.get();
         this.columnInfo = (RealmAlarmColumnInfo) context.getColumnInfo();
-        this.proxyState = new ProxyState<com.rocklobstre.parrot.data.realmmodel.RealmAlarm>(this);
+        this.proxyState = new ProxyState<com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm>(this);
         proxyState.setRealm$realm(context.getRealm());
         proxyState.setRow$realm(context.getRow());
         proxyState.setAcceptDefaultValue$realm(context.getAcceptDefaultValue());
@@ -161,6 +166,36 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
             return;
         }
         proxyState.getRow$realm().setString(columnInfo.alarmTitleIndex, value);
+    }
+
+    @Override
+    @SuppressWarnings("cast")
+    public String realmGet$alarmMessage() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.alarmMessageIndex);
+    }
+
+    @Override
+    public void realmSet$alarmMessage(String value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.alarmMessageIndex, row.getIndex(), true);
+                return;
+            }
+            row.getTable().setString(columnInfo.alarmMessageIndex, row.getIndex(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.alarmMessageIndex);
+            return;
+        }
+        proxyState.getRow$realm().setString(columnInfo.alarmMessageIndex, value);
     }
 
     @Override
@@ -278,6 +313,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
             RealmObjectSchema realmObjectSchema = realmSchema.create("RealmAlarm");
             realmObjectSchema.add("alarmId", RealmFieldType.STRING, Property.PRIMARY_KEY, Property.INDEXED, !Property.REQUIRED);
             realmObjectSchema.add("alarmTitle", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+            realmObjectSchema.add("alarmMessage", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
             realmObjectSchema.add("active", RealmFieldType.BOOLEAN, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
             realmObjectSchema.add("vibrateOnly", RealmFieldType.BOOLEAN, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
             realmObjectSchema.add("renewAutomatically", RealmFieldType.BOOLEAN, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
@@ -294,14 +330,14 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         }
         Table table = sharedRealm.getTable("class_RealmAlarm");
         final long columnCount = table.getColumnCount();
-        if (columnCount != 7) {
-            if (columnCount < 7) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 7 but was " + columnCount);
+        if (columnCount != 8) {
+            if (columnCount < 8) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 8 but was " + columnCount);
             }
             if (allowExtraColumns) {
-                RealmLog.debug("Field count is more than expected - expected 7 but was %1$d", columnCount);
+                RealmLog.debug("Field count is more than expected - expected 8 but was %1$d", columnCount);
             } else {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 7 but was " + columnCount);
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 8 but was " + columnCount);
             }
         }
         Map<String, RealmFieldType> columnTypes = new HashMap<String, RealmFieldType>();
@@ -339,6 +375,15 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         }
         if (!table.isColumnNullable(columnInfo.alarmTitleIndex)) {
             throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'alarmTitle' is required. Either set @Required to field 'alarmTitle' or migrate using RealmObjectSchema.setNullable().");
+        }
+        if (!columnTypes.containsKey("alarmMessage")) {
+            throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'alarmMessage' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
+        }
+        if (columnTypes.get("alarmMessage") != RealmFieldType.STRING) {
+            throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'String' for field 'alarmMessage' in existing Realm file.");
+        }
+        if (!table.isColumnNullable(columnInfo.alarmMessageIndex)) {
+            throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'alarmMessage' is required. Either set @Required to field 'alarmMessage' or migrate using RealmObjectSchema.setNullable().");
         }
         if (!columnTypes.containsKey("active")) {
             throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'active' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
@@ -398,12 +443,12 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
     }
 
     @SuppressWarnings("cast")
-    public static com.rocklobstre.parrot.data.realmmodel.RealmAlarm createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
+    public static com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm createOrUpdateUsingJsonObject(Realm realm, JSONObject json, boolean update)
         throws JSONException {
         final List<String> excludeFields = Collections.<String> emptyList();
-        com.rocklobstre.parrot.data.realmmodel.RealmAlarm obj = null;
+        com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm obj = null;
         if (update) {
-            Table table = realm.getTable(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+            Table table = realm.getTable(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
             long pkColumnIndex = table.getPrimaryKey();
             long rowIndex = Table.NO_MATCH;
             if (json.isNull("alarmId")) {
@@ -414,7 +459,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
             if (rowIndex != Table.NO_MATCH) {
                 final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
                 try {
-                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class), false, Collections.<String> emptyList());
+                    objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class), false, Collections.<String> emptyList());
                     obj = new io.realm.RealmAlarmRealmProxy();
                 } finally {
                     objectContext.clear();
@@ -424,9 +469,9 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         if (obj == null) {
             if (json.has("alarmId")) {
                 if (json.isNull("alarmId")) {
-                    obj = (io.realm.RealmAlarmRealmProxy) realm.createObjectInternal(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class, null, true, excludeFields);
+                    obj = (io.realm.RealmAlarmRealmProxy) realm.createObjectInternal(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class, null, true, excludeFields);
                 } else {
-                    obj = (io.realm.RealmAlarmRealmProxy) realm.createObjectInternal(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class, json.getString("alarmId"), true, excludeFields);
+                    obj = (io.realm.RealmAlarmRealmProxy) realm.createObjectInternal(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class, json.getString("alarmId"), true, excludeFields);
                 }
             } else {
                 throw new IllegalArgumentException("JSON object doesn't have the primary key field 'alarmId'.");
@@ -437,6 +482,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
                 ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmTitle(null);
             } else {
                 ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmTitle((String) json.getString("alarmTitle"));
+            }
+        }
+        if (json.has("alarmMessage")) {
+            if (json.isNull("alarmMessage")) {
+                ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmMessage(null);
+            } else {
+                ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmMessage((String) json.getString("alarmMessage"));
             }
         }
         if (json.has("active")) {
@@ -479,10 +531,10 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
 
     @SuppressWarnings("cast")
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static com.rocklobstre.parrot.data.realmmodel.RealmAlarm createUsingJsonStream(Realm realm, JsonReader reader)
+    public static com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm createUsingJsonStream(Realm realm, JsonReader reader)
         throws IOException {
         boolean jsonHasPrimaryKey = false;
-        com.rocklobstre.parrot.data.realmmodel.RealmAlarm obj = new com.rocklobstre.parrot.data.realmmodel.RealmAlarm();
+        com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm obj = new com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm();
         reader.beginObject();
         while (reader.hasNext()) {
             String name = reader.nextName();
@@ -501,6 +553,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
                     ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmTitle(null);
                 } else {
                     ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmTitle((String) reader.nextString());
+                }
+            } else if (name.equals("alarmMessage")) {
+                if (reader.peek() == JsonToken.NULL) {
+                    reader.skipValue();
+                    ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmMessage(null);
+                } else {
+                    ((RealmAlarmRealmProxyInterface) obj).realmSet$alarmMessage((String) reader.nextString());
                 }
             } else if (name.equals("active")) {
                 if (reader.peek() == JsonToken.NULL) {
@@ -549,7 +608,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         return obj;
     }
 
-    public static com.rocklobstre.parrot.data.realmmodel.RealmAlarm copyOrUpdate(Realm realm, com.rocklobstre.parrot.data.realmmodel.RealmAlarm object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm copyOrUpdate(Realm realm, com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm object, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy) object).realmGet$proxyState().getRealm$realm().threadId != realm.threadId) {
             throw new IllegalArgumentException("Objects which belong to Realm instances in other threads cannot be copied into this Realm instance.");
         }
@@ -559,12 +618,12 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         final BaseRealm.RealmObjectContext objectContext = BaseRealm.objectContext.get();
         RealmObjectProxy cachedRealmObject = cache.get(object);
         if (cachedRealmObject != null) {
-            return (com.rocklobstre.parrot.data.realmmodel.RealmAlarm) cachedRealmObject;
+            return (com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm) cachedRealmObject;
         } else {
-            com.rocklobstre.parrot.data.realmmodel.RealmAlarm realmObject = null;
+            com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm realmObject = null;
             boolean canUpdate = update;
             if (canUpdate) {
-                Table table = realm.getTable(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+                Table table = realm.getTable(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
                 long pkColumnIndex = table.getPrimaryKey();
                 String value = ((RealmAlarmRealmProxyInterface) object).realmGet$alarmId();
                 long rowIndex = Table.NO_MATCH;
@@ -575,7 +634,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
                 }
                 if (rowIndex != Table.NO_MATCH) {
                     try {
-                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class), false, Collections.<String> emptyList());
+                        objectContext.set(realm, table.getUncheckedRow(rowIndex), realm.schema.getColumnInfo(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class), false, Collections.<String> emptyList());
                         realmObject = new io.realm.RealmAlarmRealmProxy();
                         cache.put(object, (RealmObjectProxy) realmObject);
                     } finally {
@@ -594,15 +653,16 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         }
     }
 
-    public static com.rocklobstre.parrot.data.realmmodel.RealmAlarm copy(Realm realm, com.rocklobstre.parrot.data.realmmodel.RealmAlarm newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
+    public static com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm copy(Realm realm, com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm newObject, boolean update, Map<RealmModel,RealmObjectProxy> cache) {
         RealmObjectProxy cachedRealmObject = cache.get(newObject);
         if (cachedRealmObject != null) {
-            return (com.rocklobstre.parrot.data.realmmodel.RealmAlarm) cachedRealmObject;
+            return (com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm) cachedRealmObject;
         } else {
             // rejecting default values to avoid creating unexpected objects from RealmModel/RealmList fields.
-            com.rocklobstre.parrot.data.realmmodel.RealmAlarm realmObject = realm.createObjectInternal(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class, ((RealmAlarmRealmProxyInterface) newObject).realmGet$alarmId(), false, Collections.<String>emptyList());
+            com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm realmObject = realm.createObjectInternal(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class, ((RealmAlarmRealmProxyInterface) newObject).realmGet$alarmId(), false, Collections.<String>emptyList());
             cache.put(newObject, (RealmObjectProxy) realmObject);
             ((RealmAlarmRealmProxyInterface) realmObject).realmSet$alarmTitle(((RealmAlarmRealmProxyInterface) newObject).realmGet$alarmTitle());
+            ((RealmAlarmRealmProxyInterface) realmObject).realmSet$alarmMessage(((RealmAlarmRealmProxyInterface) newObject).realmGet$alarmMessage());
             ((RealmAlarmRealmProxyInterface) realmObject).realmSet$active(((RealmAlarmRealmProxyInterface) newObject).realmGet$active());
             ((RealmAlarmRealmProxyInterface) realmObject).realmSet$vibrateOnly(((RealmAlarmRealmProxyInterface) newObject).realmGet$vibrateOnly());
             ((RealmAlarmRealmProxyInterface) realmObject).realmSet$renewAutomatically(((RealmAlarmRealmProxyInterface) newObject).realmGet$renewAutomatically());
@@ -612,13 +672,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         }
     }
 
-    public static long insert(Realm realm, com.rocklobstre.parrot.data.realmmodel.RealmAlarm object, Map<RealmModel,Long> cache) {
+    public static long insert(Realm realm, com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        Table table = realm.getTable(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long tableNativePtr = table.getNativeTablePointer();
-        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((RealmAlarmRealmProxyInterface) object).realmGet$alarmId();
         long rowIndex = Table.NO_MATCH;
@@ -637,6 +697,10 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         if (realmGet$alarmTitle != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.alarmTitleIndex, rowIndex, realmGet$alarmTitle, false);
         }
+        String realmGet$alarmMessage = ((RealmAlarmRealmProxyInterface)object).realmGet$alarmMessage();
+        if (realmGet$alarmMessage != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.alarmMessageIndex, rowIndex, realmGet$alarmMessage, false);
+        }
         Table.nativeSetBoolean(tableNativePtr, columnInfo.activeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$active(), false);
         Table.nativeSetBoolean(tableNativePtr, columnInfo.vibrateOnlyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$vibrateOnly(), false);
         Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
@@ -646,13 +710,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
     }
 
     public static void insert(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        Table table = realm.getTable(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long tableNativePtr = table.getNativeTablePointer();
-        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.rocklobstre.parrot.data.realmmodel.RealmAlarm object = null;
+        com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm object = null;
         while (objects.hasNext()) {
-            object = (com.rocklobstre.parrot.data.realmmodel.RealmAlarm) objects.next();
+            object = (com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -675,6 +739,10 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
                 if (realmGet$alarmTitle != null) {
                     Table.nativeSetString(tableNativePtr, columnInfo.alarmTitleIndex, rowIndex, realmGet$alarmTitle, false);
                 }
+                String realmGet$alarmMessage = ((RealmAlarmRealmProxyInterface)object).realmGet$alarmMessage();
+                if (realmGet$alarmMessage != null) {
+                    Table.nativeSetString(tableNativePtr, columnInfo.alarmMessageIndex, rowIndex, realmGet$alarmMessage, false);
+                }
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.activeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$active(), false);
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.vibrateOnlyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$vibrateOnly(), false);
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
@@ -684,13 +752,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         }
     }
 
-    public static long insertOrUpdate(Realm realm, com.rocklobstre.parrot.data.realmmodel.RealmAlarm object, Map<RealmModel,Long> cache) {
+    public static long insertOrUpdate(Realm realm, com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm object, Map<RealmModel,Long> cache) {
         if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
             return ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex();
         }
-        Table table = realm.getTable(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        Table table = realm.getTable(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long tableNativePtr = table.getNativeTablePointer();
-        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long pkColumnIndex = table.getPrimaryKey();
         String primaryKeyValue = ((RealmAlarmRealmProxyInterface) object).realmGet$alarmId();
         long rowIndex = Table.NO_MATCH;
@@ -709,6 +777,12 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.alarmTitleIndex, rowIndex, false);
         }
+        String realmGet$alarmMessage = ((RealmAlarmRealmProxyInterface)object).realmGet$alarmMessage();
+        if (realmGet$alarmMessage != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.alarmMessageIndex, rowIndex, realmGet$alarmMessage, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.alarmMessageIndex, rowIndex, false);
+        }
         Table.nativeSetBoolean(tableNativePtr, columnInfo.activeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$active(), false);
         Table.nativeSetBoolean(tableNativePtr, columnInfo.vibrateOnlyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$vibrateOnly(), false);
         Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
@@ -718,13 +792,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
     }
 
     public static void insertOrUpdate(Realm realm, Iterator<? extends RealmModel> objects, Map<RealmModel,Long> cache) {
-        Table table = realm.getTable(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        Table table = realm.getTable(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long tableNativePtr = table.getNativeTablePointer();
-        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.realmmodel.RealmAlarm.class);
+        RealmAlarmColumnInfo columnInfo = (RealmAlarmColumnInfo) realm.schema.getColumnInfo(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm.class);
         long pkColumnIndex = table.getPrimaryKey();
-        com.rocklobstre.parrot.data.realmmodel.RealmAlarm object = null;
+        com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm object = null;
         while (objects.hasNext()) {
-            object = (com.rocklobstre.parrot.data.realmmodel.RealmAlarm) objects.next();
+            object = (com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm) objects.next();
             if(!cache.containsKey(object)) {
                 if (object instanceof RealmObjectProxy && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm() != null && ((RealmObjectProxy)object).realmGet$proxyState().getRealm$realm().getPath().equals(realm.getPath())) {
                     cache.put(object, ((RealmObjectProxy)object).realmGet$proxyState().getRow$realm().getIndex());
@@ -747,6 +821,12 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
                 } else {
                     Table.nativeSetNull(tableNativePtr, columnInfo.alarmTitleIndex, rowIndex, false);
                 }
+                String realmGet$alarmMessage = ((RealmAlarmRealmProxyInterface)object).realmGet$alarmMessage();
+                if (realmGet$alarmMessage != null) {
+                    Table.nativeSetString(tableNativePtr, columnInfo.alarmMessageIndex, rowIndex, realmGet$alarmMessage, false);
+                } else {
+                    Table.nativeSetNull(tableNativePtr, columnInfo.alarmMessageIndex, rowIndex, false);
+                }
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.activeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$active(), false);
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.vibrateOnlyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$vibrateOnly(), false);
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
@@ -756,26 +836,27 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         }
     }
 
-    public static com.rocklobstre.parrot.data.realmmodel.RealmAlarm createDetachedCopy(com.rocklobstre.parrot.data.realmmodel.RealmAlarm realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
+    public static com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm createDetachedCopy(com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm realmObject, int currentDepth, int maxDepth, Map<RealmModel, CacheData<RealmModel>> cache) {
         if (currentDepth > maxDepth || realmObject == null) {
             return null;
         }
         CacheData<RealmModel> cachedObject = cache.get(realmObject);
-        com.rocklobstre.parrot.data.realmmodel.RealmAlarm unmanagedObject;
+        com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm unmanagedObject;
         if (cachedObject != null) {
             // Reuse cached object or recreate it because it was encountered at a lower depth.
             if (currentDepth >= cachedObject.minDepth) {
-                return (com.rocklobstre.parrot.data.realmmodel.RealmAlarm)cachedObject.object;
+                return (com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm)cachedObject.object;
             } else {
-                unmanagedObject = (com.rocklobstre.parrot.data.realmmodel.RealmAlarm)cachedObject.object;
+                unmanagedObject = (com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm)cachedObject.object;
                 cachedObject.minDepth = currentDepth;
             }
         } else {
-            unmanagedObject = new com.rocklobstre.parrot.data.realmmodel.RealmAlarm();
+            unmanagedObject = new com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm();
             cache.put(realmObject, new RealmObjectProxy.CacheData<RealmModel>(currentDepth, unmanagedObject));
         }
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$alarmId(((RealmAlarmRealmProxyInterface) realmObject).realmGet$alarmId());
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$alarmTitle(((RealmAlarmRealmProxyInterface) realmObject).realmGet$alarmTitle());
+        ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$alarmMessage(((RealmAlarmRealmProxyInterface) realmObject).realmGet$alarmMessage());
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$active(((RealmAlarmRealmProxyInterface) realmObject).realmGet$active());
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$vibrateOnly(((RealmAlarmRealmProxyInterface) realmObject).realmGet$vibrateOnly());
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$renewAutomatically(((RealmAlarmRealmProxyInterface) realmObject).realmGet$renewAutomatically());
@@ -784,8 +865,9 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         return unmanagedObject;
     }
 
-    static com.rocklobstre.parrot.data.realmmodel.RealmAlarm update(Realm realm, com.rocklobstre.parrot.data.realmmodel.RealmAlarm realmObject, com.rocklobstre.parrot.data.realmmodel.RealmAlarm newObject, Map<RealmModel, RealmObjectProxy> cache) {
+    static com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm update(Realm realm, com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm realmObject, com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm newObject, Map<RealmModel, RealmObjectProxy> cache) {
         ((RealmAlarmRealmProxyInterface) realmObject).realmSet$alarmTitle(((RealmAlarmRealmProxyInterface) newObject).realmGet$alarmTitle());
+        ((RealmAlarmRealmProxyInterface) realmObject).realmSet$alarmMessage(((RealmAlarmRealmProxyInterface) newObject).realmGet$alarmMessage());
         ((RealmAlarmRealmProxyInterface) realmObject).realmSet$active(((RealmAlarmRealmProxyInterface) newObject).realmGet$active());
         ((RealmAlarmRealmProxyInterface) realmObject).realmSet$vibrateOnly(((RealmAlarmRealmProxyInterface) newObject).realmGet$vibrateOnly());
         ((RealmAlarmRealmProxyInterface) realmObject).realmSet$renewAutomatically(((RealmAlarmRealmProxyInterface) newObject).realmGet$renewAutomatically());
@@ -807,6 +889,10 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.realmmodel
         stringBuilder.append(",");
         stringBuilder.append("{alarmTitle:");
         stringBuilder.append(realmGet$alarmTitle() != null ? realmGet$alarmTitle() : "null");
+        stringBuilder.append("}");
+        stringBuilder.append(",");
+        stringBuilder.append("{alarmMessage:");
+        stringBuilder.append(realmGet$alarmMessage() != null ? realmGet$alarmMessage() : "null");
         stringBuilder.append("}");
         stringBuilder.append(",");
         stringBuilder.append("{active:");

@@ -1,218 +1,279 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+MERGED from [io.realm:realm-android-library:3.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\realm-android-library-3.1.1.aar\bbcbf7ee0b000eb610003c0dbc7bc104\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\design-27.1.1.aar\08aa83a795be9c4ce0ee185abc7ff011\AndroidManifest.xml:17:1-22:12
+MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:2:1-17:12
+MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:2:1-15:12
+MERGED from [com.airbnb.android:lottie:2.5.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\lottie-2.5.5.aar\40058f13ed10ec6ece62b46a373e64f8\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\8fc7dbb63e18272790feeefe6f1673d2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\a700d83b7a6ef9ce141cdc4e2ba8e83f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\fc6e2c5eade0c5c906d619fb59203714\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\0b6b6f3e154678b7f27b600f16de950b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\539a02bf29d4be15737e39776c4a8d09\AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:17:1-30:12
+MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\DropDownView-1.0.1.aar\fb7db3bcdfefeb1bf4c838a930e6ad86\AndroidManifest.xml:9:1-18:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\25e93adcebe7c8dd0fc672674184ed59\AndroidManifest.xml:15:1-21:12
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:17:1-59:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\relinker-1.2.2.aar\88eba58fecb0cf1ff613a84c1209c960\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\62523dad6c6eeab0515186b9b4b812cc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\e1e92cbc8448e1bf4548eb5035adce11\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\1283ff4e6b4423e20fb1d389a8640603\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bdfa8a117c94b2de47a15bd0122273f1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\7aff80523bfed014a0de4ed4cc545d02\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\transition-27.1.1.aar\45d91b5a50459bbff93732d31b4986b5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\efd1577ecadb26220b83f68cb95cd870\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\99b2bff1bc30511ef0864550b92a06e9\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1d8b710078654ac5d50638ff457f99d1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\livedata-1.1.0.aar\be632c065fa8c16bfe6f9d735934bbf3\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1f3310ebf09043f4b519b7cf57746246\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9be975aaf4d4e602919f45c0c7d896a2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2465764d1aae06c67bae4d802cd76ad4\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:3:5-37
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:4:5-37
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:11-69
-	android:versionCode
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:5:5-68
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:6:5-68
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:5:22-65
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:6:22-65
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:6:5-66
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:7:5-66
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:6:22-63
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:7:22-63
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:8:22-64
 supports-screens
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:9:5-11:41
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:11:5-13:41
 	android:smallScreens
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:10:9-37
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:12:9-37
 	android:xlargeScreens
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:11:9-38
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:13:9-38
 application
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:13:5-52:19
-MERGED from [com.android.support:design:25.3.1] C:\Users\hossein\.android\build-cache\457bf3c69aa97427d8df63b7b95006e182ae65b5\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\hossein\.android\build-cache\d7fd15a5b0a805c09fd32e23b16c840213bd39d0\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\hossein\.android\build-cache\d8a0a32fb2af5235a1fea8ada2cc5e4203031e80\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\hossein\.android\build-cache\ed1ca4680b75323cb8e136d4d7c4287db812a110\output\AndroidManifest.xml:9:5-20
-MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.android\build-cache\8b563907fb225f44fd13b23d7633cde2826f87e4\output\AndroidManifest.xml:9:5-13:19
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hossein\.android\build-cache\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hossein\.android\build-cache\d40d9381e735202bede8105aaaf3e20f4e58bcc2\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hossein\.android\build-cache\2a9ae61f69f7b4d59ae187556a34cba3555d3269\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hossein\.android\build-cache\222d7840b9e4b139fe5a924179f87811141b53bb\output\AndroidManifest.xml:26:5-20
-MERGED from [android.arch.lifecycle:extensions:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\89e3db60e1d31004f5317f4188a2b5679bf86101\output\AndroidManifest.xml:26:5-32:19
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hossein\.android\build-cache\0780b031d25c3d1ef1d46bcfb8e91f670761b0fb\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hossein\.android\build-cache\77bc531fc3017626743e41c664491d599e0ca95a\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hossein\.android\build-cache\3b495763b2772c16c3294be4460a1d52d16a1647\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hossein\.android\build-cache\1de05c82ac78fd3a4641c7a0fb552d2347bcd2f2\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hossein\.android\build-cache\3969e355d303fd639cac14ef50d70b21c12e16b9\output\AndroidManifest.xml:29:5-20
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:28:5-57:19
-	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:17:9-41
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:15:5-55:19
+MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:11:5-15:19
+MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:11:5-15:19
+MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:9:5-13:19
+MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:9:5-13:19
+MERGED from [com.airbnb.android:lottie:2.5.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\lottie-2.5.5.aar\40058f13ed10ec6ece62b46a373e64f8\AndroidManifest.xml:11:5-20
+MERGED from [com.airbnb.android:lottie:2.5.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\lottie-2.5.5.aar\40058f13ed10ec6ece62b46a373e64f8\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\539a02bf29d4be15737e39776c4a8d09\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\539a02bf29d4be15737e39776c4a8d09\AndroidManifest.xml:9:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:22:5-28:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:28:5-57:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:28:5-57:19
 	android:supportsRtl
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:18:9-35
-	android:allowBackup
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:15:9-36
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:20:9-35
+	android:label
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:19:9-41
 	android:icon
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:18:9-43
+	android:allowBackup
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:17:9-36
+		REJECTED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:19:9-42
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:21:9-42
+	tools:replace
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:22:9-44
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:14:9-68
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:16:9-68
 activity#com.rocklobstre.parrot.settings.SettingsActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:21:9-25:15
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:24:9-28:15
 	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:23:13-60
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:26:13-60
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:24:13-46
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:27:13-46
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:22:13-76
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:25:13-76
 activity#com.rocklobstre.parrot.alarmlist.AlarmListActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:27:9-36:20
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:30:9-39:20
 	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:29:13-45
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:32:13-45
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:30:13-46
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:33:13-46
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:28:13-78
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:31:13-35:29
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:31:13-78
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:32:17-69
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:32:25-66
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:34:17-77
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:37:27-74
 activity#com.rocklobstre.parrot.alarmreceiver.AlarmReceiverActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:38:9-41:57
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:41:9-44:57
 	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:40:13-64
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:43:13-64
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:41:13-54
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:44:13-54
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:39:13-86
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:42:13-86
 activity#com.rocklobstre.parrot.alarmdetail.AlarmDetailActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:46:9-50:15
+ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:49:9-53:15
 	android:screenOrientation
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:49:13-49
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:52:13-49
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:47:13-46
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:50:13-46
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:46:19-88
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:49:19-88
 uses-sdk
 INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [io.realm:realm-android-library:3.1.1] C:\Users\hossein\.android\build-cache\1306df5725adfe5264d3614c4322e356cff6a830\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] C:\Users\hossein\.android\build-cache\cda60b482d790cee21205391a32fabd61b83a88d\output\AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:design:25.3.1] C:\Users\hossein\.android\build-cache\457bf3c69aa97427d8df63b7b95006e182ae65b5\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:transition:25.3.1] C:\Users\hossein\.android\build-cache\d7fd15a5b0a805c09fd32e23b16c840213bd39d0\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\hossein\.android\build-cache\9a3f456f9195bfd1dab37b24e8f0884eaa4f17f9\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\hossein\.android\build-cache\d8a0a32fb2af5235a1fea8ada2cc5e4203031e80\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\hossein\.android\build-cache\ed1ca4680b75323cb8e136d4d7c4287db812a110\output\AndroidManifest.xml:5:5-7:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\hossein\.android\build-cache\6416dcdd38234c1d7549dfc6aa87f2fab58692a6\output\AndroidManifest.xml:19:5-43
-MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.android\build-cache\8b563907fb225f44fd13b23d7633cde2826f87e4\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hossein\.android\build-cache\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hossein\.android\build-cache\d40d9381e735202bede8105aaaf3e20f4e58bcc2\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hossein\.android\build-cache\2a9ae61f69f7b4d59ae187556a34cba3555d3269\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hossein\.android\build-cache\222d7840b9e4b139fe5a924179f87811141b53bb\output\AndroidManifest.xml:20:5-43
-MERGED from [android.arch.lifecycle:extensions:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\89e3db60e1d31004f5317f4188a2b5679bf86101\output\AndroidManifest.xml:22:5-24:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\a33476a1df530a7df24974230f009c2fc3e12364\output\AndroidManifest.xml:22:5-24:41
-MERGED from [android.arch.core:core:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\59c46a0e8b4a77f909ee0f89c47dfb5a805b98b2\output\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hossein\.android\build-cache\0780b031d25c3d1ef1d46bcfb8e91f670761b0fb\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hossein\.android\build-cache\77bc531fc3017626743e41c664491d599e0ca95a\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hossein\.android\build-cache\3b495763b2772c16c3294be4460a1d52d16a1647\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hossein\.android\build-cache\1de05c82ac78fd3a4641c7a0fb552d2347bcd2f2\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hossein\.android\build-cache\3969e355d303fd639cac14ef50d70b21c12e16b9\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:20:5-22:41
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\hossein\.android\build-cache\457bf3c69aa97427d8df63b7b95006e182ae65b5\output\AndroidManifest.xml:23:9-59
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+MERGED from [io.realm:realm-android-library:3.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\realm-android-library-3.1.1.aar\bbcbf7ee0b000eb610003c0dbc7bc104\AndroidManifest.xml:7:5-9:41
+MERGED from [io.realm:realm-android-library:3.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\realm-android-library-3.1.1.aar\bbcbf7ee0b000eb610003c0dbc7bc104\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\design-27.1.1.aar\08aa83a795be9c4ce0ee185abc7ff011\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\design-27.1.1.aar\08aa83a795be9c4ce0ee185abc7ff011\AndroidManifest.xml:20:5-44
+MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:7:5-9:41
+MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:5:5-7:41
+MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:2.5.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\lottie-2.5.5.aar\40058f13ed10ec6ece62b46a373e64f8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.airbnb.android:lottie:2.5.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\lottie-2.5.5.aar\40058f13ed10ec6ece62b46a373e64f8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\8fc7dbb63e18272790feeefe6f1673d2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\8fc7dbb63e18272790feeefe6f1673d2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\a700d83b7a6ef9ce141cdc4e2ba8e83f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\a700d83b7a6ef9ce141cdc4e2ba8e83f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\fc6e2c5eade0c5c906d619fb59203714\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\fc6e2c5eade0c5c906d619fb59203714\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\0b6b6f3e154678b7f27b600f16de950b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\0b6b6f3e154678b7f27b600f16de950b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\539a02bf29d4be15737e39776c4a8d09\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\539a02bf29d4be15737e39776c4a8d09\AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:20:5-44
+MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\DropDownView-1.0.1.aar\fb7db3bcdfefeb1bf4c838a930e6ad86\AndroidManifest.xml:14:5-16:41
+MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\DropDownView-1.0.1.aar\fb7db3bcdfefeb1bf4c838a930e6ad86\AndroidManifest.xml:14:5-16:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\25e93adcebe7c8dd0fc672674184ed59\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\25e93adcebe7c8dd0fc672674184ed59\AndroidManifest.xml:19:5-43
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:20:5-22:41
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:20:5-22:41
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\relinker-1.2.2.aar\88eba58fecb0cf1ff613a84c1209c960\AndroidManifest.xml:7:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\relinker-1.2.2.aar\88eba58fecb0cf1ff613a84c1209c960\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\62523dad6c6eeab0515186b9b4b812cc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\62523dad6c6eeab0515186b9b4b812cc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\e1e92cbc8448e1bf4548eb5035adce11\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\e1e92cbc8448e1bf4548eb5035adce11\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\1283ff4e6b4423e20fb1d389a8640603\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\1283ff4e6b4423e20fb1d389a8640603\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bdfa8a117c94b2de47a15bd0122273f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bdfa8a117c94b2de47a15bd0122273f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\7aff80523bfed014a0de4ed4cc545d02\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\7aff80523bfed014a0de4ed4cc545d02\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\transition-27.1.1.aar\45d91b5a50459bbff93732d31b4986b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\transition-27.1.1.aar\45d91b5a50459bbff93732d31b4986b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\efd1577ecadb26220b83f68cb95cd870\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\efd1577ecadb26220b83f68cb95cd870\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\99b2bff1bc30511ef0864550b92a06e9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\99b2bff1bc30511ef0864550b92a06e9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1d8b710078654ac5d50638ff457f99d1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1d8b710078654ac5d50638ff457f99d1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\livedata-1.1.0.aar\be632c065fa8c16bfe6f9d735934bbf3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\livedata-1.1.0.aar\be632c065fa8c16bfe6f9d735934bbf3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1f3310ebf09043f4b519b7cf57746246\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1f3310ebf09043f4b519b7cf57746246\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9be975aaf4d4e602919f45c0c7d896a2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9be975aaf4d4e602919f45c0c7d896a2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2465764d1aae06c67bae4d802cd76ad4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2465764d1aae06c67bae4d802cd76ad4\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\hossein\.android\build-cache\457bf3c69aa97427d8df63b7b95006e182ae65b5\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\hossein\.android\build-cache\d7fd15a5b0a805c09fd32e23b16c840213bd39d0\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\hossein\.android\build-cache\9a3f456f9195bfd1dab37b24e8f0884eaa4f17f9\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\hossein\.android\build-cache\d8a0a32fb2af5235a1fea8ada2cc5e4203031e80\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hossein\.android\build-cache\ff1b55553bcf434c33bf01e7d8de7fea30d87af8\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hossein\.android\build-cache\d40d9381e735202bede8105aaaf3e20f4e58bcc2\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hossein\.android\build-cache\2a9ae61f69f7b4d59ae187556a34cba3555d3269\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hossein\.android\build-cache\222d7840b9e4b139fe5a924179f87811141b53bb\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hossein\.android\build-cache\0780b031d25c3d1ef1d46bcfb8e91f670761b0fb\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hossein\.android\build-cache\77bc531fc3017626743e41c664491d599e0ca95a\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hossein\.android\build-cache\3b495763b2772c16c3294be4460a1d52d16a1647\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hossein\.android\build-cache\1de05c82ac78fd3a4641c7a0fb552d2347bcd2f2\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hossein\.android\build-cache\3969e355d303fd639cac14ef50d70b21c12e16b9\output\AndroidManifest.xml:25:5-27:34
-	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\hossein\.android\build-cache\457bf3c69aa97427d8df63b7b95006e182ae65b5\output\AndroidManifest.xml:27:9-31
-	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\hossein\.android\build-cache\457bf3c69aa97427d8df63b7b95006e182ae65b5\output\AndroidManifest.xml:26:9-47
 activity#com.gun0912.tedpermission.TedPermissionActivity
-ADDED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.android\build-cache\8b563907fb225f44fd13b23d7633cde2826f87e4\output\AndroidManifest.xml:10:9-12:56
+ADDED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:10:9-12:56
 	android:theme
-		ADDED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.android\build-cache\8b563907fb225f44fd13b23d7633cde2826f87e4\output\AndroidManifest.xml:12:13-53
+		ADDED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:12:13-53
 	android:name
-		ADDED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.android\build-cache\8b563907fb225f44fd13b23d7633cde2826f87e4\output\AndroidManifest.xml:11:13-75
-provider#android.arch.lifecycle.LifecycleRuntimeTrojanProvider
-ADDED from [android.arch.lifecycle:extensions:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\89e3db60e1d31004f5317f4188a2b5679bf86101\output\AndroidManifest.xml:27:9-31:43
+		ADDED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:11:13-75
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:23:9-27:43
 	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\89e3db60e1d31004f5317f4188a2b5679bf86101\output\AndroidManifest.xml:29:13-68
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:25:13-68
 	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\89e3db60e1d31004f5317f4188a2b5679bf86101\output\AndroidManifest.xml:31:13-40
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:27:13-40
 	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\89e3db60e1d31004f5317f4188a2b5679bf86101\output\AndroidManifest.xml:30:13-37
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.0.0-alpha3] C:\Users\hossein\.android\build-cache\89e3db60e1d31004f5317f4188a2b5679bf86101\output\AndroidManifest.xml:28:13-81
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:24:13-83
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:25:5-80
-IMPLIED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-54:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:25:5-80
+IMPLIED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:25:22-77
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:25:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:26:5-81
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:26:5-81
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:26:22-78
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:26:22-78
 service#com.squareup.leakcanary.internal.HeapAnalyzerService
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:29:9-32:45
-	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:31:13-36
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:29:9-32:45
 	android:process
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:32:13-42
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:32:13-42
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:31:13-36
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:30:13-80
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:30:13-80
 service#com.squareup.leakcanary.DisplayLeakService
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:33:9-35:39
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:33:9-35:39
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:35:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:35:13-36
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:34:13-70
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:34:13-70
 activity#com.squareup.leakcanary.internal.DisplayLeakActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:37:9-49:20
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:37:9-49:20
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:39:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:39:13-36
 	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:41:13-71
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:41:13-71
 	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:40:13-54
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:40:13-54
 	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:43:13-63
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:43:13-63
 	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:42:13-59
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:42:13-59
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:38:13-80
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:38:13-80
 activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:50:9-56:68
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:50:9-56:68
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:52:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:52:13-36
 	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:54:13-82
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:54:13-82
 	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:53:13-54
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:53:13-54
 	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:56:13-65
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:56:13-65
 	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:55:13-59
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:55:13-59
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.android\build-cache\085c3b4e7481eb1e62803b2868875fcd399924b2\output\AndroidManifest.xml:51:13-93
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:51:13-93
