@@ -14,8 +14,8 @@ import retrofit2.http.GET;
 
 public interface RestApi {
 
-    String URL_BASE = "https://my-json-server.typicode.com/RockLobstre/Parrot-JSON/";
+    String URL_BASE = "https://my-json-server.typicode.com/";
 
-    @GET("/reasons")
+    @GET("/RockLobstre/Parrot-JSON/reasons")
     Observable<Response<List<Reason>>> getReminderReasons();
 }

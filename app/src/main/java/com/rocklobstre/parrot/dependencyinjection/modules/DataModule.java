@@ -16,6 +16,10 @@ import com.rocklobstre.parrot.data.alarmdatabase.AlarmDatabase;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmService;
 import com.rocklobstre.parrot.data.retrofit.RestApi;
+import com.rocklobstre.parrot.data.retrofit.executor.JobExecutor;
+import com.rocklobstre.parrot.data.retrofit.executor.PostExecutionThread;
+import com.rocklobstre.parrot.data.retrofit.executor.ThreadExecutor;
+import com.rocklobstre.parrot.data.retrofit.executor.UIThread;
 import com.rocklobstre.parrot.data.retrofit.interceptor.HttpInterceptor;
 import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
 import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
@@ -59,6 +63,19 @@ public final class DataModule {
                 .build()
                 .create(RestApi.class);
     }
+
+    @Provides
+    @MainApplicationScope
+    ThreadExecutor provideThreadExecutor(JobExecutor jobExecutor) {
+        return jobExecutor;
+    }
+
+    @Provides
+    @MainApplicationScope
+    PostExecutionThread providePostExecutionThread(UIThread uiThread) {
+        return uiThread;
+    }
+
 
     @Provides
     @MainApplicationScope

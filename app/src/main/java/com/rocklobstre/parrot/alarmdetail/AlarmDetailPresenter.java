@@ -3,6 +3,8 @@ package com.rocklobstre.parrot.alarmdetail;
 
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.retrofit.executor.PostExecutionThread;
+import com.rocklobstre.parrot.data.retrofit.executor.ThreadExecutor;
 import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import com.rocklobstre.parrot.data.viewmodel.Reason;
@@ -18,6 +20,7 @@ import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableCompletableObserver;
+import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subscribers.DisposableSubscriber;
 
 /**
@@ -35,13 +38,17 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     private final AlarmDetailContract.View view;
     private final BaseSchedulerProvider schedulerProvider;
     private final CompositeDisposable compositeDisposable;
+    private final ThreadExecutor threadExecutor;
+    private final PostExecutionThread postExecutionThread;
 
     //Constructor Injection: What is a use case for Constructor Injection?
     @Inject
     public AlarmDetailPresenter(AlarmDetailContract.View view,
                                 AlarmSource alarmSource,
                                 AlarmRepository alarmRepository,
-                                BaseSchedulerProvider schedulerProvider
+                                BaseSchedulerProvider schedulerProvider,
+                                ThreadExecutor threadExecutor,
+                                PostExecutionThread postExecutionThread
                                 ) {
         this.getAlarm = new GetAlarm(alarmSource);
         this.getReasons = new GetReasons(alarmRepository);
@@ -49,7 +56,8 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
         this.view = view;
         this.schedulerProvider = schedulerProvider;
         this.compositeDisposable = new CompositeDisposable();
-
+        this.threadExecutor = threadExecutor;
+        this.postExecutionThread = postExecutionThread;
     }
 
     @Override
@@ -141,8 +149,8 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     public void onLoadReasonsIconPress() {
         compositeDisposable.add(
                 getReasons.runUseCase()
-                        .subscribeOn(schedulerProvider.io())
-                        .observeOn(schedulerProvider.ui())
+                        .subscribeOn(Schedulers.from(threadExecutor))
+                        .observeOn(postExecutionThread.getScheduler())
                         .subscribeWith(new ReasonsSubscriber())
         );
     }
