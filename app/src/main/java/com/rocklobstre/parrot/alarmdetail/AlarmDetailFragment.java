@@ -60,8 +60,6 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     private RecyclerView recyclerView;
     private DropDownAdapter adapter;
     private int selectedStandId;
-    private TextView selectedStandTitleTV;
-    private TextView selectedStandStatusTV;
     private ImageView headerChevronIV;
     private DropDownAdapter.ViewActions viewActions;
 
@@ -154,7 +152,6 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         dropDownView = (DropDownView) v.findViewById(R.id.drop_down_view);
         View collapsedView = LayoutInflater.from(getActivity()).inflate(R.layout.item_header_drop_down, null, false);
         View expandedView = LayoutInflater.from(getActivity()).inflate(R.layout.item_expanded_drop_down, null, false);
-        selectedStandTitleTV = (TextView) collapsedView.findViewById(R.id.selected_stand_title);
         recyclerView = (RecyclerView) expandedView.findViewById(R.id.recyclerView);
         headerChevronIV = (ImageView) collapsedView.findViewById(R.id.chevron_image);
         dropDownView.setHeaderView(collapsedView);
@@ -269,6 +266,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         //Is there an edge case, where Activity may be null, when this
         //method is called?
         Intent i = new Intent(getActivity(), AlarmListActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
 

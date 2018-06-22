@@ -238,12 +238,14 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
     public void startAlarmDetailActivity(String alarmId) {
         Intent i = new Intent(getActivity(), AlarmDetailActivity.class);
         i.putExtra(ALARM_TO_BE_EDITED, alarmId);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
 
     @Override
     public void startSettingsActivity() {
         Intent i = new Intent(getActivity(), SettingsActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
 

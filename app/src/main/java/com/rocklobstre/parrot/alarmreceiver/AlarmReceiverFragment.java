@@ -111,6 +111,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
                 Alarm which just went off.
                  */
         presenter.start();
+        speakerbox.abandonAudioFocus();
     }
 
     public String getAlarmId() {

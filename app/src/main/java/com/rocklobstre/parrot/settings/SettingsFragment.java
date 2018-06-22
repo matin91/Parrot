@@ -2,6 +2,8 @@ package com.rocklobstre.parrot.settings;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
@@ -9,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rocklobstre.parrot.settings.DaggerSettingsComponent;
@@ -56,6 +59,10 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_settings, container, false);
         back = (ImageButton) v.findViewById(R.id.imb_settings_back);
+        TextView verion = (TextView) v.findViewById(R.id.lbl_settings_version);
+
+        verion.setText(getResources().getString(R.string.settings_version_number) + getVersionString());
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +70,16 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
             }
         });
         return v;
+    }
+
+    public String getVersionString(){
+        PackageInfo pInfo = null;
+        try {
+            pInfo = getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return pInfo.versionName;
     }
 
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -95,6 +112,8 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
 
     @Override
     public void startAlarmListActivity() {
-        startActivity(new Intent(getActivity(), AlarmListActivity.class));
+        Intent i = new Intent(getActivity(), AlarmListActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
     }
 }
