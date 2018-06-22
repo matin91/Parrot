@@ -1,10 +1,14 @@
 package com.rocklobstre.parrot.alarmdetail;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +16,19 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.anthonyfdev.dropdownview.DropDownView;
 import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.PostrainerApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import com.rocklobstre.parrot.alarmlist.AlarmListActivity;
+import com.rocklobstre.parrot.data.viewmodel.Reason;
 
+import java.util.List;
 import java.util.Locale;
 
 import javax.inject.Inject;
@@ -41,13 +49,21 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     private EditText alarmTitle;
     private EditText alarmMessage;
     private ImageButton testMessage;
-    private ImageButton loadReasons;
     private CheckBox vibrateOnly, autoRenew;
     private TimePicker nosePicker;
     private ImageView back, proceed, clearMessage;
 
     private String alarmId;
     private boolean currentAlarmState;
+
+    private DropDownView dropDownView;
+    private RecyclerView recyclerView;
+    private DropDownAdapter adapter;
+    private int selectedStandId;
+    private TextView selectedStandTitleTV;
+    private TextView selectedStandStatusTV;
+    private ImageView headerChevronIV;
+    private DropDownAdapter.ViewActions viewActions;
 
     public AlarmDetailFragment() {
     }
@@ -92,16 +108,14 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         alarmTitle = (EditText) v.findViewById(R.id.edt_alarm_title);
         alarmMessage = (EditText) v.findViewById(R.id.edt_alarm_message);
         nosePicker = (TimePicker) v.findViewById(R.id.pck_alarm_time);
-
         testMessage = (ImageButton) v.findViewById(R.id.imb_start_speak);
-
-        loadReasons = (ImageButton) v.findViewById(R.id.imb_load_reasons);
-
         vibrateOnly = (CheckBox) v.findViewById(R.id.chb_vibrate_only);
         autoRenew = (CheckBox) v.findViewById(R.id.chb_renew_automatically);
-
         back = (ImageButton) v.findViewById(R.id.imb_alarm_detail_back);
         clearMessage = (ImageButton) v.findViewById(R.id.imb_clear_alarm_message);
+        proceed = (ImageButton) v.findViewById(R.id.imb_alarm_detail_proceed);
+        setUpDropDownViews(v);
+
 
         speakerbox.setActivity(getActivity());
 
@@ -119,13 +133,6 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
             }
         });
 
-        loadReasons.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                presenter.onLoadReasonsIconPress();
-            }
-        });
-
         clearMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,9 +140,6 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
             }
         });
 
-
-
-        proceed = (ImageButton) v.findViewById(R.id.imb_alarm_detail_proceed);
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,6 +149,36 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
         return v;
     }
+
+    private void setUpDropDownViews(View v) {
+        dropDownView = (DropDownView) v.findViewById(R.id.drop_down_view);
+        View collapsedView = LayoutInflater.from(getActivity()).inflate(R.layout.item_header_drop_down, null, false);
+        View expandedView = LayoutInflater.from(getActivity()).inflate(R.layout.item_expanded_drop_down, null, false);
+        selectedStandTitleTV = (TextView) collapsedView.findViewById(R.id.selected_stand_title);
+        recyclerView = (RecyclerView) expandedView.findViewById(R.id.recyclerView);
+        headerChevronIV = (ImageView) collapsedView.findViewById(R.id.chevron_image);
+        dropDownView.setHeaderView(collapsedView);
+        dropDownView.setExpandedView(expandedView);
+        dropDownView.setDropDownListener(dropDownListener);
+    }
+
+    private final DropDownView.DropDownListener dropDownListener = new DropDownView.DropDownListener() {
+        @Override
+        public void onExpandDropDown() {
+            if (adapter == null)
+                presenter.onDropDownExpand();
+            else
+                adapter.notifyDataSetChanged();
+            ObjectAnimator.ofFloat(headerChevronIV, View.ROTATION.getName(), 180).start();
+        }
+
+        @Override
+        public void onCollapseDropDown() {
+            ObjectAnimator.ofFloat(headerChevronIV, View.ROTATION.getName(), -180, 0).start();
+        }
+    };
+
+
 
     @Override
     public void onResume() {
@@ -259,6 +293,38 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
             testMessage.setImageResource(R.drawable.ic_speaker_play);
         } else
             speakerbox.play(getReminderMessage(), onStart, onDone, null);
+    }
+
+    @Override
+    public void setUpDropDown(List<Reason> reasons) {
+        viewActions = new DropDownAdapter.ViewActions() {
+            @Override
+            public void collapseDropDown() {
+                dropDownView.collapseDropDown();
+            }
+
+            @Override
+            public void setSelectedStand(int standId) {
+                if (!TextUtils.isEmpty(alarmMessage.getText()))
+                    alarmMessage.setText(alarmMessage.getText() + ".\n" + getStandTitle(standId));
+                else
+                    alarmMessage.setText(getStandTitle(standId));
+                selectedStandId = standId;
+            }
+
+            @Override
+            public String getStandTitle(int standId) {
+                return reasons.get(standId).getReasonMessage();
+            }
+
+            @Override
+            public int getSelectedStand() {
+                return selectedStandId;
+            }
+        };
+        adapter = new DropDownAdapter(viewActions, reasons.size());
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adapter);
     }
 
     @Override

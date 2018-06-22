@@ -7,4 +7,9 @@
     <integer name="act_transition_length">300</integer>
     <item name="act_fade_deg" format="float" type="dimen">0.6</item>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- DropDownDimens. -->
+    <dimen name="defaultHeaderHeight">72dp</dimen>
+    <dimen name="double_margin">16dp</dimen>
+    <dimen name="standard_margin">8dp</dimen>
 </resources>

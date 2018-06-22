@@ -3,6 +3,9 @@ package com.rocklobstre.parrot.alarmdetail;
 import com.rocklobstre.parrot.base.BasePresenter;
 import com.rocklobstre.parrot.base.BaseView;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
+import com.rocklobstre.parrot.data.viewmodel.Reason;
+
+import java.util.List;
 
 /**
  * Created by Ryan on 06/03/2017.
@@ -30,6 +33,7 @@ public interface AlarmDetailContract {
 
         void startSpeakingMessage();
 
+        void setUpDropDown(List<Reason> reasons);
     }
 
     interface Presenter extends BasePresenter {
@@ -41,7 +45,6 @@ public interface AlarmDetailContract {
 
         void onClearMessageIconPress();
 
-        void onLoadReasonsIconPress();
-
+        void onDropDownExpand();
     }
 }

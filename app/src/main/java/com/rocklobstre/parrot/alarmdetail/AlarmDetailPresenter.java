@@ -36,7 +36,6 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
 
 
     private final AlarmDetailContract.View view;
-    private final BaseSchedulerProvider schedulerProvider;
     private final CompositeDisposable compositeDisposable;
     private final ThreadExecutor threadExecutor;
     private final PostExecutionThread postExecutionThread;
@@ -46,7 +45,6 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     public AlarmDetailPresenter(AlarmDetailContract.View view,
                                 AlarmSource alarmSource,
                                 AlarmRepository alarmRepository,
-                                BaseSchedulerProvider schedulerProvider,
                                 ThreadExecutor threadExecutor,
                                 PostExecutionThread postExecutionThread
                                 ) {
@@ -54,7 +52,6 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
         this.getReasons = new GetReasons(alarmRepository);
         this.updateOrCreateAlarm = new UpdateOrCreateAlarm(alarmSource);
         this.view = view;
-        this.schedulerProvider = schedulerProvider;
         this.compositeDisposable = new CompositeDisposable();
         this.threadExecutor = threadExecutor;
         this.postExecutionThread = postExecutionThread;
@@ -73,8 +70,8 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     public void getReminder(){
         compositeDisposable.add(
                 getAlarm.runUseCase(view.getAlarmId())
-                        .subscribeOn(schedulerProvider.io())
-                        .observeOn(schedulerProvider.ui())
+                        .subscribeOn(Schedulers.from(threadExecutor))
+                        .observeOn(postExecutionThread.getScheduler())
                         .subscribeWith(
                                 new DisposableSubscriber<Alarm>() {
                                     @Override
@@ -117,8 +114,8 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
 
         compositeDisposable.add(
                 updateOrCreateAlarm.runUseCase(alarm)
-                        .subscribeOn(schedulerProvider.io())
-                        .observeOn(schedulerProvider.ui())
+                        .subscribeOn(Schedulers.from(threadExecutor))
+                        .observeOn(postExecutionThread.getScheduler())
                         .subscribeWith(
                                 new DisposableCompletableObserver() {
                                     @Override
@@ -146,7 +143,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     }
 
     @Override
-    public void onLoadReasonsIconPress() {
+    public void onDropDownExpand(){
         compositeDisposable.add(
                 getReasons.runUseCase()
                         .subscribeOn(Schedulers.from(threadExecutor))
@@ -163,8 +160,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
         }
 
         @Override public void onNext(List<Reason> reasons) {
-            view.setAlarmMessage(reasons.get(1).getReasonMessage());
-            view.startSpeakingMessage();
+            view.setUpDropDown(reasons);
         }
     }
 

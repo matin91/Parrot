@@ -17,7 +17,7 @@
 
     <!-- ActivityManageAlarm -->
     <string name="manage_alarm_title_hint">Alarm Title</string>
-    <string name="manage_alarm_message_hint">Reminder Message</string>
+    <string name="manage_alarm_message_hint">Write a Reminder…</string>
     <string name="manage_alarm_vibrate">Vibrate Only</string>
     <string name="manage_alarm_renew">Renew Automatically</string>
     <string name="manage_alarm_action_done">Done</string>
@@ -100,7 +100,7 @@
     <string name="msg_alarm_deactivated">Alarm Deactivated</string>
     <string name="msg_alarm_deleted">Alarm Deleted</string>
     <string name="def_alarm_name">New Alarm</string>
-    <string name="def_alarm_message">You have set an alarm, do you remember why?</string>
+    <string name="def_alarm_message">You’ve slept. Now get out of the bedroom.</string>
     <string name="msg_alarm_limit_reached">Maximun Alarms per Day is 5.</string>
     <string name="error_invalid_alarm_id">That\'s not supposed to happen. Contact the Dev. if this message keeps appearing.</string>
     <string name="error_managing_alarm">Error Managing Alarm</string>
@@ -108,6 +108,7 @@
     <string name="action_delete_item">Alarm Deleted</string>
     <string name="action_undo">UNDO</string>
     <string name="error_unable_to_retrieve_alarm">Unable to Restore Alarm</string>
+    <string name="add_a_reminder">Add a Reminder</string>
 
 
 </resources>

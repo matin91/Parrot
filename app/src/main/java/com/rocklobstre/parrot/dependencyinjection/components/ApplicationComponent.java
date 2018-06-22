@@ -32,6 +32,8 @@ import com.rocklobstre.parrot.dependencyinjection.modules.DataModule;
 import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 
 /**
