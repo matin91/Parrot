@@ -15,8 +15,10 @@
 
 ## What is Parrot?
 
-Parrot is a Talking Alarm App which allows the user to set up to 5 Daily Reminders containing a Reminder Message that is Spoken when the Alarm is triggered. Also, the user can search through inspirational built-in Reminder Messages such as "You’ve slept. Now get out of the bedroom.", "It's time to Drink water!" or "Get up early and have breakfast, which really is the most important meal of the day!".\n
+Parrot is a Talking Alarm App which allows the user to set up to 5 Daily Reminders containing a Reminder Message that is Spoken when the Alarm is triggered. Also, the user can search through inspirational built-in Reminder Messages such as "You’ve slept. Now get out of the bedroom.", "It's time to Drink water!" or "Get up early and have breakfast, which really is the most important meal of the day!".
+
 I used TextToSpeech Library for the Talking Feature.
+
 I'm applying Clean Architecture Principles, as well as Dagger 2 for Dependency Injection, RxJava 2 for Concurrency/Communication, Retrofit for Web Services and a Realm Database to store the Reminders. I specially thank Ryan K (BracketCov(http://wiseassblog.com/)) for walking me through Clean MVP Architecture.
 
 
@@ -61,6 +63,7 @@ This project is greatly inspired by Clean Architecture Principles. Now that I'm 
 * RxJava/RxAndroid 2 for concurrency. Rx allows me to create Data Streams which change over time, based on what happens in each Layer.
 * Mockito to help with Unit Testing
 * Realm for storing Reminders
+* Retrofit for calling web APIs
 * Plenty of System Services Like Vibrator, AlarmManager, MediaPlayer, PowerManager.WakeLock
 
 ## Sources and Inspiration
