@@ -1,6 +1,7 @@
-
-<img src="ic_launcher.png" alt="App Launcher" width="400" height="400"/>
 # Parrot
+
+<img src="ic_launcher.png" alt="App Launcher" width="100" height="100"/>
+
 
 ## Topics
 * [What is Parrot?](#what-is-Parrot)
@@ -14,7 +15,7 @@
 
 ## What is Parrot?
 
-Parrot is Talking Alarm App which allows the user to set up to 5 Daily Reminders containing a Reminder Message that is Spoken when the Alarm is triggered. Also, the user can search through inspirational built-in Reminder Messages such as "You’ve slept. Now get out of the bedroom.", "It's time to Drink water!" or "Get up early and have breakfast, which really is the most important meal of the day!".
+Parrot is a Talking Alarm App which allows the user to set up to 5 Daily Reminders containing a Reminder Message that is Spoken when the Alarm is triggered. Also, the user can search through inspirational built-in Reminder Messages such as "You’ve slept. Now get out of the bedroom.", "It's time to Drink water!" or "Get up early and have breakfast, which really is the most important meal of the day!".
 I'm applying Clean Architecture Principles, as well as Dagger 2 for Dependency Injection, RxJava 2 for Concurrency/Communication, Retrofit for Web Services and a Realm Database to store the Reminders. I specially thank Ryan K (BracketCov(http://wiseassblog.com/)) for walking me through Clean MVP Architecture.
 
 
