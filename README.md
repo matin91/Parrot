@@ -13,12 +13,9 @@
 
 ## What is Parrot?
 
-Parrot is an Alarm App which allows the user to set up to 5 Daily Reminders to sit up Straight and/or Perform stretches to combat bad Posture from being a Desk Jockey.
+Parrot is Talking Alarm App which allows the user to set up to 5 Daily Reminders containing a Reminder Message that is Spoken when the Alarm is triggered. Also, the user can search through inspirational built-in Reminder Messages such as "You’ve slept. Now get out of the bedroom.", "It's time to Drink water!" or "Get up early and have breakfast, which really is the most important meal of the day!".
+I'm applying Clean Architecture Principles, as well as Dagger 2 for Dependency Injection, RxJava 2 for Concurrency/Communication, Retrofit for Web Services and a Realm Database to store the Reminders. I specially thank Ryan K (BracketCov(http://wiseassblog.com/)) for walking me through Clean MVP Architecture.
 
-This App has seen over 5 iterations, as it was the second App Idea I ever built. At this time, I'm currently refactoring it to apply Clean Architecture Principles, as well as Dagger 2 for Dependency Injection, RxJava 2 for Concurrency/Communication, and a Realm Database to store the Reminders. Please see my Software Architecture Diagram for a generalized Picture of this Application's Software Architecture.
-
-This App is available on the Play Store here:
-https://play.google.com/store/apps/details?id=com.rocklobstre.parrot&hl=en
 
 ### AlarmList Component
 <img src="reminder_list.png" alt="Login Screen" width="270" height="480"/>
@@ -27,6 +24,7 @@ https://play.google.com/store/apps/details?id=com.rocklobstre.parrot&hl=en
 
 ### AlarmDetail Component
 <img src="reminder_detail.png" alt="Create Account Screen" width="270" height="480"/>
+<img src="reminder_detail_select_reason.png" alt="Select Reminder Reason Screen" width="270" height="480"/>
 
 ### AlarmReceiver Page Component
 <img src="alarm_receiver.png" alt="Profile Page Screen" width="270" height="480"/>
@@ -34,18 +32,8 @@ https://play.google.com/store/apps/details?id=com.rocklobstre.parrot&hl=en
 ### Settings  Component
 <img src="settings.png" alt="Settings Screen" width="270" height="480"/>
 
-## Change Log
-
-As of July 2017, Parrot has been drastically refactored. Changes include:
-- Removal of Reminder Objects and references to Reminders. This Decision was made based on the ambiguity between a Reminder and an Alarm. No need for two names that have the same data.
-- Overhaul of my RxJava 2 Implementation. Now uses CompositeDisposable with Observables created via UseCases.
-- Generally UI Improvements
-
 ## Issues
-
-- Styling the TimePicker Widget across API versions and Screen sizes is a very obnoxious process; particularly API 21. This will need to be improved over time.
-
-- AlarmReceiver Component sometimes behaves unexpectedly. At this point, I'm considering releasing the wakelock/alarm the moment onPause() is called, just to avoid crashes and issues releasing the Wakelock. 
+- AlarmReceiver Component sometimes behaves unexpectedly. At this point, I'm considering releasing the wakelock/alarm the moment onPause() is called, just to avoid crashes and issues releasing the Wakelock.
 
 
 
@@ -74,6 +62,10 @@ This project is greatly inspired by Clean Architecture Principles. Now that I'm 
 
 ## Sources and Inspiration
 
+Thanks to Ryan for sharing free content and giving everybody a chance of being a Great Developer.
+
+https://www.youtube.com/user/gosuddr93/feed
+
 Fernando Cejas' Repository and material on Android and Clean Architecture was very useful to me. Being able to see working code is one of the greatest resources, and although I do many things differently (differently, not necessarily better), I don't think I would attempted this without such an awesome reference!
 
 https://github.com/android10/Android-CleanArchitecture
@@ -93,24 +85,11 @@ http://fragmentedpodcast.com/episodes/11/
 
 
 ## Contact/Support me:
-It's my personal goal to create free high-quality content, accesible by anyone who has an Internet connection, as I don't feel ownership over knowledge which has graciously been given to me for free (I've never taken a paid course for Android Development).
-
-That being said, if the 200+ hours of my time spent coding, researching, making learning aids, and producing content for this project, and the effort I take to explain things in a simple and clear way (which I often fail to do), is worth throwing a bit of money at, then please do!
-
-If you're in a position where monetary support isn't an option, then you can also help out by liking/sharing my stuff on Social Media. This helps me with SEO and building an audience, and I greatly appreciate it! Lastly, drop me a comment on one of my videos.
-
-[G+](https://plus.google.com/+wiseass)
-
-[Facebook](https://www.facebook.com/wiseassblog/)
-
-[Twitter](https://twitter.com/wiseAss301)
-
-[Patreon](https://www.patreon.com/bePatron?u=5114325)
-
-[Primary Website](http://wiseassblog.com/)
+It's my personal goal to create high-quality content, I'v been writing quality apps for almost 5 years and I passionate myself for what I do, and I'm glad if you would like to work with me.
+[Gmail](mattinn91@gmail.com)
 
 ## License
- * Copyright 2016, The Android Open Source Project
+ * Copyright 2017, The Android Open Source Project
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
