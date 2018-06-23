@@ -59,7 +59,7 @@
     <EditText
         android:id="@+id/edt_alarm_title"
         style="@style/InputField.ReminderName"
-        android:theme="@style/Postrainer.Inverse"
+        android:theme="@style/Parrot.Inverse"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/pck_alarm_time"
@@ -76,7 +76,7 @@
     <CheckBox
         android:id="@+id/chb_vibrate_only"
         style="@style/CheckBox_White_Border"
-        android:theme="@style/Postrainer.Inverse"
+        android:theme="@style/Parrot.Inverse"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edt_alarm_title"
@@ -93,7 +93,7 @@
     <CheckBox
         android:id="@+id/chb_renew_automatically"
         style="@style/CheckBox_White_Border"
-        android:theme="@style/Postrainer.Inverse"
+        android:theme="@style/Parrot.Inverse"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/chb_vibrate_only"
@@ -135,8 +135,7 @@
             >
             <EditText
                 android:id="@+id/edt_alarm_message"
-                android:theme="@style/Postrainer.Inverse"
-                android:lines="3"
+                android:theme="@style/Parrot.Inverse"
                 android:gravity="top"
                 android:layout_weight=".10"
                 android:textColor="@color/WHITE"
@@ -144,6 +143,8 @@
                 android:paddingTop="16dp"
                 android:textSize="18dp"
                 android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="1000"
+                android:maxLines="10"
                 android:background="@color/TRANSPARENT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -11,7 +11,7 @@ import android.provider.Settings;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.GsonBuilder;
 import com.mapzen.speakerbox.Speakerbox;
-import com.rocklobstre.parrot.PostrainerApplication;
+import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmDatabase;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmService;

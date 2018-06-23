@@ -52,7 +52,7 @@ android {
     }
     sourceSets {
         prod {
-            java.srcDirs = ['src/prod/java', 'src/prod/java/com/bracketcove/postrainer/scheduler']
+            java.srcDirs = ['src/prod/java', 'src/prod/java/com/bracketcove/Parrot/scheduler']
         }
     }
     compileOptions {

@@ -1,8 +1,8 @@
 
-# PosTrainer
+# Parrot
 
 ## Topics
-* [What is PosTrainer?](#what-is-postrainer)
+* [What is Parrot?](#what-is-Parrot)
 * [Change Log](#change-log)
 * [Software Architecture Diagram](#software-architecture-diagram)
 * [Can I use the code?](#can-i-use-code-from-this-repo)
@@ -11,9 +11,9 @@
 * [Support Me](#contactsupport-me)
 * [License](#license)
 
-## What is PosTrainer?
+## What is Parrot?
 
-PosTrainer is an Alarm App which allows the user to set up to 5 Daily Reminders to sit up Straight and/or Perform stretches to combat bad Posture from being a Desk Jockey.
+Parrot is an Alarm App which allows the user to set up to 5 Daily Reminders to sit up Straight and/or Perform stretches to combat bad Posture from being a Desk Jockey.
 
 This App has seen over 5 iterations, as it was the second App Idea I ever built. At this time, I'm currently refactoring it to apply Clean Architecture Principles, as well as Dagger 2 for Dependency Injection, RxJava 2 for Concurrency/Communication, and a Realm Database to store the Reminders. Please see my Software Architecture Diagram for a generalized Picture of this Application's Software Architecture.
 
@@ -36,7 +36,7 @@ https://play.google.com/store/apps/details?id=com.rocklobstre.parrot&hl=en
 
 ## Change Log
 
-As of July 2017, PosTrainer has been drastically refactored. Changes include:
+As of July 2017, Parrot has been drastically refactored. Changes include:
 - Removal of Reminder Objects and references to Reminders. This Decision was made based on the ambiguity between a Reminder and an Alarm. No need for two names that have the same data.
 - Overhaul of my RxJava 2 Implementation. Now uses CompositeDisposable with Observables created via UseCases.
 - Generally UI Improvements

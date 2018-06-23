@@ -17,6 +17,8 @@ public interface AlarmReceiverContract {
             void finishActivity();
 
             void startSpeakingMessage(String message);
+
+            void onAlarmDismiss();
     }
 
     interface Presenter extends BasePresenter {

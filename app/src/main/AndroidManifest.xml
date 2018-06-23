@@ -13,24 +13,24 @@
         android:xlargeScreens="false" />
 
     <application
-        android:name="com.rocklobstre.parrot.PostrainerApplication"
+        android:name="com.rocklobstre.parrot.ParrotApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Postrainer"
+        android:theme="@style/Parrot"
         tools:replace="android:allowBackup"
         >
         <activity
             android:name="com.rocklobstre.parrot.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:theme="@style/Postrainer"
+            android:theme="@style/Parrot"
             />
 
         <activity
             android:name="com.rocklobstre.parrot.alarmlist.AlarmListActivity"
             android:label="@string/app_name"
-            android:theme="@style/Postrainer">
+            android:theme="@style/Parrot">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,13 +41,13 @@
         <activity
             android:name="com.rocklobstre.parrot.alarmreceiver.AlarmReceiverActivity"
             android:label="@string/title_activity_manage_alarm"
-            android:theme="@style/Postrainer.Inverse" />
+            android:theme="@style/Parrot.Inverse" />
 
         <!-- AlarmDetail's Orientation locked to portait, due to several issues/crashes with styling
         TimePicker across version and orientation changes -->
 
         <activity android:name="com.rocklobstre.parrot.alarmdetail.AlarmDetailActivity"
-            android:theme="@style/Postrainer"
+            android:theme="@style/Parrot"
 
             android:screenOrientation="portrait"
             />

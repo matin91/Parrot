@@ -22,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rocklobstre.parrot.alarmlist.DaggerAlarmListComponent;
-import com.rocklobstre.parrot.PostrainerApplication;
+import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.alarmdetail.AlarmDetailActivity;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
@@ -70,7 +70,7 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
         DaggerAlarmListComponent.builder()
                 .alarmListPresenterModule(new AlarmListPresenterModule(this))
                 .applicationComponent(
-                        ((PostrainerApplication) getActivity().getApplication())
+                        ((ParrotApplication) getActivity().getApplication())
                                 .getApplicationComponent()
                 )
                 .build().inject(this);

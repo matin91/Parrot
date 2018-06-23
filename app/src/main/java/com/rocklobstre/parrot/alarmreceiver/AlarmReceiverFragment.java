@@ -18,7 +18,7 @@ import com.airbnb.lottie.LottieComposition;
 import com.airbnb.lottie.OnCompositionLoadedListener;
 import com.mapzen.speakerbox.Speakerbox;
 import com.rocklobstre.parrot.alarmreceiver.DaggerAlarmReceiverComponent;
-import com.rocklobstre.parrot.PostrainerApplication;
+import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 
@@ -63,7 +63,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         DaggerAlarmReceiverComponent.builder()
                 .alarmReceiverPresenterModule(new AlarmReceiverPresenterModule(this))
                 .applicationComponent(
-                        ((PostrainerApplication) getActivity().getApplication())
+                        ((ParrotApplication) getActivity().getApplication())
                                 .getApplicationComponent()
                 )
                 .build().inject(this);
@@ -161,6 +161,12 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
                 speakerbox.play(message, onStart, onDone, null);
             }
         }, 3000);
+    }
+
+    @Override
+    public void onAlarmDismiss() {
+        speakerbox.abandonAudioFocus();
+        speakerbox.stop();
     }
 
     private void lottieProgressConfig(final LottieAnimationView animationView) {

@@ -18,7 +18,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieComposition;
 import com.airbnb.lottie.OnCompositionLoadedListener;
 import com.rocklobstre.parrot.settings.DaggerSettingsComponent;
-import com.rocklobstre.parrot.PostrainerApplication;
+import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.alarmlist.AlarmListActivity;
 
@@ -54,7 +54,7 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
         DaggerSettingsComponent.builder()
                 .settingsPresenterModule(new SettingsPresenterModule(this))
                 .applicationComponent(
-                        ((PostrainerApplication) getActivity().getApplication())
+                        ((ParrotApplication) getActivity().getApplication())
                                 .getApplicationComponent()
                 )
                 .build().inject(this);

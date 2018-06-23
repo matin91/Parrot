@@ -2,7 +2,7 @@
 
     <!-- I put high level theme data which effects App/Activities/Fragments here. -->
 
-    <style name="Postrainer" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Parrot" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -13,7 +13,7 @@
         <item name="android:timePickerStyle">@style/CustomTimePicker</item>
     </style>
 
-    <style name="Postrainer.Inverse" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Parrot.Inverse" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

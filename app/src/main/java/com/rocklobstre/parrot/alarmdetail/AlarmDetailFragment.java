@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import com.anthonyfdev.dropdownview.DropDownView;
 import com.mapzen.speakerbox.Speakerbox;
-import com.rocklobstre.parrot.PostrainerApplication;
+import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import com.rocklobstre.parrot.alarmlist.AlarmListActivity;
@@ -59,6 +59,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     private int selectedStandId;
     private ImageView headerChevronIV;
     private DropDownAdapter.ViewActions viewActions;
+    private TextView dropDownHeaderTitle;
 
     public AlarmDetailFragment() {
     }
@@ -84,7 +85,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         DaggerAlarmDetailComponent.builder()
                 .alarmDetailPresenterModule(new AlarmDetailPresenterModule(this))
                 .applicationComponent(
-                        ((PostrainerApplication) getActivity().getApplication())
+                        ((ParrotApplication) getActivity().getApplication())
                                 .getApplicationComponent()
                 )
                 .build().inject(this);
@@ -121,6 +122,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         clearMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                alarmMessage.requestFocus();
                 presenter.onClearMessageIconPress();
             }
         });
@@ -141,6 +143,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         View expandedView = LayoutInflater.from(getActivity()).inflate(R.layout.item_expanded_drop_down, null, false);
         recyclerView = (RecyclerView) expandedView.findViewById(R.id.recyclerView);
         headerChevronIV = (ImageView) collapsedView.findViewById(R.id.chevron_image);
+        dropDownHeaderTitle = (TextView) collapsedView.findViewById(R.id.selected_stand_title);
         dropDownView.setHeaderView(collapsedView);
         dropDownView.setExpandedView(expandedView);
         dropDownView.setDropDownListener(dropDownListener);
@@ -149,9 +152,10 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     private final DropDownView.DropDownListener dropDownListener = new DropDownView.DropDownListener() {
         @Override
         public void onExpandDropDown() {
-            if (adapter == null)
+            if (adapter == null) {
+                dropDownHeaderTitle.setText(getResources().getString(R.string.loading));
                 presenter.onDropDownExpand();
-            else
+            } else
                 adapter.notifyDataSetChanged();
             ObjectAnimator.ofFloat(headerChevronIV, View.ROTATION.getName(), 180).start();
         }
@@ -259,6 +263,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
     @Override
     public void setUpDropDown(List<Reason> reasons) {
+        dropDownHeaderTitle.setText("");
         viewActions = new DropDownAdapter.ViewActions() {
             @Override
             public void collapseDropDown() {
