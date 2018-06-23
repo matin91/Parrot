@@ -1,4 +1,5 @@
 
+<img src="ic_launcher.png" alt="App Launcher" width="400" height="400"/>
 # Parrot
 
 ## Topics
