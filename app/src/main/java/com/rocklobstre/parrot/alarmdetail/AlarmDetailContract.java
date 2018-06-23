@@ -31,8 +31,6 @@ public interface AlarmDetailContract {
 
         void startAlarmListActivity();
 
-        void startSpeakingMessage();
-
         void setUpDropDown(List<Reason> reasons);
     }
 
@@ -40,8 +38,6 @@ public interface AlarmDetailContract {
         void onBackIconPress();
 
         void onDoneIconPress();
-
-        void onTestMessageIconPress();
 
         void onClearMessageIconPress();
 

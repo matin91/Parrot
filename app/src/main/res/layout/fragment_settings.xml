@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/windowBackground"
+    android:background="@color/LIGHT_GREY"
     android:divider="@drawable/divider_accent"
     android:gravity="center_horizontal"
     android:id="@+id/root_settings_fragment"
@@ -79,12 +79,13 @@
         app:layout_constraintTop_toBottomOf="@+id/lbl_settings_contact_info"
         android:layout_marginTop="16dp" />
 
-    <ImageView
-        android:id="@+id/settings_logo"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_bracketlogobluelarge"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"
+        android:duplicateParentState="true"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
@@ -92,6 +93,8 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/div_settings_three" />
+        app:layout_constraintTop_toBottomOf="@+id/div_settings_three"
+        />
+
 
 </android.support.constraint.ConstraintLayout>

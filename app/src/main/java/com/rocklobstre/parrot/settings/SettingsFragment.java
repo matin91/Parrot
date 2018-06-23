@@ -14,10 +14,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
+import com.airbnb.lottie.OnCompositionLoadedListener;
 import com.rocklobstre.parrot.settings.DaggerSettingsComponent;
 import com.rocklobstre.parrot.PostrainerApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.alarmlist.AlarmListActivity;
+
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -31,6 +36,7 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
     SettingsPresenter settingsPresenter;
 
     private ImageButton back;
+    private LottieAnimationView androidLottie;
 
     public SettingsFragment() {
 
@@ -59,9 +65,11 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_settings, container, false);
         back = (ImageButton) v.findViewById(R.id.imb_settings_back);
+        androidLottie = (LottieAnimationView) v.findViewById(R.id.animation_view);
         TextView verion = (TextView) v.findViewById(R.id.lbl_settings_version);
 
         verion.setText(getResources().getString(R.string.settings_version_number) + getVersionString());
+        lottieProgressConfig(androidLottie);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,5 +123,21 @@ public class SettingsFragment extends Fragment implements SettingsContract.View 
         Intent i = new Intent(getActivity(), AlarmListActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
+    }
+
+    private void lottieProgressConfig(final LottieAnimationView animationView) {
+        animationView.loop(false);
+        LottieComposition.Factory.fromAssetFileName(Objects.requireNonNull(getActivity()), "android.json",
+                new OnCompositionLoadedListener() {
+                    @Override public void onCompositionLoaded(LottieComposition composition) {
+                        animationView.setComposition(composition);
+                    }
+                });
+
+        if (animationView.getProgress() == 1f) {
+            animationView.setProgress(0f);
+        }
+        animationView.resumeAnimation();
+
     }
 }

@@ -3,11 +3,13 @@ package com.rocklobstre.parrot.alarmdetail;
 
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
 import com.rocklobstre.parrot.data.retrofit.executor.PostExecutionThread;
 import com.rocklobstre.parrot.data.retrofit.executor.ThreadExecutor;
 import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import com.rocklobstre.parrot.data.viewmodel.Reason;
+import com.rocklobstre.parrot.usecase.SetAlarm;
 import com.rocklobstre.parrot.usecase.subscriber.BaseSubscriber;
 import com.rocklobstre.parrot.usecase.GetAlarm;
 import com.rocklobstre.parrot.usecase.GetReasons;
@@ -31,12 +33,14 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
 
     //Use Cases
     private final GetAlarm getAlarm;
+    private final SetAlarm setAlarm;
     private final UpdateOrCreateAlarm updateOrCreateAlarm;
     private final GetReasons getReasons;
 
 
     private final AlarmDetailContract.View view;
     private final CompositeDisposable compositeDisposable;
+    private final BaseSchedulerProvider schedulerProvider;
     private final ThreadExecutor threadExecutor;
     private final PostExecutionThread postExecutionThread;
 
@@ -44,15 +48,19 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     @Inject
     public AlarmDetailPresenter(AlarmDetailContract.View view,
                                 AlarmSource alarmSource,
+                                AlarmManager alarmManager,
                                 AlarmRepository alarmRepository,
+                                BaseSchedulerProvider schedulerProvider,
                                 ThreadExecutor threadExecutor,
                                 PostExecutionThread postExecutionThread
                                 ) {
         this.getAlarm = new GetAlarm(alarmSource);
+        this.setAlarm = new SetAlarm(alarmManager);
         this.getReasons = new GetReasons(alarmRepository);
         this.updateOrCreateAlarm = new UpdateOrCreateAlarm(alarmSource);
         this.view = view;
         this.compositeDisposable = new CompositeDisposable();
+        this.schedulerProvider = schedulerProvider;
         this.threadExecutor = threadExecutor;
         this.postExecutionThread = postExecutionThread;
     }
@@ -70,8 +78,8 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     public void getReminder(){
         compositeDisposable.add(
                 getAlarm.runUseCase(view.getAlarmId())
-                        .subscribeOn(Schedulers.from(threadExecutor))
-                        .observeOn(postExecutionThread.getScheduler())
+                        .subscribeOn(schedulerProvider.io())
+                        .observeOn(schedulerProvider.ui())
                         .subscribeWith(
                                 new DisposableSubscriber<Alarm>() {
                                     @Override
@@ -111,17 +119,17 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
     public void onDoneIconPress() {
         Alarm alarm = view.getViewModel();
         alarm.setAlarmId(view.getAlarmId());
-
+        alarm.setActive(true);
         compositeDisposable.add(
                 updateOrCreateAlarm.runUseCase(alarm)
-                        .subscribeOn(Schedulers.from(threadExecutor))
-                        .observeOn(postExecutionThread.getScheduler())
+                        .subscribeOn(schedulerProvider.io())
+                        .observeOn(schedulerProvider.ui())
                         .subscribeWith(
                                 new DisposableCompletableObserver() {
                                     @Override
                                     public void onComplete() {
                                         view.makeToast(R.string.message_database_write_successful);
-                                        view.startAlarmListActivity();
+                                        onAlarmSet(alarm);
                                     }
 
                                     @Override
@@ -132,9 +140,28 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
         );
     }
 
-    @Override
-    public void onTestMessageIconPress() {
-        view.startSpeakingMessage();
+    private void onAlarmSet(Alarm alarm) {
+        compositeDisposable.add(
+                setAlarm.runUseCase(alarm)
+                        .subscribeOn(schedulerProvider.io())
+                        .observeOn(schedulerProvider.ui())
+                        .subscribeWith(
+                                new DisposableCompletableObserver() {
+                                    @Override
+                                    public void onError(Throwable e) {
+                                        view.makeToast(R.string.error_managing_alarm);
+                                    }
+
+                                    @Override
+                                    public void onComplete() {
+                                        view.startAlarmListActivity();
+                                        view.makeToast(R.string.msg_alarm_activated);
+                                    }
+                                }
+                        )
+        );
+
+
     }
 
     @Override

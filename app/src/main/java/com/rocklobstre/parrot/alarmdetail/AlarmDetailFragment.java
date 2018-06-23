@@ -43,12 +43,9 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
     @Inject
     AlarmDetailPresenter presenter;
-    @Inject
-    Speakerbox speakerbox;
 
     private EditText alarmTitle;
     private EditText alarmMessage;
-    private ImageButton testMessage;
     private CheckBox vibrateOnly, autoRenew;
     private TimePicker nosePicker;
     private ImageView back, proceed, clearMessage;
@@ -106,7 +103,6 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         alarmTitle = (EditText) v.findViewById(R.id.edt_alarm_title);
         alarmMessage = (EditText) v.findViewById(R.id.edt_alarm_message);
         nosePicker = (TimePicker) v.findViewById(R.id.pck_alarm_time);
-        testMessage = (ImageButton) v.findViewById(R.id.imb_start_speak);
         vibrateOnly = (CheckBox) v.findViewById(R.id.chb_vibrate_only);
         autoRenew = (CheckBox) v.findViewById(R.id.chb_renew_automatically);
         back = (ImageButton) v.findViewById(R.id.imb_alarm_detail_back);
@@ -115,19 +111,10 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         setUpDropDownViews(v);
 
 
-        speakerbox.setActivity(getActivity());
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.onBackIconPress();
-            }
-        });
-
-        testMessage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.onTestMessageIconPress();
             }
         });
 
@@ -268,29 +255,6 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         Intent i = new Intent(getActivity(), AlarmListActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
-    }
-
-    @Override
-    public void startSpeakingMessage() {
-        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
-        Runnable onStart = new Runnable() {
-            public void run() {
-                speakerbox.requestAudioFocus();
-                testMessage.setImageResource(R.drawable.ic_speaker_pause);
-            }
-        };
-        Runnable onDone = new Runnable() {
-            public void run() {
-                speakerbox.abandonAudioFocus();
-                testMessage.setImageResource(R.drawable.ic_speaker_play);
-            }
-        };
-        if (speakerbox.getTextToSpeech().isSpeaking()) {
-            speakerbox.stop();
-            speakerbox.abandonAudioFocus();
-            testMessage.setImageResource(R.drawable.ic_speaker_play);
-        } else
-            speakerbox.play(getReminderMessage(), onStart, onDone, null);
     }
 
     @Override

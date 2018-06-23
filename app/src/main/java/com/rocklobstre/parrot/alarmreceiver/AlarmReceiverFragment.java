@@ -77,8 +77,6 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         Button stopAlarm = (Button) v.findViewById(R.id.btn_alarm_dismiss);
         LottieAnimationView animationView = (LottieAnimationView) v.findViewById(R.id.animation_view);
 
-        speakerbox.setActivity(getActivity());
-
         lottieProgressConfig(animationView);
 
         stopAlarm.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +85,8 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
                 presenter.onAlarmDismissClick();
             }
         });
+
+        speakerbox.setActivity(getActivity());
         return v;
     }
 
@@ -111,7 +111,6 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
                 Alarm which just went off.
                  */
         presenter.start();
-        speakerbox.abandonAudioFocus();
     }
 
     public String getAlarmId() {
