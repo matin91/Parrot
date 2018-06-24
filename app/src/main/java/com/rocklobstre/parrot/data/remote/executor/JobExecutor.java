@@ -1,4 +1,4 @@
-package com.rocklobstre.parrot.data.retrofit.executor;
+package com.rocklobstre.parrot.data.remote.executor;
 
 import android.support.annotation.NonNull;
 
@@ -11,7 +11,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 @MainApplicationScope
 public class JobExecutor implements ThreadExecutor {

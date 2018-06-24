@@ -21,18 +21,16 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 
 import com.mapzen.speakerbox.Speakerbox;
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
-import com.rocklobstre.parrot.data.retrofit.RestApi;
-import com.rocklobstre.parrot.data.retrofit.executor.PostExecutionThread;
-import com.rocklobstre.parrot.data.retrofit.executor.ThreadExecutor;
-import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
+import com.rocklobstre.parrot.data.remote.RestApi;
+import com.rocklobstre.parrot.data.remote.executor.PostExecutionThread;
+import com.rocklobstre.parrot.data.remote.executor.ThreadExecutor;
+import com.rocklobstre.parrot.data.remote.repository.AlarmRepository;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule;
 import com.rocklobstre.parrot.dependencyinjection.modules.DataModule;
 import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
-
-import javax.inject.Singleton;
 
 import dagger.Component;
 

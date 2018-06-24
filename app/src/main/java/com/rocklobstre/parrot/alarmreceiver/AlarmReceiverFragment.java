@@ -113,6 +113,12 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         presenter.start();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        
+    }
+
     public String getAlarmId() {
         return this.alarmId;
     }

@@ -1,6 +1,6 @@
-package com.rocklobstre.parrot.data.retrofit.wrapper;
+package com.rocklobstre.parrot.data.remote.wrapper;
 
-import com.rocklobstre.parrot.data.retrofit.error.ResponseErrorEntity;
+import com.rocklobstre.parrot.data.remote.error.ResponseErrorEntity;
 
 public class ResponseErrorWrapper {
 

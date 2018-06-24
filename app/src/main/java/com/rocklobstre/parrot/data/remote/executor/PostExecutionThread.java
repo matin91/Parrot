@@ -1,4 +1,4 @@
-package com.rocklobstre.parrot.data.retrofit.executor;
+package com.rocklobstre.parrot.data.remote.executor;
 
 import io.reactivex.Scheduler;
 

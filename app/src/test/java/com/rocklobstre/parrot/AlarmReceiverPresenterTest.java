@@ -1,9 +1,8 @@
 package com.rocklobstre.parrot;
 
-import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.alarmreceiver.AlarmReceiverContract;
 import com.rocklobstre.parrot.alarmreceiver.AlarmReceiverPresenter;
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import com.rocklobstre.parrot.util.SchedulerProvider;

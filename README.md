@@ -5,12 +5,11 @@
 
 ## Topics
 * [What is Parrot?](#what-is-Parrot)
-* [Change Log](#change-log)
 * [Software Architecture Diagram](#software-architecture-diagram)
 * [Can I use the code?](#can-i-use-code-from-this-repo)
 * [Project APIs/Concepts](#apis-and-architectures-used)
 * [Learning Sources/Inspiration](#sources-and-inspiration)
-* [Support Me](#contactsupport-me)
+* [Contact Me](#contact)
 * [License](#license)
 
 ## What is Parrot?
@@ -90,7 +89,7 @@ http://fragmentedpodcast.com/episodes/11/
 
 
 
-## Contact/Support me:
+## Contact:
 It's my personal goal to create high-quality content, I'v been writing quality apps for almost 5 years and I passionate myself for what I do, and I'm glad if you would like to work with me.
 [Gmail](mattinn91@gmail.com)
 

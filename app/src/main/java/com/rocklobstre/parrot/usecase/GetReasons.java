@@ -1,6 +1,6 @@
 package com.rocklobstre.parrot.usecase;
 
-import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
+import com.rocklobstre.parrot.data.remote.repository.AlarmRepository;
 import com.rocklobstre.parrot.data.viewmodel.Reason;
 
 import java.util.List;

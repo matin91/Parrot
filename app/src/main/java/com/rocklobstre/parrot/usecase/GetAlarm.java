@@ -1,6 +1,6 @@
 package com.rocklobstre.parrot.usecase;
 
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 
 import io.reactivex.Flowable;

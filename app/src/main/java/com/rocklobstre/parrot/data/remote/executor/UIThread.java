@@ -1,9 +1,8 @@
-package com.rocklobstre.parrot.data.retrofit.executor;
+package com.rocklobstre.parrot.data.remote.executor;
 
 import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;

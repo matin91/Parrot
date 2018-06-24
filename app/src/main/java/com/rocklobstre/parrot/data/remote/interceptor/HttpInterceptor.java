@@ -1,4 +1,4 @@
-package com.rocklobstre.parrot.data.retrofit.interceptor;
+package com.rocklobstre.parrot.data.remote.interceptor;
 
 import java.io.IOException;
 import java.util.Locale;

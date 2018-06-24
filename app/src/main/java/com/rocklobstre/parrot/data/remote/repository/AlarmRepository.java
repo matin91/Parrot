@@ -1,13 +1,12 @@
-package com.rocklobstre.parrot.data.retrofit.repository;
+package com.rocklobstre.parrot.data.remote.repository;
 
-import com.rocklobstre.parrot.data.retrofit.RestApi;
+import com.rocklobstre.parrot.data.remote.RestApi;
 import com.rocklobstre.parrot.data.viewmodel.Reason;
 import com.rocklobstre.parrot.dependencyinjection.scope.MainApplicationScope;
 
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import io.reactivex.Observable;
 

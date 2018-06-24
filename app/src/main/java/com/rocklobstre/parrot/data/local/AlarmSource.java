@@ -1,4 +1,4 @@
-package com.rocklobstre.parrot.data.alarmdatabase;
+package com.rocklobstre.parrot.data.local;
 
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 

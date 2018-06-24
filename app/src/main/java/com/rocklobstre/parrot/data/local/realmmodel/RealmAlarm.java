@@ -1,4 +1,4 @@
-package com.rocklobstre.parrot.data.alarmdatabase.realmmodel;
+package com.rocklobstre.parrot.data.local.realmmodel;
 
 import io.realm.RealmModel;
 import io.realm.annotations.PrimaryKey;

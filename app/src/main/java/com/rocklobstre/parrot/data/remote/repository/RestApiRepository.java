@@ -1,9 +1,9 @@
-package com.rocklobstre.parrot.data.retrofit.repository;
+package com.rocklobstre.parrot.data.remote.repository;
 
 import com.google.gson.Gson;
-import com.rocklobstre.parrot.data.retrofit.error.ResponseErrorEntity;
-import com.rocklobstre.parrot.data.retrofit.error.RestApiErrorException;
-import com.rocklobstre.parrot.data.retrofit.wrapper.ResponseErrorWrapper;
+import com.rocklobstre.parrot.data.remote.error.ResponseErrorEntity;
+import com.rocklobstre.parrot.data.remote.error.RestApiErrorException;
+import com.rocklobstre.parrot.data.remote.wrapper.ResponseErrorWrapper;
 
 import java.io.IOException;
 

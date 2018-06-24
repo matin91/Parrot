@@ -1,4 +1,4 @@
-package com.rocklobstre.parrot.data.retrofit.repository;
+package com.rocklobstre.parrot.data.remote.repository;
 
 import com.rocklobstre.parrot.data.viewmodel.Reason;
 

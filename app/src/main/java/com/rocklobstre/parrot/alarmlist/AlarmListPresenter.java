@@ -1,7 +1,7 @@
 package com.rocklobstre.parrot.alarmlist;
 
 import com.rocklobstre.parrot.R;
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import com.rocklobstre.parrot.usecase.CancelAlarm;

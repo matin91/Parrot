@@ -1,4 +1,4 @@
-package com.rocklobstre.parrot.data.retrofit.error;
+package com.rocklobstre.parrot.data.remote.error;
 
 public class RestApiErrorException extends RuntimeException {
 

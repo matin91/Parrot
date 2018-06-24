@@ -2,11 +2,11 @@ package com.rocklobstre.parrot.alarmdetail;
 
 
 import com.rocklobstre.parrot.R;
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
-import com.rocklobstre.parrot.data.retrofit.executor.PostExecutionThread;
-import com.rocklobstre.parrot.data.retrofit.executor.ThreadExecutor;
-import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
+import com.rocklobstre.parrot.data.remote.executor.PostExecutionThread;
+import com.rocklobstre.parrot.data.remote.executor.ThreadExecutor;
+import com.rocklobstre.parrot.data.remote.repository.AlarmRepository;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import com.rocklobstre.parrot.data.viewmodel.Reason;
 import com.rocklobstre.parrot.usecase.SetAlarm;

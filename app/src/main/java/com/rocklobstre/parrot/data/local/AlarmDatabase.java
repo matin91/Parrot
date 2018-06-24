@@ -1,6 +1,6 @@
-package com.rocklobstre.parrot.data.alarmdatabase;
+package com.rocklobstre.parrot.data.local;
 
-import com.rocklobstre.parrot.data.alarmdatabase.realmmodel.RealmAlarm;
+import com.rocklobstre.parrot.data.local.realmmodel.RealmAlarm;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 
 import java.util.ArrayList;
