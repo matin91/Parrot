@@ -116,7 +116,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
     @Override
     public void onPause() {
         super.onPause();
-        
+
     }
 
     public String getAlarmId() {
