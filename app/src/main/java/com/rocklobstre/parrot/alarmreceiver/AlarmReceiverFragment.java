@@ -114,6 +114,12 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         presenter.start();
     }
 
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        finishActivity();
+    }
+
     public String getAlarmId() {
         return this.alarmId;
     }
@@ -143,6 +149,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
             android.os.Process.killProcess(android.os.Process.myPid());
         }
     }
+
 
     @Override
     public void startSpeakingMessage(final String message) {

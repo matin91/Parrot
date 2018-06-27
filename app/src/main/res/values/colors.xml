@@ -8,6 +8,7 @@
     <color name="WHITE">#FFFFFF</color>
     <color name="ALPHA_WHITE">#B3FFFFFF</color>
     <color name="ALPHA_BLACK">#A6000000</color>
+    <color name="TRANSPARENT_GRAY">#55000000</color>
     <color name="BLACK">#000000</color>
     <color name="SCREAMY_YELLOW">#FFF63F</color>
     <color name="TRANSPARENT">#00000000</color>

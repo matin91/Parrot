@@ -2,7 +2,9 @@ package com.rocklobstre.parrot.alarmlist;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.StringRes;
 import android.support.design.widget.BaseTransientBottomBar;
 import android.support.design.widget.FloatingActionButton;
@@ -21,6 +23,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
+import com.airbnb.lottie.OnCompositionLoadedListener;
 import com.rocklobstre.parrot.alarmlist.DaggerAlarmListComponent;
 import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.R;
@@ -33,8 +38,11 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Objects;
 
 import javax.inject.Inject;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * Created by Ryan on 08/08/2016.
@@ -94,6 +102,13 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
 
         alarmList = (RecyclerView) v.findViewById(R.id.lst_alarm_list);
 
+        View hintLayout = v.findViewById(R.id.lyt_dismiss_hint);
+
+        LottieAnimationView animationView = (LottieAnimationView) v.findViewById(R.id.animation_view);
+
+        lottieProgressConfig(animationView);
+
+
         alarms = new ArrayList<>();
 
         initializeRecyclerView();
@@ -116,6 +131,16 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
                                 30
                         )
                 );
+                if (isFirstTime()){
+                    hintLayout.setVisibility(View.VISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            hintLayout.setVisibility(View.GONE);
+                        }
+                    }, 5000);
+                }
+
             }
         });
         return v;
@@ -406,5 +431,39 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
             }
         };
         return simpleItemTouchCallback;
+    }
+
+    /*------------------------------- other -------------------------------*/
+    /***
+     * Checks that application runs first time and write flag at SharedPreferences
+     * @return true if 1st time
+     */
+    private boolean isFirstTime()
+    {
+        SharedPreferences preferences = getActivity().getPreferences(MODE_PRIVATE);
+        boolean ranBefore = preferences.getBoolean("RanBefore", false);
+        if (!ranBefore) {
+            // first time
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("RanBefore", true);
+            editor.commit();
+        }
+        return !ranBefore;
+    }
+
+    private void lottieProgressConfig(final LottieAnimationView animationView) {
+        animationView.loop(true);
+        LottieComposition.Factory.fromAssetFileName(Objects.requireNonNull(getActivity()), "swipe_left.json",
+                new OnCompositionLoadedListener() {
+                    @Override public void onCompositionLoaded(LottieComposition composition) {
+                        animationView.setComposition(composition);
+                    }
+                });
+
+        if (animationView.getProgress() == 1f) {
+            animationView.setProgress(0f);
+        }
+        animationView.resumeAnimation();
+
     }
 }

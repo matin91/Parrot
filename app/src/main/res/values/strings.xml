@@ -108,6 +108,7 @@
     <string name="error_unable_to_retrieve_alarm">Unable to Restore Alarm</string>
     <string name="add_a_reminder">Add a Reminder</string>
     <string name="loading">Loading...</string>
+    <string name="swipe_delete">Swipe to Remove</string>
 
 
 </resources>
