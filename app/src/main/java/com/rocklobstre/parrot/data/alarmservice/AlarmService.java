@@ -9,7 +9,12 @@ import android.media.RingtoneManager;
 import android.os.CountDownTimer;
 import android.os.PowerManager;
 import android.os.Vibrator;
+import android.provider.Settings;
 
+import static android.content.Context.POWER_SERVICE;
+
+import com.mapzen.speakerbox.Speakerbox;
+import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.alarmreceiver.AlarmReceiverActivity;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 
@@ -111,7 +116,11 @@ public class AlarmService implements AlarmManager {
         }
 
         if (wakeLock != null && wakeLock.isHeld()) {
-            wakeLock.release();
+            try {
+                wakeLock.release();
+            } catch (Throwable th) {
+                // ignoring this exception, probably wakeLock was already released
+            }
         }
 
         return Completable.complete();
@@ -122,6 +131,18 @@ public class AlarmService implements AlarmManager {
      */
     @Override
     public Completable startAlarm(Alarm alarm) {
+        if (wakeLock == null) {
+            ((PowerManager) applicationContext
+                .getSystemService(POWER_SERVICE))
+                .newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Alarm");
+        }
+
+        try{
+            wakeLock.release();//always release before acquiring for safety just in case
+        }
+        catch(Exception e){
+            //probably already released
+        }
         wakeLock.acquire();
 
         if (alarm.isVibrateOnly()) {
@@ -142,6 +163,9 @@ public class AlarmService implements AlarmManager {
 
 
     private void playAlarmSound() throws java.io.IOException {
+        if (mediaPlayer == null){
+            mediaPlayer = MediaPlayer.create(applicationContext, Settings.System.DEFAULT_ALARM_ALERT_URI);
+        }
         new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
 

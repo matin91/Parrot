@@ -35,6 +35,8 @@ public final class ApplicationModule {
     private final AudioManager audioManager;
     private final AlarmManager alarmManager;
     private final MediaPlayer mediaPlayer;
+    private final Speakerbox speakerBox;
+
 
 
     //This objects are necessary for creation of other objects within this Module, hence making them
@@ -48,6 +50,7 @@ public final class ApplicationModule {
         this.vibrator = ((Vibrator) applicationContext.getSystemService(Context.VIBRATOR_SERVICE));
         this.alarmManager = ((AlarmManager) applicationContext.getSystemService(Context.ALARM_SERVICE));
         this.mediaPlayer = MediaPlayer.create(application, Settings.System.DEFAULT_ALARM_ALERT_URI);
+        this.speakerBox = new Speakerbox(ParrotApplication.getInstance());
     }
 
     @Provides
@@ -114,7 +117,7 @@ public final class ApplicationModule {
     @MainApplicationScope
     @Provides
     Speakerbox provideSpeakerbox(){
-        return new Speakerbox(ParrotApplication.getInstance());
+        return speakerBox;
     }
 
 }

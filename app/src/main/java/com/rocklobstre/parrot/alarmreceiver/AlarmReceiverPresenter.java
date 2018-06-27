@@ -155,7 +155,6 @@ public class AlarmReceiverPresenter implements AlarmReceiverContract.Presenter {
                                 new DisposableCompletableObserver() {
                                     @Override
                                     public void onComplete() {
-                                        view.onAlarmDismiss();
                                         view.finishActivity();
                                     }
 

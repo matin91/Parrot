@@ -87,6 +87,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         });
 
         speakerbox.setActivity(getActivity());
+        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
         return v;
     }
 
@@ -113,12 +114,6 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
         presenter.start();
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-
-    }
-
     public String getAlarmId() {
         return this.alarmId;
     }
@@ -139,17 +134,18 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
 
     @Override
     public void finishActivity() {
+        speakerbox.abandonAudioFocus();
+        speakerbox.stop();
         Activity activity = getActivity();
 
         //null check to avoid cases where Act is destroyed. Not sure if necessary at this point.
         if (activity != null) {
-            activity.finish();
+            android.os.Process.killProcess(android.os.Process.myPid());
         }
     }
 
     @Override
     public void startSpeakingMessage(final String message) {
-        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
         final Runnable onStart = new Runnable() {
             public void run() {
                 speakerbox.requestAudioFocus();
@@ -167,12 +163,6 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
                 speakerbox.play(message, onStart, onDone, null);
             }
         }, 3000);
-    }
-
-    @Override
-    public void onAlarmDismiss() {
-        speakerbox.abandonAudioFocus();
-        speakerbox.stop();
     }
 
     private void lottieProgressConfig(final LottieAnimationView animationView) {

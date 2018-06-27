@@ -18,6 +18,7 @@ public class ParrotApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
 
         initializeRealm();
         initializeLeakCanary();
@@ -31,7 +32,6 @@ public class ParrotApplication extends Application {
                 .applicationModule(applicationModule)
                 .build();
 
-        instance = this;
 
     }
 
