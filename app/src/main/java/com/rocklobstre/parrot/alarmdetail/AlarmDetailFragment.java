@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -109,8 +110,19 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         back = (ImageButton) v.findViewById(R.id.imb_alarm_detail_back);
         clearMessage = (ImageButton) v.findViewById(R.id.imb_clear_alarm_message);
         proceed = (ImageButton) v.findViewById(R.id.imb_alarm_detail_proceed);
+        View scrollDown = v.findViewById(R.id.imb_alarm_scroll_bottom);
+        ScrollView scrollLayout = (ScrollView)v.findViewById(R.id.scrl_alarm_detail);
+
         setUpDropDownViews(v);
 
+        scrollDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                scrollLayout.fullScroll(View.FOCUS_DOWN);
+                dropDownView.expandDropDown();
+                clearMessage.callOnClick();
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +134,6 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         clearMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alarmMessage.requestFocus();
                 presenter.onClearMessageIconPress();
             }
         });

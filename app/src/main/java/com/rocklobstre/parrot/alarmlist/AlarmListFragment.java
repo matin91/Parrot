@@ -138,7 +138,7 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
                         public void run() {
                             hintLayout.setVisibility(View.GONE);
                         }
-                    }, 5000);
+                    }, 4000);
                 }
 
             }
