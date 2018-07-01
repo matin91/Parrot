@@ -1,5 +1,6 @@
 package com.rocklobstre.parrot.alarmlist;
 
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -54,6 +55,7 @@ import static android.content.Context.MODE_PRIVATE;
  */
 public class AlarmListFragment extends Fragment implements AlarmListContract.View {
     private static final String ALARM_TO_BE_EDITED = "ALARM_TO_BE_EDITED";
+    private static final int NOTIFICATION_ID = 22;
     public static int REQUEST_CODE = 42;
     public static String NOTIFICATION_GROUP_KEY = "task_reminders";
 
@@ -241,8 +243,14 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
                 .setPriority(NotificationCompat.PRIORITY_MAX);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getActivity());
-        notificationManager.notify((int) SystemClock.currentThreadTimeMillis(), builder.build());
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
 
+    }
+
+    @Override
+    public void hideNotification() {
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getActivity());
+        notificationManager.cancel(NOTIFICATION_ID);
     }
 
     /*

@@ -202,6 +202,7 @@ public class AlarmListPresenter implements AlarmListContract.Presenter {
                                 }
                         )
         );
+        view.hideNotification();
     }
 
 

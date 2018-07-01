@@ -27,6 +27,8 @@ public interface AlarmListContract {
         void insertAlarmAt(int position, Alarm alarm);
 
         void showNotification();
+
+        void hideNotification();
     }
 
     interface Presenter extends BasePresenter {
