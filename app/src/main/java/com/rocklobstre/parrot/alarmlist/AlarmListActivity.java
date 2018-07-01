@@ -1,6 +1,8 @@
 package com.rocklobstre.parrot.alarmlist;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -58,5 +60,15 @@ public class AlarmListActivity extends AppCompatActivity {
                         Manifest.permission.VIBRATE
                 )
                 .check();
+    }
+    /**
+     * Allows to get the intent to launch this activity from a notification
+     * With a given preselected category name
+     * @param context
+     */
+    public static Intent getIntentForNotification(Context context) {
+        Intent intent = new Intent(context, AlarmListActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        return intent;
     }
 }

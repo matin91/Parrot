@@ -32,6 +32,8 @@ public interface AlarmDetailContract {
         void startAlarmListActivity();
 
         void setUpDropDown(List<Reason> reasons);
+
+        void showNotification();
     }
 
     interface Presenter extends BasePresenter {

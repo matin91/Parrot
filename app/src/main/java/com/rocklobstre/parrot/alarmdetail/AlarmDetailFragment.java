@@ -1,11 +1,16 @@
 package com.rocklobstre.parrot.alarmdetail;
 
 import android.animation.ObjectAnimator;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -41,6 +46,8 @@ import javax.inject.Inject;
  */
 public class AlarmDetailFragment extends Fragment implements AlarmDetailContract.View {
     private static final String ALARM_TO_BE_EDITED = "ALARM_TO_BE_EDITED";
+    public static int REQUEST_CODE = 42;
+    public static String NOTIFICATION_GROUP_KEY = "task_reminders";
 
     @Inject
     AlarmDetailPresenter presenter;
@@ -303,6 +310,28 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         adapter = new DropDownAdapter(viewActions, reasons.size());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void showNotification() {
+        Intent intent = AlarmListActivity.getIntentForNotification(getActivity());
+        PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(),
+                REQUEST_CODE,
+                intent,
+                PendingIntent.FLAG_CANCEL_CURRENT);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity())
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle(getResources().getString(R.string.notification_title))
+                .setAutoCancel(true)
+                .setColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary))
+                .setGroup(NOTIFICATION_GROUP_KEY)
+                .setGroupSummary(true)
+                .setContentIntent(pendingIntent)
+                .setPriority(NotificationCompat.PRIORITY_MAX);
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getActivity());
+        notificationManager.notify((int) SystemClock.currentThreadTimeMillis(), builder.build());
     }
 
     @Override

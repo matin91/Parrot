@@ -180,7 +180,7 @@ public class AlarmListPresenter implements AlarmListContract.Presenter {
                         )
         );
 
-
+        view.showNotification();
     }
 
     private void onAlarmCancelled(Alarm alarm) {

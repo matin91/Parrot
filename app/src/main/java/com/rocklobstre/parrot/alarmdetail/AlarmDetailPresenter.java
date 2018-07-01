@@ -161,7 +161,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
                         )
         );
 
-
+        view.showNotification();
     }
 
     @Override
@@ -190,5 +190,6 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
             view.setUpDropDown(reasons);
         }
     }
+
 
 }

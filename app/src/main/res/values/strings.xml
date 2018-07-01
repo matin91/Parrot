@@ -109,6 +109,7 @@
     <string name="add_a_reminder">Add a Reminder</string>
     <string name="loading">Loading...</string>
     <string name="swipe_delete">Swipe to Remove</string>
+    <string name="notification_title">Talking Alarm has been Set</string>
 
 
 </resources>
