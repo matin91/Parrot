@@ -14,7 +14,7 @@ import static dagger.internal.Preconditions.checkNotNull;
  * this Use Case.
  * - If a Alarm is found, return it to the Presenter.
  * - If no Alarm is found, throw NoReminderFoundException
- * Created by R_KAY on 5/23/2017.
+ * Created by Matin on 5/23/2017.
  */
 
 public class GetReasons implements UseCaseObservable<List<Reason>, String> {

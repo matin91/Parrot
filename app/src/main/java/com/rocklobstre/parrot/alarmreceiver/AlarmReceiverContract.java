@@ -5,7 +5,7 @@ import com.rocklobstre.parrot.base.BaseView;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 
 /**
- * Created by Ryan on 05/03/2017.
+ * Created by Matin on 05/03/2017.
  */
 
 public interface AlarmReceiverContract {

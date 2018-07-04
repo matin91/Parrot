@@ -8,7 +8,7 @@ import java.util.List;
 import io.reactivex.Flowable;
 
 /**
- * Created by R_KAY on 5/23/2017.
+ * Created by Matin on 5/23/2017.
  */
 
 public class GetAlarmList implements UseCase<List<Alarm>, Void> {

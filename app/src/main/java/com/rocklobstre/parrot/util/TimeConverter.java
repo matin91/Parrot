@@ -9,7 +9,7 @@ import java.util.Locale;
 
 /**
  * Recieves an Hour, and a Minute, and outputs those values as a Formatted String which
- * Created by Ryan on 14/04/2016.
+ * Created by Matin on 14/04/2016.
  */
 public class TimeConverter {
 

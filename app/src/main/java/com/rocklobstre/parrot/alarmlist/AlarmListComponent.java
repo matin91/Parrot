@@ -8,7 +8,7 @@ import dagger.Component;
 /**
  * Since SpeakerDetailComponent is dependent upon the ReminderRepository, when must make
  * satisfy the dependency by supplying TaskRepositoryComponent.class.
- * Created by Ryan on 16/03/2017.
+ * Created by Matin on 16/03/2017.
  */
 @FragmentScoped
 @Component(dependencies = ApplicationComponent.class,

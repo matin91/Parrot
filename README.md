@@ -91,7 +91,8 @@ http://fragmentedpodcast.com/episodes/11/
 
 ## Contact:
 It's my personal goal to create high-quality content, I'v been writing quality apps for almost 5 years and I passionate myself for what I do, and I'm glad if you would like to work with me.
-[Gmail](mattinn91@gmail.com)
+
+- [Gmail](mattinn91@gmail.com)(hsalehi91@gmail.com)
 
 ## License
  * Copyright 2017, The Android Open Source Project

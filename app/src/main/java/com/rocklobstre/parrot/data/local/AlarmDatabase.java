@@ -18,7 +18,7 @@ import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 /**
- * Created by Ryan on 10/04/2017.
+ * Created by Matin on 10/04/2017.
  */
 
 public class AlarmDatabase implements AlarmSource {

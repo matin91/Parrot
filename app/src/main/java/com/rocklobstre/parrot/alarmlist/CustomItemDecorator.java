@@ -11,7 +11,7 @@ import com.rocklobstre.parrot.R;
 
 
 /**
- * Created by Ryan on 07/04/2016.
+ * Created by Matin on 07/04/2016.
  */
 public class CustomItemDecorator extends RecyclerView.ItemDecoration {
 

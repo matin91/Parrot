@@ -42,12 +42,12 @@ import javax.inject.Inject;
 
 /**
  * I treat my Fragments as Views
- * Created by Ryan on 08/08/2016.
+ * Created by Matin on 08/08/2016.
  */
 public class AlarmDetailFragment extends Fragment implements AlarmDetailContract.View {
     private static final String ALARM_TO_BE_EDITED = "ALARM_TO_BE_EDITED";
     public static int REQUEST_CODE = 42;
-    public static String NOTIFICATION_GROUP_KEY = "task_reminders";
+    public static String NOTIFICATION_GROUP_KEY = "reminders";
 
     @Inject
     AlarmDetailPresenter presenter;

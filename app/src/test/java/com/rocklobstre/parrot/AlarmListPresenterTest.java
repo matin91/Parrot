@@ -25,7 +25,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 /**
- * Created by Ryan on 09/03/2017.
+ * Created by Matin on 09/03/2017.
  */
 @RunWith(MockitoJUnitRunner.class)
 public class AlarmListPresenterTest {

@@ -13,7 +13,7 @@ import com.rocklobstre.parrot.util.ActivityUtils;
  * This Activity is fired when an Alarm goes off. Once it is active, it handles the Alarm based on
  * the Alarm's configuration (such as Vibrate Only, etc.). It also allows the user to stop
  * an Alarm which is going off.
- * Created by Ryan on 17/04/2016.
+ * Created by Matin on 17/04/2016.
  */
 public class AlarmReceiverActivity extends AppCompatActivity {
 

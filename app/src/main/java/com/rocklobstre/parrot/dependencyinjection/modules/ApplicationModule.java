@@ -25,7 +25,7 @@ import static android.content.Context.POWER_SERVICE;
 /**
  * This is a Module. It provides dependencies via @Provides annotated methods below.
  * Module's are designed to be partitioned in a way that makes sense.
- * Created by Ryan on 10/03/2017.
+ * Created by Matin on 10/03/2017.
  */
 @Module
 public final class ApplicationModule {

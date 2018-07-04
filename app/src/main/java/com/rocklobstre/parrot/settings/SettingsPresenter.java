@@ -3,7 +3,7 @@ package com.rocklobstre.parrot.settings;
 import javax.inject.Inject;
 
 /**
- * Created by Ryan on 05/03/2017.
+ * Created by Matin on 05/03/2017.
  */
 
 public class SettingsPresenter implements SettingsContract.Presenter {

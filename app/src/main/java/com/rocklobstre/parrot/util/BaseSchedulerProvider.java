@@ -3,7 +3,7 @@ package com.rocklobstre.parrot.util;
 import io.reactivex.Scheduler;
 
 /**
- * Created by Ryan on 05/03/2017.
+ * Created by Matin on 05/03/2017.
  */
 
 public interface BaseSchedulerProvider {

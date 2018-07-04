@@ -2,7 +2,7 @@ package com.rocklobstre.parrot.data.viewmodel;
 
 /**
  * POJO for the View
- * Created by Ryan on 10/04/2017.
+ * Created by Matin on 10/04/2017.
  */
 
 public class Alarm {

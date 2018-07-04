@@ -22,7 +22,7 @@ import io.reactivex.subscribers.DisposableSubscriber;
 /**
  * Retrieves a List of any Reminders which are Present in AlarmDatabase (Realm Database), and
  * displays passes them to the View.
- * Created by Ryan on 05/03/2017.
+ * Created by Matin on 05/03/2017.
  */
 
 public class AlarmListPresenter implements AlarmListContract.Presenter {

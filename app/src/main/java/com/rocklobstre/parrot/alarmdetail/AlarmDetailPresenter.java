@@ -26,7 +26,7 @@ import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subscribers.DisposableSubscriber;
 
 /**
- * Created by Ryan on 05/03/2017.
+ * Created by Matin on 05/03/2017.
  */
 
 public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {

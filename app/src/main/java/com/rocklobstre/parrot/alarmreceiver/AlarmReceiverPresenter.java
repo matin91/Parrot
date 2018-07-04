@@ -18,7 +18,7 @@ import io.reactivex.observers.DisposableCompletableObserver;
 import io.reactivex.subscribers.DisposableSubscriber;
 
 /**
- * Created by Ryan on 05/03/2017.
+ * Created by Matin on 05/03/2017.
  */
 
 public class AlarmReceiverPresenter implements AlarmReceiverContract.Presenter {

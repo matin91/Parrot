@@ -7,7 +7,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * SchedulerProvider for use during tests. Supplies immediate Schedulers which can be run on the JVM without issue.
- * Created by Ryan on 10/04/2017.
+ * Created by Matin on 10/04/2017.
  */
 
 public class SchedulerProvider implements BaseSchedulerProvider {

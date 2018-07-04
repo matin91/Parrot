@@ -20,7 +20,7 @@ import io.reactivex.Flowable;
 
 /**
  * This is a "Unit Test", which uses Mockito to test the Apps Behaviour/Logic.
- * Created by Ryan on 09/03/2017.
+ * Created by Matin on 09/03/2017.
  */
 
 @RunWith(MockitoJUnitRunner.class)

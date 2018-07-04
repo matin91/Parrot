@@ -6,7 +6,7 @@ import com.rocklobstre.parrot.util.FragmentScoped;
 import dagger.Component;
 
 /**
- * Created by Ryan on 16/03/2017.
+ * Created by Matin on 16/03/2017.
  */
 
 @FragmentScoped

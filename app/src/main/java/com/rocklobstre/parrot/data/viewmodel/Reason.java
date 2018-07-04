@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * POJO for the Reminder Reason
- * Created by Ryan on 10/04/2017.
+ * Created by Matin on 10/04/2017.
  */
 
 public class Reason {

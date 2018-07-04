@@ -7,7 +7,7 @@ import com.rocklobstre.parrot.data.viewmodel.Alarm;
 import java.util.List;
 
 /**
- * Created by Ryan on 06/03/2017.
+ * Created by Matin on 06/03/2017.
  */
 
 public interface AlarmListContract {

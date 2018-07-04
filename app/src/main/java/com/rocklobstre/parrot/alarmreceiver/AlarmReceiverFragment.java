@@ -28,7 +28,7 @@ import java.util.Objects;
 import javax.inject.Inject;
 
 /**
- * Created by Ryan on 05/03/2017.
+ * Created by Matin on 05/03/2017.
  */
 
 public class AlarmReceiverFragment extends Fragment implements AlarmReceiverContract.View {

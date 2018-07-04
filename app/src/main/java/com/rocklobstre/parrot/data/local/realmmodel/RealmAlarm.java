@@ -6,7 +6,7 @@ import io.realm.annotations.RealmClass;
 
 /**
  * POJO for Realm
- * Created by Ryan on 10/04/2016.
+ * Created by Matin on 10/04/2016.
  */
 @RealmClass
 public class RealmAlarm implements RealmModel {

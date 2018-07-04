@@ -51,13 +51,13 @@ import javax.inject.Inject;
 import static android.content.Context.MODE_PRIVATE;
 
 /**
- * Created by Ryan on 08/08/2016.
+ * Created by Matin on 08/08/2016.
  */
 public class AlarmListFragment extends Fragment implements AlarmListContract.View {
     private static final String ALARM_TO_BE_EDITED = "ALARM_TO_BE_EDITED";
     private static final int NOTIFICATION_ID = 22;
     public static int REQUEST_CODE = 42;
-    public static String NOTIFICATION_GROUP_KEY = "task_reminders";
+    public static String NOTIFICATION_GROUP_KEY = "reminders";
 
     private RecyclerView alarmList;
     private FloatingActionButton fabulous;

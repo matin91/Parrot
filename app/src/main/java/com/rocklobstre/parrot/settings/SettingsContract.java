@@ -4,7 +4,7 @@ import com.rocklobstre.parrot.base.BasePresenter;
 import com.rocklobstre.parrot.base.BaseView;
 
 /**
- * Created by Ryan on 09/03/2017.
+ * Created by Matin on 09/03/2017.
  */
 
 public interface SettingsContract {
