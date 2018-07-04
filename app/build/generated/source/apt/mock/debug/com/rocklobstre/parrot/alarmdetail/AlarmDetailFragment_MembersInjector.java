@@ -1,6 +1,5 @@
 package com.rocklobstre.parrot.alarmdetail;
 
-import com.mapzen.speakerbox.Speakerbox;
 import dagger.MembersInjector;
 import javax.annotation.Generated;
 import javax.inject.Provider;
@@ -13,19 +12,14 @@ public final class AlarmDetailFragment_MembersInjector
     implements MembersInjector<AlarmDetailFragment> {
   private final Provider<AlarmDetailPresenter> presenterProvider;
 
-  private final Provider<Speakerbox> speakerboxProvider;
-
-  public AlarmDetailFragment_MembersInjector(
-      Provider<AlarmDetailPresenter> presenterProvider, Provider<Speakerbox> speakerboxProvider) {
+  public AlarmDetailFragment_MembersInjector(Provider<AlarmDetailPresenter> presenterProvider) {
     assert presenterProvider != null;
     this.presenterProvider = presenterProvider;
-    assert speakerboxProvider != null;
-    this.speakerboxProvider = speakerboxProvider;
   }
 
   public static MembersInjector<AlarmDetailFragment> create(
-      Provider<AlarmDetailPresenter> presenterProvider, Provider<Speakerbox> speakerboxProvider) {
-    return new AlarmDetailFragment_MembersInjector(presenterProvider, speakerboxProvider);
+      Provider<AlarmDetailPresenter> presenterProvider) {
+    return new AlarmDetailFragment_MembersInjector(presenterProvider);
   }
 
   @Override
@@ -34,16 +28,10 @@ public final class AlarmDetailFragment_MembersInjector
       throw new NullPointerException("Cannot inject members into a null reference");
     }
     instance.presenter = presenterProvider.get();
-    instance.speakerbox = speakerboxProvider.get();
   }
 
   public static void injectPresenter(
       AlarmDetailFragment instance, Provider<AlarmDetailPresenter> presenterProvider) {
     instance.presenter = presenterProvider.get();
-  }
-
-  public static void injectSpeakerbox(
-      AlarmDetailFragment instance, Provider<Speakerbox> speakerboxProvider) {
-    instance.speakerbox = speakerboxProvider.get();
   }
 }

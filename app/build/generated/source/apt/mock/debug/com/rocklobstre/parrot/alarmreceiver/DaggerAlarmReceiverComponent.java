@@ -1,8 +1,8 @@
 package com.rocklobstre.parrot.alarmreceiver;
 
 import com.mapzen.speakerbox.Speakerbox;
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import com.rocklobstre.parrot.dependencyinjection.components.ApplicationComponent;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 import dagger.MembersInjector;

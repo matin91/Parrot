@@ -5,10 +5,16 @@ import android.media.AudioManager;
 import android.os.PowerManager;
 import android.os.Vibrator;
 import com.mapzen.speakerbox.Speakerbox;
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
-import com.rocklobstre.parrot.data.retrofit.RestApi;
-import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
+import com.rocklobstre.parrot.data.local.AlarmSource;
+import com.rocklobstre.parrot.data.remote.RestApi;
+import com.rocklobstre.parrot.data.remote.executor.JobExecutor;
+import com.rocklobstre.parrot.data.remote.executor.JobExecutor_Factory;
+import com.rocklobstre.parrot.data.remote.executor.PostExecutionThread;
+import com.rocklobstre.parrot.data.remote.executor.ThreadExecutor;
+import com.rocklobstre.parrot.data.remote.executor.UIThread;
+import com.rocklobstre.parrot.data.remote.executor.UIThread_Factory;
+import com.rocklobstre.parrot.data.remote.repository.AlarmRepository;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideAlarmManagerFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideAlarmSourceFactory;
@@ -20,7 +26,9 @@ import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_Prov
 import com.rocklobstre.parrot.dependencyinjection.modules.ApplicationModule_ProvideWakeLockFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.DataModule;
 import com.rocklobstre.parrot.dependencyinjection.modules.DataModule_ProvideAlarmRepositoryFactory;
+import com.rocklobstre.parrot.dependencyinjection.modules.DataModule_ProvidePostExecutionThreadFactory;
 import com.rocklobstre.parrot.dependencyinjection.modules.DataModule_ProvideRestApiFactory;
+import com.rocklobstre.parrot.dependencyinjection.modules.DataModule_ProvideThreadExecutorFactory;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
@@ -51,6 +59,14 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
   private Provider<RestApi> provideRestApiProvider;
 
   private Provider<AlarmRepository> provideAlarmRepositoryProvider;
+
+  private Provider<JobExecutor> jobExecutorProvider;
+
+  private Provider<ThreadExecutor> provideThreadExecutorProvider;
+
+  private Provider<UIThread> uIThreadProvider;
+
+  private Provider<PostExecutionThread> providePostExecutionThreadProvider;
 
   private DaggerApplicationComponent(Builder builder) {
     assert builder != null;
@@ -103,6 +119,20 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
         DoubleCheck.provider(
             DataModule_ProvideAlarmRepositoryFactory.create(
                 builder.dataModule, provideRestApiProvider));
+
+    this.jobExecutorProvider = DoubleCheck.provider(JobExecutor_Factory.create());
+
+    this.provideThreadExecutorProvider =
+        DoubleCheck.provider(
+            DataModule_ProvideThreadExecutorFactory.create(
+                builder.dataModule, jobExecutorProvider));
+
+    this.uIThreadProvider = DoubleCheck.provider(UIThread_Factory.create());
+
+    this.providePostExecutionThreadProvider =
+        DoubleCheck.provider(
+            DataModule_ProvidePostExecutionThreadFactory.create(
+                builder.dataModule, uIThreadProvider));
   }
 
   @Override
@@ -153,6 +183,16 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
   @Override
   public AlarmRepository alarmRepository() {
     return provideAlarmRepositoryProvider.get();
+  }
+
+  @Override
+  public ThreadExecutor threadExecutor() {
+    return provideThreadExecutorProvider.get();
+  }
+
+  @Override
+  public PostExecutionThread postExecutionThread() {
+    return providePostExecutionThreadProvider.get();
   }
 
   public static final class Builder {

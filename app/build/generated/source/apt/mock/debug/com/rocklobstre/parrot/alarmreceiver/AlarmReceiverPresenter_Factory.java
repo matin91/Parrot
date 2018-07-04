@@ -1,7 +1,7 @@
 package com.rocklobstre.parrot.alarmreceiver;
 
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
 import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 import dagger.internal.Factory;
 import javax.annotation.Generated;

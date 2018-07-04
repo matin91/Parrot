@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
 MERGED from [io.realm:realm-android-library:3.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\realm-android-library-3.1.1.aar\bbcbf7ee0b000eb610003c0dbc7bc104\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\design-27.1.1.aar\08aa83a795be9c4ce0ee185abc7ff011\AndroidManifest.xml:17:1-22:12
 MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:2:1-17:12
@@ -32,45 +32,45 @@ MERGED from [android.arch.lifecycle:livedata:1.1.0] C:\Users\hossein\.gradle\wra
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\1f3310ebf09043f4b519b7cf57746246\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9be975aaf4d4e602919f45c0c7d896a2\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2465764d1aae06c67bae4d802cd76ad4\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:4:5-37
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:4:5-37
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:6:5-68
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:6:5-68
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:6:22-65
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:6:22-65
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:7:5-66
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:7:5-66
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:7:22-63
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:7:22-63
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:8:5-67
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:8:22-64
 supports-screens
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:11:5-13:41
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:11:5-13:41
 	android:smallScreens
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:12:9-37
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:12:9-37
 	android:xlargeScreens
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:13:9-38
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:13:9-38
 application
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:15:5-55:19
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:15:5-55:19
 MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:11:5-15:19
 MERGED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:11:5-15:19
 MERGED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:9:5-13:19
@@ -84,66 +84,66 @@ MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\w
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:28:5-57:19
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:28:5-57:19
 	android:supportsRtl
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:19:9-41
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:19:9-41
 	android:icon
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:18:9-43
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:17:9-36
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:17:9-36
 		REJECTED from [com.mapzen.android:speakerbox:1.4.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\speakerbox-1.4.1.aar\a675359d8805f99893182b2f4548c39f\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:21:9-42
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:21:9-38
 	tools:replace
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:22:9-44
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:22:9-44
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:16:9-68
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:16:9-64
 activity#com.rocklobstre.parrot.settings.SettingsActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:24:9-28:15
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:24:9-28:15
 	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:26:13-60
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:26:13-60
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:27:13-46
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:27:13-42
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:25:13-76
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:25:13-76
 activity#com.rocklobstre.parrot.alarmlist.AlarmListActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:30:9-39:20
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:30:9-39:20
 	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:32:13-45
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:32:13-45
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:33:13-46
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:33:13-42
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:31:13-78
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:31:13-78
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:34:13-38:29
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:37:27-74
 activity#com.rocklobstre.parrot.alarmreceiver.AlarmReceiverActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:41:9-44:57
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:41:9-44:53
 	android:label
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:43:13-64
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:43:13-64
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:44:13-54
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:44:13-50
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:42:13-86
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:42:13-86
 activity#com.rocklobstre.parrot.alarmdetail.AlarmDetailActivity
-ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:49:9-53:15
+ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:49:9-53:15
 	android:screenOrientation
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:52:13-49
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:52:13-49
 	android:theme
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:50:13-46
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:50:13-42
 	android:name
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:49:19-88
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:49:19-88
 uses-sdk
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
 MERGED from [io.realm:realm-android-library:3.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\realm-android-library-3.1.1.aar\bbcbf7ee0b000eb610003c0dbc7bc104\AndroidManifest.xml:7:5-9:41
 MERGED from [io.realm:realm-android-library:3.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\realm-android-library-3.1.1.aar\bbcbf7ee0b000eb610003c0dbc7bc104\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:27.1.1] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\design-27.1.1.aar\08aa83a795be9c4ce0ee185abc7ff011\AndroidManifest.xml:20:5-44
@@ -200,16 +200,16 @@ MERGED from [android.arch.core:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\d
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9be975aaf4d4e602919f45c0c7d896a2\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2465764d1aae06c67bae4d802cd76ad4\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2465764d1aae06c67bae4d802cd76ad4\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml
 activity#com.gun0912.tedpermission.TedPermissionActivity
 ADDED from [gun0912.ted:tedpermission:1.0.3] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\tedpermission-1.0.3.aar\a0b6546c473d15464a1817fdb3623a8f\AndroidManifest.xml:10:9-12:56
 	android:theme
@@ -228,7 +228,7 @@ ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wr
 		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\extensions-1.1.0.aar\5c49069ef865514db09e867ebfeff0f9\AndroidManifest.xml:24:13-83
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:25:5-80
-IMPLIED from C:\Users\hossein\Desktop\PosTrainer-master\app\src\main\AndroidManifest.xml:2:1-57:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\hossein\Desktop\Parrot-master\app\src\main\AndroidManifest.xml:2:1-57:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
 	android:name
 		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\hossein\.gradle\wrapper\dists\gradle-4.7-all\caches\transforms-1\files-1.1\leakcanary-android-1.5.aar\eb8ab2851bbb8b9c17226886199d8e79\AndroidManifest.xml:25:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE

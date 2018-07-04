@@ -1,6 +1,6 @@
 package com.rocklobstre.parrot.dependencyinjection.modules;
 
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
+import com.rocklobstre.parrot.data.local.AlarmSource;
 import dagger.internal.Factory;
 import dagger.internal.Preconditions;
 import javax.annotation.Generated;

@@ -1,8 +1,10 @@
 package com.rocklobstre.parrot.alarmdetail;
 
-import com.mapzen.speakerbox.Speakerbox;
-import com.rocklobstre.parrot.data.alarmdatabase.AlarmSource;
-import com.rocklobstre.parrot.data.retrofit.repository.AlarmRepository;
+import com.rocklobstre.parrot.data.alarmservice.AlarmManager;
+import com.rocklobstre.parrot.data.local.AlarmSource;
+import com.rocklobstre.parrot.data.remote.executor.PostExecutionThread;
+import com.rocklobstre.parrot.data.remote.executor.ThreadExecutor;
+import com.rocklobstre.parrot.data.remote.repository.AlarmRepository;
 import com.rocklobstre.parrot.dependencyinjection.components.ApplicationComponent;
 import com.rocklobstre.parrot.util.BaseSchedulerProvider;
 import dagger.MembersInjector;
@@ -19,13 +21,17 @@ public final class DaggerAlarmDetailComponent implements AlarmDetailComponent {
 
   private Provider<AlarmSource> alarmSourceProvider;
 
+  private Provider<AlarmManager> alarmManagerProvider;
+
   private Provider<AlarmRepository> alarmRepositoryProvider;
 
   private Provider<BaseSchedulerProvider> baseSchedulerProvider;
 
-  private Provider<AlarmDetailPresenter> alarmDetailPresenterProvider;
+  private Provider<ThreadExecutor> threadExecutorProvider;
 
-  private Provider<Speakerbox> getSpeakerboxProvider;
+  private Provider<PostExecutionThread> postExecutionThreadProvider;
+
+  private Provider<AlarmDetailPresenter> alarmDetailPresenterProvider;
 
   private MembersInjector<AlarmDetailFragment> alarmDetailFragmentMembersInjector;
 
@@ -57,6 +63,18 @@ public final class DaggerAlarmDetailComponent implements AlarmDetailComponent {
           }
         };
 
+    this.alarmManagerProvider =
+        new dagger.internal.Factory<AlarmManager>() {
+          private final ApplicationComponent applicationComponent = builder.applicationComponent;
+
+          @Override
+          public AlarmManager get() {
+            return Preconditions.checkNotNull(
+                applicationComponent.alarmManager(),
+                "Cannot return null from a non-@Nullable component method");
+          }
+        };
+
     this.alarmRepositoryProvider =
         new dagger.internal.Factory<AlarmRepository>() {
           private final ApplicationComponent applicationComponent = builder.applicationComponent;
@@ -81,28 +99,42 @@ public final class DaggerAlarmDetailComponent implements AlarmDetailComponent {
           }
         };
 
-    this.alarmDetailPresenterProvider =
-        AlarmDetailPresenter_Factory.create(
-            provideAlarmDetailViewProvider,
-            alarmSourceProvider,
-            alarmRepositoryProvider,
-            baseSchedulerProvider);
-
-    this.getSpeakerboxProvider =
-        new dagger.internal.Factory<Speakerbox>() {
+    this.threadExecutorProvider =
+        new dagger.internal.Factory<ThreadExecutor>() {
           private final ApplicationComponent applicationComponent = builder.applicationComponent;
 
           @Override
-          public Speakerbox get() {
+          public ThreadExecutor get() {
             return Preconditions.checkNotNull(
-                applicationComponent.getSpeakerbox(),
+                applicationComponent.threadExecutor(),
                 "Cannot return null from a non-@Nullable component method");
           }
         };
 
+    this.postExecutionThreadProvider =
+        new dagger.internal.Factory<PostExecutionThread>() {
+          private final ApplicationComponent applicationComponent = builder.applicationComponent;
+
+          @Override
+          public PostExecutionThread get() {
+            return Preconditions.checkNotNull(
+                applicationComponent.postExecutionThread(),
+                "Cannot return null from a non-@Nullable component method");
+          }
+        };
+
+    this.alarmDetailPresenterProvider =
+        AlarmDetailPresenter_Factory.create(
+            provideAlarmDetailViewProvider,
+            alarmSourceProvider,
+            alarmManagerProvider,
+            alarmRepositoryProvider,
+            baseSchedulerProvider,
+            threadExecutorProvider,
+            postExecutionThreadProvider);
+
     this.alarmDetailFragmentMembersInjector =
-        AlarmDetailFragment_MembersInjector.create(
-            alarmDetailPresenterProvider, getSpeakerboxProvider);
+        AlarmDetailFragment_MembersInjector.create(alarmDetailPresenterProvider);
   }
 
   @Override
