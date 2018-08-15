@@ -6,7 +6,6 @@
 ## Topics
 * [What is Parrot?](#what-is-Parrot)
 * [Software Architecture Diagram](#software-architecture-diagram)
-* [Can I use the code?](#can-i-use-code-from-this-repo)
 * [Project APIs/Concepts](#apis-and-architectures-used)
 * [Learning Sources/Inspiration](#sources-and-inspiration)
 * [Contact Me](#contact)
@@ -18,7 +17,7 @@ Parrot is a Talking Alarm App which allows the user to set up to 5 Daily Reminde
 
 I used TextToSpeech Library for the Talking Feature.
 
-I'm applying Clean Architecture Principles, as well as Dagger 2 for Dependency Injection, RxJava 2 for Concurrency/Communication, Retrofit for Web Services and a Realm Database to store the Reminders. I specially thank Ryan K (BracketCov(http://wiseassblog.com/)) for walking me through Clean MVP Architecture.
+I'm applying Clean Architecture Principles, as well as Dagger 2 for Dependency Injection, RxJava 2 for Concurrency/Communication, Retrofit for Web Services and a Realm Database to store the Reminders. for walking me through Clean MVP Architecture.
 
 
 ### AlarmList Component
@@ -45,11 +44,6 @@ I'm applying Clean Architecture Principles, as well as Dagger 2 for Dependency I
 
 <img src="diagram.jpg" alt="Profile Page Screen" width="540" height="960"/>
 
-## Can I use code from this Repo?
-Absolutely, pursuant to the project's [LICENSE](LICENSE.md). I primarily learned how to build Profiler by learning from free sources and referencing open source libraries, many of which I list (here)[#sources]. That being said, the logo (whenever I get around to making it) and name are my intellectual creations, so don't use them unless you are linking/reffering to this Repo.
-
-Follow the rules in the license, and you're good.
-
 ## APIs and Architectures Used:
 This project is greatly inspired by Clean Architecture Principles. Now that I'm more comfortable with RxJava and Dagger 2, I'm confident that I'll be able to execute a modular and highly testable Application on the Android Platform. This project is an attempt to make that idea into an Open Source App.
 
@@ -66,10 +60,6 @@ This project is greatly inspired by Clean Architecture Principles. Now that I'm 
 * Plenty of System Services Like Vibrator, AlarmManager, MediaPlayer, PowerManager.WakeLock
 
 ## Sources and Inspiration
-
-Thanks to Ryan for sharing free content and giving everybody a chance of being a Great Developer.
-
-https://www.youtube.com/user/gosuddr93/feed
 
 Fernando Cejas' Repository and material on Android and Clean Architecture was very useful to me. Being able to see working code is one of the greatest resources, and although I do many things differently (differently, not necessarily better), I don't think I would attempted this without such an awesome reference!
 
