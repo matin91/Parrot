@@ -2,6 +2,7 @@
 
 <img src="ic_launcher.png" alt="App Launcher" width="100" height="100"/>
 
+**[Download APK](https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)**
 
 ## Topics
 * [What is Parrot?](#what-is-Parrot)
