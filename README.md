@@ -1,5 +1,7 @@
 # Parrot: Wakes you up!
 
+![get it on google play!](https://vignette.wikia.nocookie.net/logopedia/images/b/b9/Get-it-on-Google-Play.png/revision/latest?cb=20150704202355)(https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)
+
 <img src="ic_launcher.png" alt="App Launcher" width="100" height="100"/>
 
 **[Download APK](https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)**
@@ -83,7 +85,7 @@ http://fragmentedpodcast.com/episodes/11/
 ## Contact:
 It's my personal goal to create high-quality content, I'v been writing quality apps for almost 5 years and I passionate myself for what I do, and I'm glad if you would like to work with me.
 
-- [Gmail](mattinn91@gmail.com)(hsalehi91@gmail.com)
+- [Gmail](mattinn91@gmail.com)(rocklobstre@gmail.com)
 
 ## License
  * Copyright 2017, The Android Open Source Project
