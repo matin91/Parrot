@@ -1,7 +1,5 @@
 # Parrot: Wakes you up!
 
-![get it on google play!](https://vignette.wikia.nocookie.net/logopedia/images/b/b9/Get-it-on-Google-Play.png/revision/latest?cb=20150704202355)(https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)
-
 <img src="ic_launcher.png" alt="App Launcher" width="100" height="100"/>
 
 **[Download APK](https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)**
