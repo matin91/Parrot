@@ -1,4 +1,4 @@
-# Parrot
+# Parrot: Wakes you up!
 
 <img src="ic_launcher.png" alt="App Launcher" width="100" height="100"/>
 
