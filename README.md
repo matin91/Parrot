@@ -4,6 +4,11 @@
 
 **[Download APK](https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)**
 
+<a href="https://play.google.com/store/apps/details?id=com.rocklobstre.parrot">
+  <img src="play-store-change.png" height="80"/>
+</a>
+
+
 ## Topics
 * [What is Parrot?](#what-is-Parrot)
 * [Software Architecture Diagram](#software-architecture-diagram)
