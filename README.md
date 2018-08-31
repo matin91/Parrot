@@ -5,7 +5,7 @@
 **[Download APK](https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)**
 
 <a href="https://play.google.com/store/apps/details?id=com.rocklobstre.parrot">
-  <img src="play-store-change.png" height="80"/>
+  <img src="https://www.hand2hand.global/wp-content/uploads/2018/03/play-store-badge.png" height="80"/>
 </a>
 
 
