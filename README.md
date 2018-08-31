@@ -1,6 +1,6 @@
 # Parrot: Wakes you up!
 
-<img src="ic_launcher.png" alt="App Launcher" width="100" height="100"/>
+<img src="ic_launcher.png" alt="App Launcher" width="100" height="120"/>
 
 **[Download APK](https://github.com/RockLobstre/Parrot/blob/master/parrot.apk?raw=true)**
 
