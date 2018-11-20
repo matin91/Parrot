@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -22,6 +23,9 @@ import com.rocklobstre.parrot.ParrotApplication;
 import com.rocklobstre.parrot.R;
 import com.rocklobstre.parrot.data.viewmodel.Alarm;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -40,6 +44,9 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
     AlarmReceiverPresenter presenter;
     @Inject
     Speakerbox speakerbox;
+
+    private TextView dateview;
+    private TextView messageview;
 
     public AlarmReceiverFragment() {
 
@@ -76,6 +83,8 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
 
         Button stopAlarm = (Button) v.findViewById(R.id.btn_alarm_dismiss);
         LottieAnimationView animationView = (LottieAnimationView) v.findViewById(R.id.animation_view);
+        dateview = (TextView)v.findViewById(R.id.date);
+        messageview = (TextView)v.findViewById(R.id.message);
 
         lottieProgressConfig(animationView);
 
@@ -170,6 +179,15 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
                 speakerbox.play(message, onStart, onDone, null);
             }
         }, 3000);
+
+        //show message
+        messageview.setText(message);
+
+        //show date
+        Date today = Calendar.getInstance().getTime();//getting date
+        SimpleDateFormat formatter = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");//formating according to my need
+        String date = formatter.format(today);
+        dateview.setText(date);
     }
 
     private void lottieProgressConfig(final LottieAnimationView animationView) {

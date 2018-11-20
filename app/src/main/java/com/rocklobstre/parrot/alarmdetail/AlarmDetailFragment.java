@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationCompat;
@@ -68,6 +69,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     private ImageView headerChevronIV;
     private DropDownAdapter.ViewActions viewActions;
     private TextView dropDownHeaderTitle;
+    private Speakerbox speakerbox;
 
     public AlarmDetailFragment() {
     }
@@ -98,6 +100,9 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
                 )
                 .build().inject(this);
 
+        speakerbox = new Speakerbox(getActivity().getApplication());
+        speakerbox.setActivity(getActivity());
+        speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
     }
 
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -117,17 +122,16 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         back = (ImageButton) v.findViewById(R.id.imb_alarm_detail_back);
         clearMessage = (ImageButton) v.findViewById(R.id.imb_clear_alarm_message);
         proceed = (ImageButton) v.findViewById(R.id.imb_alarm_detail_proceed);
-        View scrollDown = v.findViewById(R.id.imb_alarm_scroll_bottom);
+        View testSpeak = v.findViewById(R.id.imb_alarm_scroll_bottom);
         ScrollView scrollLayout = (ScrollView)v.findViewById(R.id.scrl_alarm_detail);
 
         setUpDropDownViews(v);
 
-        scrollDown.setOnClickListener(new View.OnClickListener() {
+        testSpeak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 scrollLayout.fullScroll(View.FOCUS_DOWN);
-                dropDownView.expandDropDown();
-                clearMessage.callOnClick();
+                speakMessage();
             }
         });
 
@@ -153,6 +157,26 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         });
 
         return v;
+    }
+
+    private void speakMessage() {
+        final Runnable onStart = new Runnable() {
+            public void run() {
+                speakerbox.requestAudioFocus();
+            }
+        };
+        final Runnable onDone = new Runnable() {
+            public void run() {
+                speakerbox.abandonAudioFocus();
+            }
+        };
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                speakerbox.play(alarmMessage.getText().toString(), onStart, onDone, null);
+            }
+        }, 2000);
+
     }
 
     private void setUpDropDownViews(View v) {
@@ -191,6 +215,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         super.onResume();
         presenter.start();
     }
+
 
     @Override
     public void onAttach(Context context) {
@@ -295,6 +320,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
                 else
                     alarmMessage.setText(getStandTitle(standId));
                 selectedStandId = standId;
+                speakMessage();
             }
 
             @Override

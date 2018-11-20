@@ -204,7 +204,7 @@
             android:textSize="15dp"
             android:layout_toLeftOf="@+id/imb_alarm_detail_proceed"
             android:scaleType="fitCenter"
-            android:text="Edit what it Says!"
+            android:text="Test what it Says!"
             android:layout_marginRight="8dp"
             android:layout_marginTop="0dp" />
 

@@ -6,14 +6,41 @@
     android:layout_height="match_parent"
     android:id="@+id/root_alarm_fragment"
     >
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
         android:scaleType="centerInside"
-        android:layout_centerInParent="true"
         android:duplicateParentState="true"/>
 
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="33dp"
+        android:layout_below="@+id/animation_view"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textColor="@color/WHITE"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:layout_below="@+id/date"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:padding="8dp"
+        android:textColor="@color/WHITE"
+        android:layout_margin="8dp"
+        />
 
     <Button
         android:id="@+id/btn_alarm_dismiss"
@@ -28,7 +55,7 @@
         android:textColor="@color/WHITE"
         android:textSize="28sp"
         android:layout_marginRight="8dp"
-        android:layout_below="@+id/animation_view"
+        android:layout_below="@+id/message"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp" />
