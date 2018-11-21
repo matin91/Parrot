@@ -143,7 +143,7 @@ public class AlarmReceiverFragment extends Fragment implements AlarmReceiverCont
                 false,
                 true,
                 12,
-                30
+                30, 70
         );
     }
 

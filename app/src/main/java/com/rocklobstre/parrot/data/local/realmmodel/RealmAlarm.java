@@ -21,6 +21,7 @@ public class RealmAlarm implements RealmModel {
     private boolean renewAutomatically;
     private int hourOfDay;
     private int minute;
+    private int volume;
 
     public RealmAlarm() {
         //blank constructor for realm?
@@ -33,7 +34,8 @@ public class RealmAlarm implements RealmModel {
                       boolean vibrateOnly,
                       boolean renewAutomatically,
                       int minute,
-                      int hourOfDay
+                      int hourOfDay,
+                      int volume
     ) {
 
         this.alarmId = alarmId;
@@ -44,6 +46,7 @@ public class RealmAlarm implements RealmModel {
         this.renewAutomatically = renewAutomatically;
         this.minute = minute;
         this.hourOfDay = hourOfDay;
+        this.volume = volume;
     }
 
     /**
@@ -60,7 +63,16 @@ public class RealmAlarm implements RealmModel {
         this.active = false;
         this.vibrateOnly = false;
         this.renewAutomatically = false;
+        this.volume = 70;
 
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 
     public String getAlarmId() {

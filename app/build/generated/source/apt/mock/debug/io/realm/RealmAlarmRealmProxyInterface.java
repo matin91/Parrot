@@ -18,4 +18,6 @@ public interface RealmAlarmRealmProxyInterface {
     public void realmSet$hourOfDay(int value);
     public int realmGet$minute();
     public void realmSet$minute(int value);
+    public int realmGet$volume();
+    public void realmSet$volume(int value);
 }

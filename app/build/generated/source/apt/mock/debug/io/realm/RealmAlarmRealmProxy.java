@@ -42,9 +42,10 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         public long renewAutomaticallyIndex;
         public long hourOfDayIndex;
         public long minuteIndex;
+        public long volumeIndex;
 
         RealmAlarmColumnInfo(String path, Table table) {
-            final Map<String, Long> indicesMap = new HashMap<String, Long>(8);
+            final Map<String, Long> indicesMap = new HashMap<String, Long>(9);
             this.alarmIdIndex = getValidColumnIndex(path, table, "RealmAlarm", "alarmId");
             indicesMap.put("alarmId", this.alarmIdIndex);
             this.alarmTitleIndex = getValidColumnIndex(path, table, "RealmAlarm", "alarmTitle");
@@ -61,6 +62,8 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
             indicesMap.put("hourOfDay", this.hourOfDayIndex);
             this.minuteIndex = getValidColumnIndex(path, table, "RealmAlarm", "minute");
             indicesMap.put("minute", this.minuteIndex);
+            this.volumeIndex = getValidColumnIndex(path, table, "RealmAlarm", "volume");
+            indicesMap.put("volume", this.volumeIndex);
 
             setIndicesMap(indicesMap);
         }
@@ -76,6 +79,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
             this.renewAutomaticallyIndex = otherInfo.renewAutomaticallyIndex;
             this.hourOfDayIndex = otherInfo.hourOfDayIndex;
             this.minuteIndex = otherInfo.minuteIndex;
+            this.volumeIndex = otherInfo.volumeIndex;
 
             setIndicesMap(otherInfo.getIndicesMap());
         }
@@ -99,6 +103,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         fieldNames.add("renewAutomatically");
         fieldNames.add("hourOfDay");
         fieldNames.add("minute");
+        fieldNames.add("volume");
         FIELD_NAMES = Collections.unmodifiableList(fieldNames);
     }
 
@@ -308,6 +313,28 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         proxyState.getRow$realm().setLong(columnInfo.minuteIndex, value);
     }
 
+    @Override
+    @SuppressWarnings("cast")
+    public int realmGet$volume() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (int) proxyState.getRow$realm().getLong(columnInfo.volumeIndex);
+    }
+
+    @Override
+    public void realmSet$volume(int value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            row.getTable().setLong(columnInfo.volumeIndex, row.getIndex(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        proxyState.getRow$realm().setLong(columnInfo.volumeIndex, value);
+    }
+
     public static RealmObjectSchema createRealmObjectSchema(RealmSchema realmSchema) {
         if (!realmSchema.contains("RealmAlarm")) {
             RealmObjectSchema realmObjectSchema = realmSchema.create("RealmAlarm");
@@ -319,6 +346,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
             realmObjectSchema.add("renewAutomatically", RealmFieldType.BOOLEAN, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
             realmObjectSchema.add("hourOfDay", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
             realmObjectSchema.add("minute", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+            realmObjectSchema.add("volume", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
             return realmObjectSchema;
         }
         return realmSchema.get("RealmAlarm");
@@ -330,14 +358,14 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         }
         Table table = sharedRealm.getTable("class_RealmAlarm");
         final long columnCount = table.getColumnCount();
-        if (columnCount != 8) {
-            if (columnCount < 8) {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 8 but was " + columnCount);
+        if (columnCount != 9) {
+            if (columnCount < 9) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 9 but was " + columnCount);
             }
             if (allowExtraColumns) {
-                RealmLog.debug("Field count is more than expected - expected 8 but was %1$d", columnCount);
+                RealmLog.debug("Field count is more than expected - expected 9 but was %1$d", columnCount);
             } else {
-                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 8 but was " + columnCount);
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 9 but was " + columnCount);
             }
         }
         Map<String, RealmFieldType> columnTypes = new HashMap<String, RealmFieldType>();
@@ -429,6 +457,15 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         }
         if (table.isColumnNullable(columnInfo.minuteIndex)) {
             throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'minute' does support null values in the existing Realm file. Use corresponding boxed type for field 'minute' or migrate using RealmObjectSchema.setNullable().");
+        }
+        if (!columnTypes.containsKey("volume")) {
+            throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'volume' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
+        }
+        if (columnTypes.get("volume") != RealmFieldType.INTEGER) {
+            throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'int' for field 'volume' in existing Realm file.");
+        }
+        if (table.isColumnNullable(columnInfo.volumeIndex)) {
+            throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'volume' does support null values in the existing Realm file. Use corresponding boxed type for field 'volume' or migrate using RealmObjectSchema.setNullable().");
         }
 
         return columnInfo;
@@ -526,6 +563,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
                 ((RealmAlarmRealmProxyInterface) obj).realmSet$minute((int) json.getInt("minute"));
             }
         }
+        if (json.has("volume")) {
+            if (json.isNull("volume")) {
+                throw new IllegalArgumentException("Trying to set non-nullable field 'volume' to null.");
+            } else {
+                ((RealmAlarmRealmProxyInterface) obj).realmSet$volume((int) json.getInt("volume"));
+            }
+        }
         return obj;
     }
 
@@ -595,6 +639,13 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
                     throw new IllegalArgumentException("Trying to set non-nullable field 'minute' to null.");
                 } else {
                     ((RealmAlarmRealmProxyInterface) obj).realmSet$minute((int) reader.nextInt());
+                }
+            } else if (name.equals("volume")) {
+                if (reader.peek() == JsonToken.NULL) {
+                    reader.skipValue();
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'volume' to null.");
+                } else {
+                    ((RealmAlarmRealmProxyInterface) obj).realmSet$volume((int) reader.nextInt());
                 }
             } else {
                 reader.skipValue();
@@ -668,6 +719,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
             ((RealmAlarmRealmProxyInterface) realmObject).realmSet$renewAutomatically(((RealmAlarmRealmProxyInterface) newObject).realmGet$renewAutomatically());
             ((RealmAlarmRealmProxyInterface) realmObject).realmSet$hourOfDay(((RealmAlarmRealmProxyInterface) newObject).realmGet$hourOfDay());
             ((RealmAlarmRealmProxyInterface) realmObject).realmSet$minute(((RealmAlarmRealmProxyInterface) newObject).realmGet$minute());
+            ((RealmAlarmRealmProxyInterface) realmObject).realmSet$volume(((RealmAlarmRealmProxyInterface) newObject).realmGet$volume());
             return realmObject;
         }
     }
@@ -706,6 +758,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.hourOfDayIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$hourOfDay(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.minuteIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$minute(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.volumeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$volume(), false);
         return rowIndex;
     }
 
@@ -748,6 +801,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
                 Table.nativeSetLong(tableNativePtr, columnInfo.hourOfDayIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$hourOfDay(), false);
                 Table.nativeSetLong(tableNativePtr, columnInfo.minuteIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$minute(), false);
+                Table.nativeSetLong(tableNativePtr, columnInfo.volumeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$volume(), false);
             }
         }
     }
@@ -788,6 +842,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.hourOfDayIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$hourOfDay(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.minuteIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$minute(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.volumeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$volume(), false);
         return rowIndex;
     }
 
@@ -832,6 +887,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
                 Table.nativeSetBoolean(tableNativePtr, columnInfo.renewAutomaticallyIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$renewAutomatically(), false);
                 Table.nativeSetLong(tableNativePtr, columnInfo.hourOfDayIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$hourOfDay(), false);
                 Table.nativeSetLong(tableNativePtr, columnInfo.minuteIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$minute(), false);
+                Table.nativeSetLong(tableNativePtr, columnInfo.volumeIndex, rowIndex, ((RealmAlarmRealmProxyInterface)object).realmGet$volume(), false);
             }
         }
     }
@@ -862,6 +918,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$renewAutomatically(((RealmAlarmRealmProxyInterface) realmObject).realmGet$renewAutomatically());
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$hourOfDay(((RealmAlarmRealmProxyInterface) realmObject).realmGet$hourOfDay());
         ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$minute(((RealmAlarmRealmProxyInterface) realmObject).realmGet$minute());
+        ((RealmAlarmRealmProxyInterface) unmanagedObject).realmSet$volume(((RealmAlarmRealmProxyInterface) realmObject).realmGet$volume());
         return unmanagedObject;
     }
 
@@ -873,6 +930,7 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         ((RealmAlarmRealmProxyInterface) realmObject).realmSet$renewAutomatically(((RealmAlarmRealmProxyInterface) newObject).realmGet$renewAutomatically());
         ((RealmAlarmRealmProxyInterface) realmObject).realmSet$hourOfDay(((RealmAlarmRealmProxyInterface) newObject).realmGet$hourOfDay());
         ((RealmAlarmRealmProxyInterface) realmObject).realmSet$minute(((RealmAlarmRealmProxyInterface) newObject).realmGet$minute());
+        ((RealmAlarmRealmProxyInterface) realmObject).realmSet$volume(((RealmAlarmRealmProxyInterface) newObject).realmGet$volume());
         return realmObject;
     }
 
@@ -913,6 +971,10 @@ public class RealmAlarmRealmProxy extends com.rocklobstre.parrot.data.local.real
         stringBuilder.append(",");
         stringBuilder.append("{minute:");
         stringBuilder.append(realmGet$minute());
+        stringBuilder.append("}");
+        stringBuilder.append(",");
+        stringBuilder.append("{volume:");
+        stringBuilder.append(realmGet$volume());
         stringBuilder.append("}");
         stringBuilder.append("]");
         return stringBuilder.toString();

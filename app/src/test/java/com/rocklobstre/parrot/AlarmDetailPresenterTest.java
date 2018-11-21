@@ -50,6 +50,8 @@ public class AlarmDetailPresenterTest {
 
     private static final int HOUR = 10;
 
+    private static final int VOLUME = 70;
+
 
     //true means active
     private static final boolean ALARM_STATE = true;
@@ -64,7 +66,8 @@ public class AlarmDetailPresenterTest {
             false,
             false,
             MINUTE,
-            HOUR
+            HOUR,
+            VOLUME
     );
 
     private static final Alarm INACTIVE_ALARM = new Alarm(
@@ -74,7 +77,8 @@ public class AlarmDetailPresenterTest {
             false,
             false,
             HOUR,
-            MINUTE
+            MINUTE,
+            VOLUME
 
     );
 

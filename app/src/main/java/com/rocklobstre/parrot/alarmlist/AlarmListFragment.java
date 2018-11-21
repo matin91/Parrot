@@ -137,7 +137,8 @@ public class AlarmListFragment extends Fragment implements AlarmListContract.Vie
                                 false,
                                 true,
                                 12,
-                                30
+                                30,
+                                70
                         )
                 );
                 if (isFirstTime()){

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.AnthonyFermin:DropDownView:1.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/67c02257c7947cb121395903c98901e7/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/67c02257c7947cb121395903c98901e7/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/05e1163482a861cfea4769ff7ca5b20f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/05e1163482a861cfea4769ff7ca5b20f/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

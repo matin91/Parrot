@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,6 +24,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ScrollView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -70,6 +72,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
     private DropDownAdapter.ViewActions viewActions;
     private TextView dropDownHeaderTitle;
     private Speakerbox speakerbox;
+    private SeekBar seekbar;
 
     public AlarmDetailFragment() {
     }
@@ -103,6 +106,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         speakerbox = new Speakerbox(getActivity().getApplication());
         speakerbox.setActivity(getActivity());
         speakerbox.getTextToSpeech().setLanguage(new Locale("en_US"));
+
     }
 
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -122,10 +126,12 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         back = (ImageButton) v.findViewById(R.id.imb_alarm_detail_back);
         clearMessage = (ImageButton) v.findViewById(R.id.imb_clear_alarm_message);
         proceed = (ImageButton) v.findViewById(R.id.imb_alarm_detail_proceed);
+        seekbar = (SeekBar) v.findViewById(R.id.seekbar);
         View testSpeak = v.findViewById(R.id.imb_alarm_scroll_bottom);
         ScrollView scrollLayout = (ScrollView)v.findViewById(R.id.scrl_alarm_detail);
 
         setUpDropDownViews(v);
+        setAlarmVolume();
 
         testSpeak.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +162,14 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
             }
         });
 
+
         return v;
+    }
+
+    private void setAlarmVolume() {
+        AudioManager audioManager =
+                (AudioManager)getActivity().getSystemService(Context.AUDIO_SERVICE);
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, seekbar.getProgress(), 0);
     }
 
     private void speakMessage() {
@@ -241,6 +254,7 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
         alarm.setActive(false);
         alarm.setRenewAutomatically(getRenewAutomatically());
         alarm.setVibrateOnly(getVibrateOnly());
+        alarm.setVolume(seekbar.getProgress());
 
         return alarm;
     }
@@ -358,6 +372,11 @@ public class AlarmDetailFragment extends Fragment implements AlarmDetailContract
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getActivity());
         notificationManager.notify((int) SystemClock.currentThreadTimeMillis(), builder.build());
+    }
+
+    @Override
+    public void setVolume(int volume) {
+        seekbar.setProgress(volume);
     }
 
     @Override

@@ -1,279 +1,278 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-MERGED from [io.realm:realm-android-library:3.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/realm-android-library-3.1.1.aar/a3350c9c77810517f1848ba14bf60395/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:design:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/582577cdf540302cc3c8a76cd0846191/AndroidManifest.xml:17:1-22:12
-MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/e8c362540c147452eff989c3f819c454/AndroidManifest.xml:2:1-17:12
-MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:2:1-15:12
-MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/b8d9b946d4c145c3be3a832a9fd7124e/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/efdd921923c4b5976e5a3796579820c2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/652a0e0dc1488e932ed82c2b818ca2c8/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/05a042dc8ab0785fc68efe021a1bbe74/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/c232a6f0c93cebfb85d0773710880a61/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/ef126ab9ab730594d4345f17fb692d92/AndroidManifest.xml:2:1-11:12
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:17:1-30:12
-MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/67c02257c7947cb121395903c98901e7/AndroidManifest.xml:9:1-18:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/1a2b5d803ac75a3fff65f356dc7e4bb6/AndroidManifest.xml:15:1-21:12
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:17:1-59:12
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/relinker-1.2.2.aar/5c8654606cf8b90d95c3021fc6dc29d9/AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/965cab0a8462bc2c4d0dee9f127e8e0f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c33644cfc79aa107c8260d70e770eccf/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6cf6a85b6fb8bbc268c74d340d6c8e36/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/92dfdff949cb5de7d15252184b6b6049/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/226bf3ce2dd9bba8ed718feae9f7775c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/d0c1c70302d12a2fba25749716c95fcb/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/1dcac8d1aed01647d0fcaced7a9156cc/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/1a4bbab7d7116cc1de28844abb2a2520/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/cac0536bbab81660aa16ed8e4cbb010d/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/5bfc3e3925ce05c231e16a66eb4fb21e/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1b612db9cd3d05d545a7a9bd4060f4bf/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/56d2b46a7fef18013556c1d9083d3f3d/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/5b8cab6717cf66ebb0ba4808cef405a6/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+MERGED from [io.realm:realm-android-library:3.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/realm-android-library-3.1.1.aar/f692f17442cbf24b880d42adc1b151e6/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/d3e5ae0c4f676464c61464a87a580b98/AndroidManifest.xml:17:1-22:12
+MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/44c29ede7caeb7f8ea2968c9a140409f/AndroidManifest.xml:2:1-17:12
+MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:2:1-15:12
+MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/50581bcd0bc50ef09ec5ace50f660fdf/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c8c4ccba4d717839351a860251d9659b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/0294dec415e7378f59911443f77af65e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/1fe637bd6b536639913603bd632e85d2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/5ba65bdcac665beff7cebd0d0653a351/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/2c18be45f79b122955f277906b4f5d7b/AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:17:1-30:12
+MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/05e1163482a861cfea4769ff7ca5b20f/AndroidManifest.xml:9:1-18:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/c56d7d6e6764ca730aa8b38e8cc07605/AndroidManifest.xml:15:1-21:12
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:17:1-59:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/relinker-1.2.2.aar/d3f526b82270043b25b5c6382235be60/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3c54db3fc86d2c742ba9d0337bae1146/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9e30e68abded851796d4a9d22236c564/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/e0127d4b3e5b9440e4b9d56c85193710/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/00e12b63b7d88fcefdf9bb85aa0fa0dd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a27848fd6cbc1a51a2024da949ed0572/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/fa2626d600d6fb83a512cd1392b7480b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/bf8beed5b8daf85c98e842ff05c14dc3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/8fa4dd39b92120cffc478512e13998b0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9542010336911e10714bab2a1c17b9fb/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/1ac26d478ddf4f6564937425938337bf/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a05da43da0504b2eb963af207a102e37/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/93f8db169f172886ae2a8bb97e3f03f5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/36b786c254bf89e61adadf7ce9f9aedf/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
 	package
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:4:5-37
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:4:5-37
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:3:5-51
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:6:5-68
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:6:5-68
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:6:22-65
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:6:22-65
 uses-permission#android.permission.VIBRATE
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:7:5-66
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:7:5-66
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:7:22-63
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:7:22-63
 uses-permission#android.permission.INTERNET
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:8:5-67
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:8:22-64
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:8:22-64
 supports-screens
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:11:5-13:41
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:11:5-13:41
 	android:smallScreens
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:12:9-37
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:12:9-37
 	android:xlargeScreens
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:13:9-38
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:13:9-38
 application
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:15:5-55:19
-MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/e8c362540c147452eff989c3f819c454/AndroidManifest.xml:11:5-15:19
-MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/e8c362540c147452eff989c3f819c454/AndroidManifest.xml:11:5-15:19
-MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:9:5-13:19
-MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:9:5-13:19
-MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/b8d9b946d4c145c3be3a832a9fd7124e/AndroidManifest.xml:11:5-20
-MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/b8d9b946d4c145c3be3a832a9fd7124e/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/ef126ab9ab730594d4345f17fb692d92/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/ef126ab9ab730594d4345f17fb692d92/AndroidManifest.xml:9:5-20
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:22:5-28:19
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:22:5-28:19
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:28:5-57:19
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:28:5-57:19
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:15:5-55:19
+MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/44c29ede7caeb7f8ea2968c9a140409f/AndroidManifest.xml:11:5-15:19
+MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/44c29ede7caeb7f8ea2968c9a140409f/AndroidManifest.xml:11:5-15:19
+MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:9:5-13:19
+MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:9:5-13:19
+MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/50581bcd0bc50ef09ec5ace50f660fdf/AndroidManifest.xml:11:5-20
+MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/50581bcd0bc50ef09ec5ace50f660fdf/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/2c18be45f79b122955f277906b4f5d7b/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/2c18be45f79b122955f277906b4f5d7b/AndroidManifest.xml:9:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:22:5-28:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:28:5-57:19
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:28:5-57:19
 	android:supportsRtl
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:19:9-41
 	android:icon
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:17:9-36
-		REJECTED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/e8c362540c147452eff989c3f819c454/AndroidManifest.xml:12:9-35
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:17:9-36
+		REJECTED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/44c29ede7caeb7f8ea2968c9a140409f/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:21:9-38
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:21:9-38
 	tools:replace
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:22:9-44
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:22:9-44
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:16:9-64
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:16:9-64
 activity#com.rocklobstre.parrot.settings.SettingsActivity
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:24:9-28:15
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:24:9-28:15
 	android:label
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:26:13-60
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:26:13-60
 	android:theme
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:27:13-42
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:27:13-42
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:25:13-76
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:25:13-76
 activity#com.rocklobstre.parrot.alarmlist.AlarmListActivity
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:30:9-39:20
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:30:9-39:20
 	android:label
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:32:13-45
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:32:13-45
 	android:theme
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:33:13-42
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:33:13-42
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:31:13-78
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:31:13-78
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:34:13-38:29
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:35:17-69
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:35:25-66
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:37:17-77
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:37:27-74
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:37:27-74
 activity#com.rocklobstre.parrot.alarmreceiver.AlarmReceiverActivity
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:41:9-44:53
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:41:9-44:53
 	android:label
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:43:13-64
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:43:13-64
 	android:theme
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:44:13-50
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:44:13-50
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:42:13-86
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:42:13-86
 activity#com.rocklobstre.parrot.alarmdetail.AlarmDetailActivity
-ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:49:9-53:15
+ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:49:9-53:15
 	android:screenOrientation
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:52:13-49
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:52:13-49
 	android:theme
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:50:13-42
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:50:13-42
 	android:name
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:49:19-88
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml:49:19-88
 uses-sdk
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-MERGED from [io.realm:realm-android-library:3.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/realm-android-library-3.1.1.aar/a3350c9c77810517f1848ba14bf60395/AndroidManifest.xml:7:5-9:41
-MERGED from [io.realm:realm-android-library:3.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/realm-android-library-3.1.1.aar/a3350c9c77810517f1848ba14bf60395/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/582577cdf540302cc3c8a76cd0846191/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/582577cdf540302cc3c8a76cd0846191/AndroidManifest.xml:20:5-44
-MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/e8c362540c147452eff989c3f819c454/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/e8c362540c147452eff989c3f819c454/AndroidManifest.xml:7:5-9:41
-MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:5:5-7:41
-MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/b8d9b946d4c145c3be3a832a9fd7124e/AndroidManifest.xml:7:5-9:41
-MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/b8d9b946d4c145c3be3a832a9fd7124e/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/efdd921923c4b5976e5a3796579820c2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/efdd921923c4b5976e5a3796579820c2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/652a0e0dc1488e932ed82c2b818ca2c8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/652a0e0dc1488e932ed82c2b818ca2c8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/05a042dc8ab0785fc68efe021a1bbe74/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/05a042dc8ab0785fc68efe021a1bbe74/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/c232a6f0c93cebfb85d0773710880a61/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/c232a6f0c93cebfb85d0773710880a61/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/ef126ab9ab730594d4345f17fb692d92/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/ef126ab9ab730594d4345f17fb692d92/AndroidManifest.xml:5:5-7:41
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/67c02257c7947cb121395903c98901e7/AndroidManifest.xml:14:5-16:41
-MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/67c02257c7947cb121395903c98901e7/AndroidManifest.xml:14:5-16:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/1a2b5d803ac75a3fff65f356dc7e4bb6/AndroidManifest.xml:19:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/1a2b5d803ac75a3fff65f356dc7e4bb6/AndroidManifest.xml:19:5-43
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:20:5-22:41
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:20:5-22:41
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/relinker-1.2.2.aar/5c8654606cf8b90d95c3021fc6dc29d9/AndroidManifest.xml:7:5-43
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/relinker-1.2.2.aar/5c8654606cf8b90d95c3021fc6dc29d9/AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/965cab0a8462bc2c4d0dee9f127e8e0f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/965cab0a8462bc2c4d0dee9f127e8e0f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c33644cfc79aa107c8260d70e770eccf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c33644cfc79aa107c8260d70e770eccf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6cf6a85b6fb8bbc268c74d340d6c8e36/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6cf6a85b6fb8bbc268c74d340d6c8e36/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/92dfdff949cb5de7d15252184b6b6049/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/92dfdff949cb5de7d15252184b6b6049/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/226bf3ce2dd9bba8ed718feae9f7775c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/226bf3ce2dd9bba8ed718feae9f7775c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/d0c1c70302d12a2fba25749716c95fcb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/d0c1c70302d12a2fba25749716c95fcb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/1dcac8d1aed01647d0fcaced7a9156cc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/1dcac8d1aed01647d0fcaced7a9156cc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/1a4bbab7d7116cc1de28844abb2a2520/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/1a4bbab7d7116cc1de28844abb2a2520/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/cac0536bbab81660aa16ed8e4cbb010d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/cac0536bbab81660aa16ed8e4cbb010d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/5bfc3e3925ce05c231e16a66eb4fb21e/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/5bfc3e3925ce05c231e16a66eb4fb21e/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1b612db9cd3d05d545a7a9bd4060f4bf/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/1b612db9cd3d05d545a7a9bd4060f4bf/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/56d2b46a7fef18013556c1d9083d3f3d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/56d2b46a7fef18013556c1d9083d3f3d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/5b8cab6717cf66ebb0ba4808cef405a6/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/5b8cab6717cf66ebb0ba4808cef405a6/AndroidManifest.xml:20:5-44
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+MERGED from [io.realm:realm-android-library:3.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/realm-android-library-3.1.1.aar/f692f17442cbf24b880d42adc1b151e6/AndroidManifest.xml:7:5-9:41
+MERGED from [io.realm:realm-android-library:3.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/realm-android-library-3.1.1.aar/f692f17442cbf24b880d42adc1b151e6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/d3e5ae0c4f676464c61464a87a580b98/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/d3e5ae0c4f676464c61464a87a580b98/AndroidManifest.xml:20:5-44
+MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/44c29ede7caeb7f8ea2968c9a140409f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mapzen.android:speakerbox:1.4.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/speakerbox-1.4.1.aar/44c29ede7caeb7f8ea2968c9a140409f/AndroidManifest.xml:7:5-9:41
+MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:5:5-7:41
+MERGED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/50581bcd0bc50ef09ec5ace50f660fdf/AndroidManifest.xml:7:5-9:41
+MERGED from [com.airbnb.android:lottie:2.5.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/lottie-2.5.5.aar/50581bcd0bc50ef09ec5ace50f660fdf/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c8c4ccba4d717839351a860251d9659b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c8c4ccba4d717839351a860251d9659b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/0294dec415e7378f59911443f77af65e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/0294dec415e7378f59911443f77af65e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/1fe637bd6b536639913603bd632e85d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/1fe637bd6b536639913603bd632e85d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/5ba65bdcac665beff7cebd0d0653a351/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/5ba65bdcac665beff7cebd0d0653a351/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/2c18be45f79b122955f277906b4f5d7b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/2c18be45f79b122955f277906b4f5d7b/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:20:5-44
+MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/05e1163482a861cfea4769ff7ca5b20f/AndroidManifest.xml:14:5-16:41
+MERGED from [com.github.AnthonyFermin:DropDownView:1.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/DropDownView-1.0.1.aar/05e1163482a861cfea4769ff7ca5b20f/AndroidManifest.xml:14:5-16:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/c56d7d6e6764ca730aa8b38e8cc07605/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/c56d7d6e6764ca730aa8b38e8cc07605/AndroidManifest.xml:19:5-43
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/relinker-1.2.2.aar/d3f526b82270043b25b5c6382235be60/AndroidManifest.xml:7:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/relinker-1.2.2.aar/d3f526b82270043b25b5c6382235be60/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3c54db3fc86d2c742ba9d0337bae1146/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3c54db3fc86d2c742ba9d0337bae1146/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9e30e68abded851796d4a9d22236c564/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9e30e68abded851796d4a9d22236c564/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/e0127d4b3e5b9440e4b9d56c85193710/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/e0127d4b3e5b9440e4b9d56c85193710/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/00e12b63b7d88fcefdf9bb85aa0fa0dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/00e12b63b7d88fcefdf9bb85aa0fa0dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a27848fd6cbc1a51a2024da949ed0572/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a27848fd6cbc1a51a2024da949ed0572/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/fa2626d600d6fb83a512cd1392b7480b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/fa2626d600d6fb83a512cd1392b7480b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/bf8beed5b8daf85c98e842ff05c14dc3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/bf8beed5b8daf85c98e842ff05c14dc3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/8fa4dd39b92120cffc478512e13998b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/8fa4dd39b92120cffc478512e13998b0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9542010336911e10714bab2a1c17b9fb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9542010336911e10714bab2a1c17b9fb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/1ac26d478ddf4f6564937425938337bf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/1ac26d478ddf4f6564937425938337bf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a05da43da0504b2eb963af207a102e37/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a05da43da0504b2eb963af207a102e37/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/93f8db169f172886ae2a8bb97e3f03f5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/93f8db169f172886ae2a8bb97e3f03f5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/36b786c254bf89e61adadf7ce9f9aedf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/36b786c254bf89e61adadf7ce9f9aedf/AndroidManifest.xml:20:5-44
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-		ADDED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+		ADDED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/matinsalehi/Desktop/AndroidProjects/Parrot/app/src/main/AndroidManifest.xml
 activity#com.gun0912.tedpermission.TedPermissionActivity
-ADDED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:10:9-12:56
+ADDED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:10:9-12:56
 	android:theme
-		ADDED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:12:13-53
+		ADDED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:12:13-53
 	android:name
-		ADDED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/f0e85d29361275f45e6b856fe7a22aa3/AndroidManifest.xml:11:13-75
+		ADDED from [gun0912.ted:tedpermission:1.0.3] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/tedpermission-1.0.3.aar/0ae15d0d1eb3ce60dc855d1067c8ad05/AndroidManifest.xml:11:13-75
 provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:23:9-27:43
+ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:23:9-27:43
 	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:25:13-68
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:25:13-68
 	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:27:13-40
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:27:13-40
 	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:26:13-37
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/014847f72c74346f5c85ca56d96307f0/AndroidManifest.xml:24:13-83
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/c8508d345ec572a0a64ef6327af1c3b8/AndroidManifest.xml:24:13-83
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:25:5-80
-IMPLIED from /Users/matinsalehi/Desktop/XcodeProjects/Parrot-master/Parrot/app/src/main/AndroidManifest.xml:2:1-57:12 reason: com.squareup.leakcanary requested WRITE_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:25:5-80
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:25:22-77
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:25:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:26:5-81
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:26:5-81
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:26:22-78
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:26:22-78
 service#com.squareup.leakcanary.internal.HeapAnalyzerService
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:29:9-32:45
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:29:9-32:45
 	android:process
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:32:13-42
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:32:13-42
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:31:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:31:13-36
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:30:13-80
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:30:13-80
 service#com.squareup.leakcanary.DisplayLeakService
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:33:9-35:39
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:33:9-35:39
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:35:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:35:13-36
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:34:13-70
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:34:13-70
 activity#com.squareup.leakcanary.internal.DisplayLeakActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:37:9-49:20
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:37:9-49:20
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:39:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:39:13-36
 	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:41:13-71
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:41:13-71
 	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:40:13-54
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:40:13-54
 	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:43:13-63
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:43:13-63
 	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:42:13-59
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:42:13-59
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:38:13-80
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:38:13-80
 activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:50:9-56:68
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:50:9-56:68
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:52:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:52:13-36
 	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:54:13-82
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:54:13-82
 	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:53:13-54
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:53:13-54
 	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:56:13-65
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:56:13-65
 	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:55:13-59
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:55:13-59
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/68c05e744acd32d06127240f0fe327ab/AndroidManifest.xml:51:13-93
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] /Users/matinsalehi/.gradle/caches/transforms-1/files-1.1/leakcanary-android-1.5.aar/7846bf1763ed047e882697c0bc62f4e2/AndroidManifest.xml:51:13-93

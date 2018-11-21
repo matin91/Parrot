@@ -77,6 +77,9 @@ public class AlarmService implements AlarmManager {
                     alarmIntent);
         }
 
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,
+                reminder.getVolume(), 0);
+
         return Completable.complete();
     }
 

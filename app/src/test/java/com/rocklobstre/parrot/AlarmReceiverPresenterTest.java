@@ -40,6 +40,8 @@ public class AlarmReceiverPresenterTest {
 
     private static final int MINUTE = 30;
 
+    private static final int VOLUME = 70;
+
     private static final int HOUR = 10;
 
     //TODO: fix this test data to look the same as implementation would
@@ -52,7 +54,8 @@ public class AlarmReceiverPresenterTest {
             false,
             false,
             MINUTE,
-            HOUR
+            HOUR,
+            VOLUME
     );
 
     private static final Alarm INACTIVE_ALARM = new Alarm(
@@ -62,7 +65,8 @@ public class AlarmReceiverPresenterTest {
             false,
             false,
             HOUR,
-            MINUTE
+            MINUTE,
+            VOLUME
 
     );
 
@@ -103,7 +107,8 @@ public class AlarmReceiverPresenterTest {
                 false,
                 false,
                 MINUTE,
-                HOUR
+                HOUR,
+                VOLUME
         );
 
         when(view.getViewModel())
@@ -135,7 +140,8 @@ public class AlarmReceiverPresenterTest {
                 false,
                 true,
                 MINUTE,
-                HOUR
+                HOUR,
+                VOLUME
         );
 
         when(view.getViewModel())
@@ -161,7 +167,8 @@ public class AlarmReceiverPresenterTest {
                 false,
                 true,
                 MINUTE,
-                HOUR
+                HOUR,
+                VOLUME
         );
 
         when(view.getViewModel())

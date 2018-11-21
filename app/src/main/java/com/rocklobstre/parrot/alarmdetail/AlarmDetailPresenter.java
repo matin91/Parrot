@@ -90,6 +90,7 @@ public class AlarmDetailPresenter implements AlarmDetailContract.Presenter {
                                         view.setRenewAutomatically(alarm.isRenewAutomatically());
                                         view.setPickerTime(alarm.getHourOfDay(), alarm.getMinute());
                                         view.setCurrentAlarmState(alarm.isActive());
+                                        view.setVolume(alarm.getVolume());
                                     }
 
                                     @Override

@@ -15,7 +15,15 @@ public class Alarm {
     private boolean renewAutomatically;
     private int hourOfDay;
     private int minute;
+    private int volume;
 
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
 
     public Alarm() {
     }
@@ -27,7 +35,8 @@ public class Alarm {
                  boolean vibrateOnly,
                  boolean renewAutomatically,
                  int hourOfDay,
-                 int minute) {
+                 int minute,
+                 int volume) {
         this.alarmId = alarmId;
         this.alarmTitle = alarmTitle;
         this.alarmMessage = alarmMessage;
@@ -36,6 +45,7 @@ public class Alarm {
         this.renewAutomatically = renewAutomatically;
         this.hourOfDay = hourOfDay;
         this.minute = minute;
+        this.volume = volume;
     }
 
     public String getAlarmId() {

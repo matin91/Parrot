@@ -47,6 +47,8 @@ public class AlarmListPresenterTest {
 
     private static final int HOUR = 10;
 
+    private static final int VOLUME = 70;
+
     private static final boolean ALARM_STATE = true;
 
     //TODO: fix this test data to look the same as implementation would
@@ -59,7 +61,8 @@ public class AlarmListPresenterTest {
             false,
             false,
             MINUTE,
-            HOUR
+            HOUR,
+            VOLUME
     );
 
     private static final Alarm INACTIVE_ALARM = new Alarm(
@@ -69,7 +72,8 @@ public class AlarmListPresenterTest {
             false,
             false,
             HOUR,
-            MINUTE
+            MINUTE,
+            VOLUME
 
     );
 
@@ -247,7 +251,8 @@ public class AlarmListPresenterTest {
                 false,
                 false,
                 MINUTE,
-                HOUR
+                HOUR,
+                VOLUME
         );
 
         Mockito.when(alarmSource.updateAlarm(alarm))
@@ -305,7 +310,8 @@ public class AlarmListPresenterTest {
                 false,
                 false,
                 MINUTE,
-                HOUR
+                HOUR,
+                VOLUME
         );
 
         presenter.onCreateAlarmButtonClick(5, alarm);
@@ -325,7 +331,8 @@ public class AlarmListPresenterTest {
                 false,
                 false,
                 MINUTE,
-                HOUR
+                HOUR,
+                VOLUME
         );
 
         List<Alarm> alarms = new ArrayList<>();
@@ -351,7 +358,8 @@ public class AlarmListPresenterTest {
                 false,
                 false,
                 MINUTE,
-                HOUR
+                HOUR,
+                VOLUME
         );
 
         Mockito.when(alarmSource.updateAlarm(alarm))
