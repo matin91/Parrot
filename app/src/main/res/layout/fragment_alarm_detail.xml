@@ -109,7 +109,7 @@
                 android:id="@+id/seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/WHITE"
+                android:background="@color/colorAccent"
                 android:padding="8dp"
                 android:progress="70"
                 android:layout_marginTop="8dp"

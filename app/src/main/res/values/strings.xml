@@ -110,7 +110,7 @@
     <string name="loading">Loading...</string>
     <string name="swipe_delete">Swipe to Remove</string>
     <string name="notification_title">Talking Alarm has been Set</string>
-    <string name="alarm_volume">Volume</string>
+    <string name="alarm_volume">Alarm Volume</string>
 
 
 </resources>

@@ -37,8 +37,10 @@ public class ParrotApplication extends Application {
 
     private void initializeRealm(){
         Realm.init(this);
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder().build();
-        Realm.setDefaultConfiguration(realmConfiguration);
+        RealmConfiguration config = new RealmConfiguration.Builder()
+                .deleteRealmIfMigrationNeeded()
+                .build();
+        Realm.setDefaultConfiguration(config);
     }
 
     private void initializeLeakCanary(){
